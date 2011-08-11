@@ -2,8 +2,6 @@
 Selenium with Python
 ********************
 
-:Author: `Baiju Muthukadan <http://baijum.blogspot.com/>`_
-:Email: baiju.m.mail AT gmail.com
 :Version: |version|
 
 .. toctree::
