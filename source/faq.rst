@@ -1,3 +1,5 @@
+.. _faq:
+
 Appendix: Frequently asked questions
 ------------------------------------
 

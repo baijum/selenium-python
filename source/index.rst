@@ -15,6 +15,7 @@ Selenium with Python
    api
    faq
    references
+   glossary
 
 Indices and tables
 ==================

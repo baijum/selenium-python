@@ -1,3 +1,5 @@
+.. _installation:
+
 Installation
 ------------
 
@@ -24,7 +26,7 @@ Downloading Selenium server
 .. note::
 
   The Selenium server is only required, if you want to use the remote
-  WebDriver.  See the `Using Selenium with remote WebDriver`_ section
+  WebDriver.  See the :ref:`selenium-remote-webdriver` section
   for more details.
 
 You can download Selenium server 2.x from the `download page of

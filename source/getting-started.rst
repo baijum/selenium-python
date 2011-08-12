@@ -1,3 +1,5 @@
+.. _getting-started:
+
 Getting Started
 ---------------
 
@@ -226,6 +228,7 @@ Final lines are some boiler plate code to run the test suite::
   if __name__ == "__main__":
       unittest.main()
 
+.. _selenium-remote-webdriver:
 
 Using Selenium with remote WebDriver
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
