@@ -225,13 +225,13 @@ Action Chains
 
     *on_element:* The element to mouse up.
 
-  - end_keys(`*keys_to_send`)
+  - send_keys(`*keys_to_send`)
 
     Sends keys to current focused element.
 
     *keys_to_send:* The keys to send.
 
-  - end_keys_to_element(self, element, `*keys_to_send`):
+  - send_keys_to_element(self, element, `*keys_to_send`):
 
     Sends keys to an element.
 
