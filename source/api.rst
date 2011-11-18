@@ -897,4 +897,136 @@ defined here: http://code.google.com/p/selenium/wiki/JsonWireProtocol
 
       driver.get_screenshot_as_base64()
 
+WebElement
+~~~~~~~~~~
 
+**module:** webdriver.remote.webelement
+
+Represents an HTML element.
+
+Generally, all interesting operations to do with interacting with a page
+will be performed through this interface.
+
+- class WebElement(parent, id_)
+
+  This class represents a web element.
+
+  *parent:* The parent element of the current element
+
+  *id_:* The Id of the current element
+
+  - tag_name
+
+    Gets this element's tagName property.
+
+  - text
+
+    Gets the text of the element.
+
+  - click()
+
+    Clicks the element.
+
+  - submit()
+    
+    Submits a form.
+
+  - clear()
+
+    Clears the text if it's a text entry element.
+
+  - get_attribute(name)
+
+    Gets the attribute value.
+
+  - s_selected(self)
+    
+    Whether the element is selected.
+
+  - is_enabled()
+    
+    Whether the element is enabled.
+
+  - find_element_by_id(id_)
+
+    Finds element by id.
+
+  - find_elements_by_id(id_)
+
+  - find_element_by_name(name)
+
+    Find element by name.
+
+  - find_elements_by_name(name)
+
+  - find_element_by_link_text(link_text)
+
+    Finds element by link text.
+
+  - find_elements_by_link_text(link_text)
+
+  - find_element_by_partial_link_text(link_text)
+
+  - find_elements_by_partial_link_text(link_text):
+
+  - find_element_by_tag_name(name)
+
+  - find_elements_by_tag_name(name)
+
+  - find_element_by_xpath(xpath)
+    
+    Finds element by xpath.
+
+  - find_elements_by_xpath(xpath)
+
+    Finds elements within the elements by xpath.
+
+  - find_element_by_class_name(name)
+    
+    Finds an element by their class name.
+
+  - find_elements_by_class_name(name)
+    
+    Finds elements by their class name.
+
+  - find_element_by_css_selector(css_selector)
+
+    Find and return an element by CSS selector.
+
+  - find_elements_by_css_selector(css_selector)
+    
+    Find and return list of multiple elements by CSS selector.
+
+  - send_keys(*value)
+    
+    Simulates typing into the element.
+
+**RenderedWebElement Items**
+
+  - is_displayed()
+
+    Whether the element would be visible to a user
+
+  - size
+
+    Returns the size of the element
+
+  - value_of_css_property(property_name)
+
+    Returns the value of a CSS property
+
+  - location
+    
+    Returns the location of the element in the renderable canvas
+
+  - parent
+
+  - id
+
+  - find_element(by=By.ID, value=None)
+
+    It is reccommened to use ``find_element_by_*`` methods instead of this.
+
+  - find_elements(By.ID, value=None)
+
+    It is reccommened to use ``find_elements_by_*`` methods instead of this.
