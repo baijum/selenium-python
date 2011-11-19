@@ -2,7 +2,7 @@
 Selenium with Python
 ********************
 
-:Version: |version|
+.. :Version: |version|
 
 .. toctree::
    :numbered:
