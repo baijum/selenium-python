@@ -1,9 +1,9 @@
 Selenium Python Bindings Documentation
 ======================================
 
-This repository contains documentation for Selenium Python bindings.
+http://readthedocs.org/docs/selenium-python
 
---
-Baiju Muthukadan
-baiju.m.mail AT gmail DOT com
+If you would like to contribute to this documentation, you can fork
+this project in Github and send pull requests.  You can also send your
+feedback to my email: baiju.m.mail AT gmail DOT com.
 
