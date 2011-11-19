@@ -41,7 +41,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'Selenium Python Bindings'
-copyright = u'2010-2011, Selenium Project'
+copyright = u'2011, Baiju Muthukadan'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
@@ -164,7 +164,7 @@ html_static_path = ['_static']
 #html_file_suffix = None
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'SeleniumPythonBindingsdoc'
+htmlhelp_basename = 'SeleniumPythonBindings'
 
 
 # -- Options for LaTeX output --------------------------------------------------
@@ -178,8 +178,8 @@ htmlhelp_basename = 'SeleniumPythonBindingsdoc'
 # Grouping the document tree into LaTeX files. List of tuples
 # (source start file, target name, title, author, documentclass [howto/manual]).
 latex_documents = [
-  ('index', 'SeleniumPythonBindings.tex', u'Selenium Python Bindings Documentation',
-   u'Selenium Project Team', 'manual'),
+  ('index', 'SeleniumPythonBindings.tex', u'Selenium Python Bindings',
+   u'Baiju Muthukadan', 'manual'),
 ]
 
 # The name of an image file (relative to this directory) to place at the top of
@@ -212,7 +212,7 @@ latex_documents = [
 # (source start file, name, description, authors, manual section).
 man_pages = [
     ('index', 'seleniumpythonbindings', u'Selenium Python Bindings Documentation',
-     [u'Selenium Project Team'], 1)
+     [u'Baiju Muthukadan'], 1)
 ]
 
 
@@ -220,9 +220,9 @@ man_pages = [
 
 # Bibliographic Dublin Core info.
 epub_title = u'Selenium Python Bindings'
-epub_author = u'Selenium Project Team'
-epub_publisher = u'Selenium Project Team'
-epub_copyright = u'2010-2011, Project Team'
+epub_author = u'Baiju Muthukadan'
+epub_publisher = u'Baiju Muthukadan'
+epub_copyright = u'2010-2011, Baiju Muthukadan'
 
 # The language of the text. It defaults to the language option
 # or en if the language is not set.
