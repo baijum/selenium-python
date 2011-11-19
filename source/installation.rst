@@ -38,9 +38,36 @@ or::
 
   pip install selenium
 
-You may consider using `virtualenv
-<http://pypi.python.org/pypi/virtualenv>`_ to create isolated Python
-environments.
+You may consider using `virtualenv <http://www.virtualenv.org>`_
+to create isolated Python environments.
+
+
+Detailed instructions for Windows users
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. Note::
+
+  You should have internet connection to perform this installation.
+
+1. Install Python 2.7 using the `MSI available in python.org download page <http://www.python.org/download>`_.
+
+2. Install `virtualenv <http://www.virtualenv.org>`_
+
+   Download this Python script: https://raw.github.com/pypa/virtualenv/master/virtualenv.py
+
+3. Create a virtual environment (You should be in the directory where the `virtualenv.py` script is downloaded)
+
+   C:\Python27\python.exe virtualenv.py selenv
+
+   This step will create a folder named `selenv` which can be used to install selenium.
+
+4. Install selenium
+
+   selenv\Scripts\pip.exe install selenium
+
+   Now you can run your scripts using the Python inside the virtual environment.
+
+   selenv\Scripts\python.exe my_selenium_script.py
 
 
 Downloading Selenium server
