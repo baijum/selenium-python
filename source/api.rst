@@ -907,7 +907,7 @@ Represents an HTML element.
 Generally, all interesting operations to do with interacting with a page
 will be performed through this interface.
 
-- class WebElement(parent, id_)
+- class WebElement(parent, `id_`)
 
   This class represents a web element.
 
@@ -947,11 +947,11 @@ will be performed through this interface.
     
     Whether the element is enabled.
 
-  - find_element_by_id(id_)
+  - find_element_by_id(`id_`)
 
     Finds element by id.
 
-  - find_elements_by_id(id_)
+  - find_elements_by_id(`id_`)
 
   - find_element_by_name(name)
 
@@ -997,7 +997,7 @@ will be performed through this interface.
     
     Find and return list of multiple elements by CSS selector.
 
-  - send_keys(*value)
+  - send_keys(`*value`)
     
     Simulates typing into the element.
 
