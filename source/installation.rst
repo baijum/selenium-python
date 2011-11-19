@@ -57,17 +57,24 @@ Detailed instructions for Windows users
 
 3. Create a virtual environment (You should be in the directory where the `virtualenv.py` script is downloaded)
 
-   C:\Python27\python.exe virtualenv.py selenv
+   ::
+
+     C:\Python27\python.exe virtualenv.py selenv
+
 
    This step will create a folder named `selenv` which can be used to install selenium.
 
 4. Install selenium
 
-   selenv\Scripts\pip.exe install selenium
+   ::
+
+     selenv\Scripts\pip.exe install selenium
 
    Now you can run your scripts using the Python inside the virtual environment.
 
-   selenv\Scripts\python.exe my_selenium_script.py
+   ::
+
+     selenv\Scripts\python.exe my_selenium_script.py
 
 
 Downloading Selenium server
