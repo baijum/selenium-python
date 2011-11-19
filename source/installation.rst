@@ -15,31 +15,9 @@ Selenium Python bindings provide a convenient API to access Selenium
 WebDrivers like Firefox, Ie and Chrome.  The current supported Python
 versions are Python 2.6 and Python 2.7.  Python 3 is not yet
 supported.  Selenium server is a Java program.  Java Runtime
-Environment (JRE) 1.6 is recommended to run Selenium server.  This
-article explain using Selenium 2 with WebDriver API.  Selenium 1 API
-is not covered here.
-
-
-Downloading Selenium server
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-.. note::
-
-  The Selenium server is only required, if you want to use the remote
-  WebDriver.  See the :ref:`selenium-remote-webdriver` section
-  for more details.
-
-You can download Selenium server 2.x from the `download page of
-selenium website <http://seleniumhq.org/download/>`_.  The file name
-should be something like this:
-``selenium-server-standalone-2.x.x.jar``.  You can always download the
-latest 2.x version of Selenium server.
-
-If Java Runtime Environment (JRE) is not installed in your system, you
-can download the `JRE from the Oracle website
-<http://www.oracle.com/technetwork/java/javase/downloads/index.html>`_.
-If you have root access in your system, you can also use your
-operating system instructions to install JRE.
+Environment (JRE) 1.6 or newer version is recommended to run Selenium
+server.  This article explain using Selenium 2 with WebDriver API.
+Selenium 1 API is not covered here.
 
 
 Downloading Python bindings for Selenium
@@ -63,6 +41,28 @@ or::
 You may consider using `virtualenv
 <http://pypi.python.org/pypi/virtualenv>`_ to create isolated Python
 environments.
+
+
+Downloading Selenium server
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. note::
+
+  The Selenium server is only required, if you want to use the remote
+  WebDriver.  See the :ref:`selenium-remote-webdriver` section
+  for more details.
+
+You can download Selenium server 2.x from the `download page of
+selenium website <http://seleniumhq.org/download/>`_.  The file name
+should be something like this:
+``selenium-server-standalone-2.x.x.jar``.  You can always download the
+latest 2.x version of Selenium server.
+
+If Java Runtime Environment (JRE) is not installed in your system, you
+can download the `JRE from the Oracle website
+<http://www.oracle.com/technetwork/java/javase/downloads/index.html>`_.
+If you have root access in your system, you can also use your
+operating system instructions to install JRE.
 
 
 Running Selenium server
