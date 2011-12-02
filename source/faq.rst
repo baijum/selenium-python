@@ -95,10 +95,10 @@ In the above example, ``application/octet-stream`` is used as the content type.
 
 The ``browser.download.dir`` option specify the directory where you want to download the files.
 
-How to use firebug with Firfox ?
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+How to use firebug with Firefox ?
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-First download the Fireug XPI file, later you call the ``add_extension`` method available
+First download the Firebug XPI file, later you call the ``add_extension`` method available
 for the firefox profile::
 
   from selenium import webdriver
