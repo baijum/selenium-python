@@ -95,3 +95,17 @@ In the above example, ``application/octet-stream`` is used as the content type.
 
 The ``browser.download.dir`` option specify the directory where you want to download the files.
 
+How to use firebug with Firfox ?
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+First download the Fireug XPI file, later you call the ``add_extension`` method available
+for the firefox profile::
+
+  from selenium import webdriver
+
+  fp = webdriver.FirefoxProfile()
+
+  fp.add_extension(extension='firebug-1.8.4.xpi')
+  fp.set_preference("extensions.firebug.currentVersion", "1.8.4") #Avoid startup screen
+  browser = webdriver.Firefox(firefox_profile=fp)
+
