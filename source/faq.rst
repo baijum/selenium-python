@@ -53,3 +53,45 @@ scroll to any position of an opened window.  The `scrollHeight
 property for all elements.  The `document.body.scrollHeight` will give
 the height of the entire body of the page.
 
+How to auto save files using custom Firefox profile ?
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Ref: http://stackoverflow.com/questions/1176348/access-to-file-download-dialog-in-firefox
+
+The first step is to identify the type of file you want to auto save.
+
+To identify the content type you want to download automatically, you can use
+`curl <http://curl.haxx.se/>`_::
+
+  curl -I URL | grep "Content-Type"
+
+Another way to find content type is using the `requests <http://python-requests.org>`_ module,
+you can use it like this::
+
+  import requests
+  print requests.head('http://www.python.org').headers['content-type']
+
+Once the content type is identified, you can use it to set the firefox profile preference:
+``browser.helperApps.neverAsk.saveToDisk``
+
+Here is an example::
+
+  import os
+
+  from selenium import webdriver
+
+  fp = webdriver.FirefoxProfile()
+
+  fp.set_preference("browser.download.folderList",2)
+  fp.set_preference("browser.download.manager.showWhenStarting",False)
+  fp.set_preference("browser.download.dir", os.getcwd())
+  fp.set_preference("browser.helperApps.neverAsk.saveToDisk", "application/octet-stream")
+
+  browser = webdriver.Firefox(firefox_profile=fp)
+  browser.get("http://pypi.python.org/pypi/selenium")
+  browser.find_element_by_partial_link_text("selenium-2").click()
+
+In the above example, ``application/octet-stream`` is used as the content type.
+
+The ``browser.download.dir`` option specify the directory where you want to download the files.
+
