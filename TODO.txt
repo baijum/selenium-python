@@ -1,4 +1,5 @@
 - Cover basics of unittest
-- How to use in Windows
 - XPATH (Appendix)
 - Mouse over
+- Fix "Navigating" chapter API
+- Complete: Test Design Considerations
