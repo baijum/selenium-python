@@ -7,6 +7,8 @@ Selenium with Python
 
 `Fork me on Github <https://github.com/baijum/selenium-python>`_
 
+`PDF version <http://media.readthedocs.org/pdf/selenium-python/latest/selenium-python.pdf>`_
+
 .. toctree::
    :numbered:
 
