@@ -57,6 +57,7 @@ How to auto save files using custom Firefox profile ?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Ref: http://stackoverflow.com/questions/1176348/access-to-file-download-dialog-in-firefox
+Ref: http://blog.codecentric.de/en/2010/07/file-downloads-with-selenium-mission-impossible/
 
 The first step is to identify the type of file you want to auto save.
 
