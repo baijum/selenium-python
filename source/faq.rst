@@ -61,19 +61,19 @@ Ref: http://blog.codecentric.de/en/2010/07/file-downloads-with-selenium-mission-
 
 The first step is to identify the type of file you want to auto save.
 
-To identify the content type you want to download automatically, you can use
-`curl <http://curl.haxx.se/>`_::
+To identify the content type you want to download automatically, you
+can use `curl <http://curl.haxx.se/>`_::
 
   curl -I URL | grep "Content-Type"
 
-Another way to find content type is using the `requests <http://python-requests.org>`_ module,
-you can use it like this::
+Another way to find content type is using the `requests
+<http://python-requests.org>`_ module, you can use it like this::
 
   import requests
   print requests.head('http://www.python.org').headers['content-type']
 
-Once the content type is identified, you can use it to set the firefox profile preference:
-``browser.helperApps.neverAsk.saveToDisk``
+Once the content type is identified, you can use it to set the firefox
+profile preference: ``browser.helperApps.neverAsk.saveToDisk``
 
 Here is an example::
 
@@ -92,15 +92,17 @@ Here is an example::
   browser.get("http://pypi.python.org/pypi/selenium")
   browser.find_element_by_partial_link_text("selenium-2").click()
 
-In the above example, ``application/octet-stream`` is used as the content type.
+In the above example, ``application/octet-stream`` is used as the
+content type.
 
-The ``browser.download.dir`` option specify the directory where you want to download the files.
+The ``browser.download.dir`` option specify the directory where you
+want to download the files.
 
 How to use firebug with Firefox ?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-First download the Firebug XPI file, later you call the ``add_extension`` method available
-for the firefox profile::
+First download the Firebug XPI file, later you call the
+``add_extension`` method available for the firefox profile::
 
   from selenium import webdriver
 
