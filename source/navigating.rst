@@ -85,8 +85,8 @@ but what about the other elements? You can "toggle" the state of
 checkboxes, and you can use "setSelected" to set something like an
 `OPTION` tag selected.  Dealing with `SELECT` tags isn't too bad::
 
-    select = driver.find_element_by_xpath("//select"))
-    all_options = select.find_elements_by_tag_name("option"))
+    select = driver.find_element_by_xpath("//select")
+    all_options = select.find_elements_by_tag_name("option")
     for option in all_options:
         print "Value is: %s" % option.getValue() #<- FIXME: API
         option.setSelected() #<- FIXME: API

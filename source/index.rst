@@ -3,7 +3,6 @@ Selenium with Python
 ********************
 
 :Author: `Baiju Muthukadan <http://baijum.blogspot.com>`_
-.. :Version: |version|
 
 `Fork me on Github <https://github.com/baijum/selenium-python>`_
 
