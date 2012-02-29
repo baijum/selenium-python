@@ -385,11 +385,12 @@ http://code.google.com/p/selenium/downloads/list
 Remote WebDriver
 ~~~~~~~~~~~~~~~~
 
-**module:** selenium.webdriver.remote.webdriver
+.. module:: selenium.webdriver.remote.webdriver
 
-Controls a browser by sending commands to a remote server.  This
-server is expected to be running the WebDriver wire protocol as
-defined here: http://code.google.com/p/selenium/wiki/JsonWireProtocol
+Remote WebDriver controls a browser by sending commands to a remote
+server.  This server is expected to be running the WebDriver wire
+protocol as defined here:
+http://code.google.com/p/selenium/wiki/JsonWireProtocol
 
 - class WebDriver(command_executor='http://127.0.0.1:4444/wd/hub',
         desired_capabilities=None, browser_profile=None)
@@ -900,133 +901,135 @@ defined here: http://code.google.com/p/selenium/wiki/JsonWireProtocol
 WebElement
 ~~~~~~~~~~
 
-**module:** webdriver.remote.webelement
-
-Represents an HTML element.
+.. module:: selenium.webdriver.remote.webelement
 
 Generally, all interesting operations to do with interacting with a page
-will be performed through this interface.
+will be performed through this WebElement interface.
 
-- class WebElement(parent, `id_`)
+.. class:: WebElement(parent, id_)
 
-  This class represents a web element.
+   This class represents an HTML web element.
 
-  *parent:* The parent element of the current element
+   .. attribute:: parent
 
-  *id_:* The Id of the current element
+      The parent element of the current element
 
-  - tag_name
+   .. attribute:: id_
 
-    Gets this element's tagName property.
+      The Id of the current element
 
-  - text
+   .. attribute:: tag_name
 
-    Gets the text of the element.
+      Gets this element's tagName property.
 
-  - click()
+   .. attribute:: text
 
-    Clicks the element.
+      Gets the text of the element.
 
-  - submit()
+   .. method:: click()
+
+      Clicks the element.
+
+   .. method:: submit()
     
-    Submits a form.
+      Submits a form.
 
-  - clear()
+   .. method:: clear()
 
-    Clears the text if it's a text entry element.
+      Clears the text if it's a text entry element.
 
-  - get_attribute(name)
+   .. method:: get_attribute(name)
 
-    Gets the attribute value.
+      Gets the attribute value.
 
-  - s_selected(self)
+   .. method:: s_selected(self)
     
-    Whether the element is selected.
+      Whether the element is selected.
 
-  - is_enabled()
+   .. method:: is_enabled()
     
-    Whether the element is enabled.
+      Whether the element is enabled.
 
-  - find_element_by_id(`id_`)
+   .. method:: find_element_by_id(id_)
 
-    Finds element by id.
+      Finds element by id.
 
-  - find_elements_by_id(`id_`)
+   .. method:: find_elements_by_id(id_)
 
-  - find_element_by_name(name)
+   .. method:: find_element_by_name(name)
 
-    Find element by name.
+      Find element by name.
 
-  - find_elements_by_name(name)
+   .. method:: find_elements_by_name(name)
 
-  - find_element_by_link_text(link_text)
+   .. method:: find_element_by_link_text(link_text)
 
-    Finds element by link text.
+      Finds element by link text.
 
-  - find_elements_by_link_text(link_text)
+   .. method:: find_elements_by_link_text(link_text)
 
-  - find_element_by_partial_link_text(link_text)
+   .. method:: find_element_by_partial_link_text(link_text)
 
-  - find_elements_by_partial_link_text(link_text):
+   .. method:: find_elements_by_partial_link_text(link_text)
 
-  - find_element_by_tag_name(name)
+   .. method:: find_element_by_tag_name(name)
 
-  - find_elements_by_tag_name(name)
+   .. method:: find_elements_by_tag_name(name)
 
-  - find_element_by_xpath(xpath)
+   .. method:: find_element_by_xpath(xpath)
     
-    Finds element by xpath.
+      Finds element by xpath.
 
-  - find_elements_by_xpath(xpath)
+   .. method:: find_elements_by_xpath(xpath)
 
-    Finds elements within the elements by xpath.
+      Finds elements within the elements by xpath.
 
-  - find_element_by_class_name(name)
+   .. method:: find_element_by_class_name(name)
     
-    Finds an element by their class name.
+      Finds an element by their class name.
 
-  - find_elements_by_class_name(name)
+   .. method:: find_elements_by_class_name(name)
     
-    Finds elements by their class name.
+      Finds elements by their class name.
 
-  - find_element_by_css_selector(css_selector)
+   .. method:: find_element_by_css_selector(css_selector)
 
-    Find and return an element by CSS selector.
+      Find and return an element by CSS selector.
 
-  - find_elements_by_css_selector(css_selector)
+   .. method:: find_elements_by_css_selector(css_selector)
     
-    Find and return list of multiple elements by CSS selector.
+      Find and return list of multiple elements by CSS selector.
 
-  - send_keys(`*value`)
+   .. method:: send_keys(*value)
     
-    Simulates typing into the element.
+      Simulates typing into the element.
 
-**RenderedWebElement Items**
+   **RenderedWebElement Items**
 
-  - is_displayed()
+   .. method:: is_displayed()
 
-    Whether the element would be visible to a user
+      Whether the element would be visible to a user
 
-  - size
+   .. method:: size
 
-    Returns the size of the element
+      Returns the size of the element
 
-  - value_of_css_property(property_name)
+   .. method:: value_of_css_property(property_name)
 
-    Returns the value of a CSS property
+      Returns the value of a CSS property
 
-  - location
+   .. method:: location
     
-    Returns the location of the element in the renderable canvas
+      Returns the location of the element in the renderable canvas
 
-  - parent
+   .. method:: parent
 
-  - id
+   .. method:: id
 
-  - find_element(by=By.ID, value=None)
+   .. method:: find_element(by=By.ID, value=None)
 
-    It is reccommened to use ``find_element_by_*`` methods instead of this.
+      It is reccommened to use ``find_element_by_*`` methods instead of this.
 
-  - find_elements(By.ID, value=None)
+   .. method:: find_elements(By.ID, value=None)
 
-    It is reccommened to use ``find_elements_by_*`` methods instead of this.
+      It is reccommened to use ``find_elements_by_*`` methods instead of this.
