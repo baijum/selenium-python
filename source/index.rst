@@ -8,6 +8,10 @@ Selenium with Python
 
 `PDF version <http://media.readthedocs.org/pdf/selenium-python/latest/selenium-python.pdf>`_
 
+.. note::
+
+   THIS IS NOT AN OFFICIAL DOCUMENTATION.
+
 .. toctree::
    :numbered:
 
@@ -21,9 +25,6 @@ Selenium with Python
    references
    glossary
 
-.. note::
-
-   THIS IS NOT AN OFFICIAL DOCUMENTATION.
 
 Indices and tables
 ==================
