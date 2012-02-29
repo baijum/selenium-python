@@ -234,6 +234,10 @@ Using Selenium with remote WebDriver
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 To use the remote WebDriver, you should have Selenium server running.
+To run the server, use this command::
+
+  java -jar selenium-server-standalone-2.x.x.jar
+
 While running the Selenium server, you could see a message looks like
 this::
 

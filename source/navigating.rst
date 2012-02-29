@@ -88,24 +88,26 @@ checkboxes, and you can use "setSelected" to set something like an
     select = driver.find_element_by_xpath("//select")
     all_options = select.find_elements_by_tag_name("option")
     for option in all_options:
-        print "Value is: %s" % option.getValue() #<- FIXME: API
-        option.setSelected() #<- FIXME: API
+        print "Value is: %s" % option.get_attribute("value")
+        option.click()
 
 This will find the first "SELECT" element on the page, and cycle
 through each of it's OPTIONs in turn, printing out their values, and
-selecting each in turn.  As you can see, this isn't the most efficient
-way of dealing with SELECT elements . WebDriver's support classes
-include one called "Select", which provides useful methods for
-interacting with these.
+selecting each in turn.
 
-::
+.. As you can see, this isn't the most efficient
+.. way of dealing with SELECT elements . WebDriver's support classes
+.. include one called "Select", which provides useful methods for
+.. interacting with these.
 
-    select = driver.find_element_by_xpath("//select").select()  #<- FIXME: API
-    select.deselectAll() #<- FIXME: API
-    select.selectByVisibleText("Edam") #<- FIXME: API
+.. ::
 
-This will deselect all OPTIONs from the first SELECT on the page, and
-then select the OPTION with the displayed text of "Edam".
+..     select = driver.find_element_by_xpath("//select").select()  #<- FIXME: API
+..     select.deselectAll() #<- FIXME: API
+..     select.selectByVisibleText("Edam") #<- FIXME: API
+
+.. This will deselect all OPTIONs from the first SELECT on the page, and
+.. then select the OPTION with the displayed text of "Edam".
 
 Once you've finished filling out the form, you probably want to submit
 it. One way to do this would be to find the "submit" button and click
@@ -237,4 +239,3 @@ This has been a high level walkthrough of WebDriver and some of its
 key capabilities.  You may want to look at the `Test Design
 Considerations` chapter to get some ideas about how you can reduce the
 pain of maintaining your tests and how to make your code more modular.
-
