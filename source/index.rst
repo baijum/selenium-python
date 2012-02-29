@@ -21,6 +21,10 @@ Selenium with Python
    references
    glossary
 
+.. note::
+
+   THIS IS NOT AN OFFICIAL DOCUMENTATION.
+
 Indices and tables
 ==================
 
