@@ -392,12 +392,10 @@ server.  This server is expected to be running the WebDriver wire
 protocol as defined here:
 http://code.google.com/p/selenium/wiki/JsonWireProtocol
 
-- class WebDriver(command_executor='http://127.0.0.1:4444/wd/hub',
+.. class:: WebDriver(command_executor='http://127.0.0.1:4444/wd/hub',
         desired_capabilities=None, browser_profile=None)
 
-
-
-  Create a new driver that will issue commands using the wire protocol.
+   Create a new driver that will issue commands using the wire protocol.
 
 
   *command_executor:* Either a command.CommandExecutor object or a
@@ -423,45 +421,42 @@ http://code.google.com/p/selenium/wiki/JsonWireProtocol
   `desired_capabilities` argument)
 
 
-  - name
+   .. attribute::  name
 
-    Returns the name of the underlying browser for this instance.
+      Returns the name of the underlying browser for this instance.
 
+   .. method:: start_client()
 
-  - start_client():
+      Called before starting a new session. This method may be
+      overridden to define custom startup behavior.
 
-    Called before starting a new session. This method may be
-    overridden to define custom startup behavior.
+   .. method:: stop_client()
 
+      Called after executing a quit command. This method may be
+      overridden to define custom shutdown behavior.
 
-  - stop_client()
+   .. method:: start_session(desired_capabilities, browser_profile=None)
 
-    Called after executing a quit command. This method may be
-    overridden to define custom shutdown behavior.
+      Creates a new session with the desired capabilities.
 
+      *desired_capabilities:* A dictionry with following keys:
 
-  - start_session(desired_capabilities, browser_profile=None)
+        - *browser_name:* The name of the browser to request.
 
-    Creates a new session with the desired capabilities.
+        - *version:* Which browser version to request.
 
-    *desired_capabilities:* A dictionry with following keys:
+        - *platform:* Which platform to request the browser on.
 
-      - *browser_name:* The name of the browser to request.
+        - *javascript_enabled:* Whether the new session should support JavaScript.
 
-      - *version:* Which browser version to request.
-
-      - *platform:* Which platform to request the browser on.
-
-      - *javascript_enabled:* Whether the new session should support JavaScript.
-
-      - *browser_profile:* A
-        selenium.webdriver.firefox.firefox_profile.FirefoxProfile
-        object.  Only used if Firefox is requested.
+        - *browser_profile:* A
+          selenium.webdriver.firefox.firefox_profile.FirefoxProfile
+          object.  Only used if Firefox is requested.
 
 
-  - create_web_element(element_id)
+   .. method:: create_web_element(element_id)
 
-    Creates a web element with the specified element_id.
+      Creates a web element with the specified element_id.
 
   - execute(driver_command, params=None)
 
