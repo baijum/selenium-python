@@ -10,7 +10,7 @@ Selenium with Python
 
 .. note::
 
-   THIS IS NOT AN OFFICIAL DOCUMENTATION.
+   This is not an official documentation.  Official API documentation is available `here <http://selenium.googlecode.com/svn/trunk/docs/api/py/index.html>`_.
 
 .. toctree::
    :numbered:
