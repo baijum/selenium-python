@@ -3,6 +3,12 @@
 API
 ---
 
+.. note::
+
+   This is not an official documentation.  Official API documentation
+   is available `here
+   <http://selenium.googlecode.com/svn/trunk/docs/api/py/index.html>`_.
+
 This chapter cover all the interfaces of Selenium WebDriver.
 
 Some attributes are callable (or methods) and others are non-callable
