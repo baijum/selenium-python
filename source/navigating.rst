@@ -3,11 +3,6 @@
 Navigating
 ----------
 
-.. warning::
-
-    This section is a copy-paste from Java docs, so it requires some
-    modification.
-
 The first thing you'll want to do with WebDriver is navigate to a
 page.  The normal way to do this is by calling "get":
 
