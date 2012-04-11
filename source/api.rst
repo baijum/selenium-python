@@ -464,440 +464,424 @@ http://code.google.com/p/selenium/wiki/JsonWireProtocol
 
       Creates a web element with the specified element_id.
 
-  - execute(driver_command, params=None)
+   .. method:: execute(driver_command, params=None)
 
-    Sends a command to be executed by a command.CommandExecutor.
+      Sends a command to be executed by a command.CommandExecutor.
 
-    *driver_command:* The name of the command to execute as a string.
+      *driver_command:* The name of the command to execute as a string.
 
-    *params:* A dictionary of named parameters to send with the command.
+      *params:* A dictionary of named parameters to send with the command.
 
-    **Returns:** The command's JSON response loaded into a dictionary
-    object.
+      **Returns:** The command's JSON response loaded into a dictionary
+      object.
 
-  - get(url)
+   .. method:: get(url)
 
-    Loads a web page in the current browser session.
+      Loads a web page in the current browser session.
 
-  - title
+   .. attribute:: title
 
-    Returns the title of the current page.
+      Returns the title of the current page.
 
-  - find_element_by_id(`id_`)
+   .. method:: find_element_by_id(`id_`)
 
-    Finds an element by id.
+      Finds an element by id.
 
-    *id\_:* The id of the element to be found.
+      *id\_:* The id of the element to be found.
 
-    Usage::
+      Usage::
 
-      driver.find_element_by_id('foo')
+        driver.find_element_by_id('foo')
 
 
-  - find_elements_by_id(`id_`)
+   .. method:: find_elements_by_id(`id_`)
 
-    Finds multiple elements by id.
+      Finds multiple elements by id.
 
-    *id\_:* The id of the elements to be found.
+      *id\_:* The id of the elements to be found.
 
-    Usage::
+      Usage::
 
-      driver.find_element_by_id('foo')
+        driver.find_element_by_id('foo')
 
+   .. method:: find_element_by_xpath(xpath)
 
-  - find_element_by_xpath(xpath)
+      Finds an element by xpath.
 
-    Finds an element by xpath.
+      *xpath:* The xpath locator of the element to find.
 
-    *xpath:* The xpath locator of the element to find.
+      Usage::
 
-    Usage::
+        driver.find_element_by_xpath('//div/td[1]')
 
-      driver.find_element_by_xpath('//div/td[1]')
+   .. method:: find_elements_by_xpath(xpath)
 
+      Finds multiple elements by xpath.
 
-  - find_elements_by_xpath(xpath)
+      *xpath:* The xpath locator of the elements to be found.
 
-    Finds multiple elements by xpath.
+      Usage::
 
-    *xpath:* The xpath locator of the elements to be found.
+        driver.find_elements_by_xpath("//div[contains(@class, 'foo')]")
 
-    Usage::
 
-      driver.find_elements_by_xpath("//div[contains(@class, 'foo')]")
+   .. method:: find_element_by_link_text(link_text)
 
+      Finds an element by link text.
 
-  - find_element_by_link_text(link_text)
+      *link_text:* The text of the element to be found.
 
-    Finds an element by link text.
+      Usage::
 
-    *link_text:* The text of the element to be found.
+        driver.find_element_by_link_text('Sign In')
 
-    Usage::
+   .. method:: find_elements_by_link_text(text)
 
-      driver.find_element_by_link_text('Sign In')
+      Finds elements by link text.
 
+      *link_text:* The text of the elements to be found.
 
-  - find_elements_by_link_text(text)
+      Usage::
 
-    Finds elements by link text.
+        driver.find_elements_by_link_text('Sign In')
 
-    *link_text:* The text of the elements to be found.
+   .. method:: find_element_by_partial_link_text(link_text)
 
-    Usage::
+      Finds an element by a partial match of its link text.
 
-      driver.find_elements_by_link_text('Sign In')
+      *link_text:* The text of the element to partially match on.
 
+      Usage::
 
-  - find_element_by_partial_link_text(link_text)
+        driver.find_element_by_partial_link_text('Sign')
 
-    Finds an element by a partial match of its link text.
+   .. method:: find_elements_by_partial_link_text(link_text)
 
-    *link_text:* The text of the element to partially match on.
+      Finds elements by a partial match of their link text.
 
-    Usage::
+      *link_text:* The text of the element to partial match on.
 
-      driver.find_element_by_partial_link_text('Sign')
+      Usage::
 
+        driver.find_element_by_partial_link_text('Sign')
 
-  - find_elements_by_partial_link_text(link_text)
+   .. method:: find_element_by_name(name)
 
-    Finds elements by a partial match of their link text.
+      Finds an element by name.
 
-    *link_text:* The text of the element to partial match on.
+      *name:* The name of the element to find.
 
-    Usage::
+      Usage::
 
-      driver.find_element_by_partial_link_text('Sign')
+        driver.find_element_by_name('foo')
 
+   .. method:: find_elements_by_name(name)
 
-  - find_element_by_name(name)
+      Finds elements by name.
 
-    Finds an element by name.
+      *name:* The name of the elements to find.
 
-    *name:* The name of the element to find.
+      Usage::
 
-    Usage::
+        driver.find_elements_by_name('foo')
 
-      driver.find_element_by_name('foo')
 
+   .. method:: find_element_by_tag_name(name)
 
-  - find_elements_by_name(name)
+      Finds an element by tag name.
 
-    Finds elements by name.
+      *name:* The tag name of the element to find.
 
-    *name:* The name of the elements to find.
+      Usage::
 
-    Usage::
+        driver.find_element_by_tag_name('foo')
 
-      driver.find_elements_by_name('foo')
+   .. method:: find_elements_by_tag_name(name)
 
+      Finds elements by tag name.
 
-  - find_element_by_tag_name(name)
+      *name:* The tag name the use when finding elements.
 
-    Finds an element by tag name.
+      Usage::
 
-    *name:* The tag name of the element to find.
+        driver.find_elements_by_tag_name('foo')
 
-    Usage::
+   .. method:: find_element_by_class_name(name)
 
-      driver.find_element_by_tag_name('foo')
+      Finds an element by class name.
 
+      *name:* The class name of the element to find.
 
-  - find_elements_by_tag_name(name)
+      Usage::
 
-    Finds elements by tag name.
+        driver.find_element_by_class_name('foo')
 
-    *name:* The tag name the use when finding elements.
+   .. method:: find_elements_by_class_name(name)
 
-    Usage::
+      Finds elements by class name.
 
-      driver.find_elements_by_tag_name('foo')
+      *name:* The class name of the elements to find.
 
+      Usage::
 
-  - find_element_by_class_name(name)
+        driver.find_elements_by_class_name('foo')
 
-    Finds an element by class name.
+   .. method:: find_element_by_css_selector(css_selector)
 
-    *name:* The class name of the element to find.
+      Finds an element by css selector.
 
-    Usage::
+      *css_selector:* The css selector to use when finding elements.
 
-      driver.find_element_by_class_name('foo')
+      Usage::
 
+        driver.find_element_by_css_selector('#foo')
 
-  - find_elements_by_class_name(name)
 
-    Finds elements by class name.
+   .. method:: find_elements_by_css_selector(css_selector)
 
-    *name:* The class name of the elements to find.
+      Finds elements by css selector.
 
-    Usage::
+      *css_selector:* The css selector to use when finding elements.
 
-      driver.find_elements_by_class_name('foo')
+      Usage::
 
+        driver.find_element_by_css_selector('#foo')
 
-  - find_element_by_css_selector(css_selector)
+   .. execute_script(script, \*args)
 
-    Finds an element by css selector.
+      Synchronously Executes JavaScript in the current window/frame.
 
-    *css_selector:* The css selector to use when finding elements.
+      *script:* The JavaScript to execute.
 
-    Usage::
+      *\*args:* Any applicable arguments for your JavaScript.
 
-      driver.find_element_by_css_selector('#foo')
+      Usage::
 
+        driver.execute_script('document.title')
 
-  - find_elements_by_css_selector(css_selector)
+   .. method:: execute_async_script(script, \*args)
 
-    Finds elements by css selector.
+      Asynchronously Executes JavaScript in the current window/frame.
 
-    *css_selector:* The css selector to use when finding elements.
+      *script:* The JavaScript to execute.
 
-    Usage::
+      *\*args:* Any applicable arguments for your JavaScript.
 
-      driver.find_element_by_css_selector('#foo')
+      Usage::
 
-  - execute_script(script, \*args)
+        driver.execute_async_script('document.title')
 
-    Synchronously Executes JavaScript in the current window/frame.
+   .. attribute:: current_url
 
-    *script:* The JavaScript to execute.
+      URL of the current loaded page.
 
-    *\*args:* Any applicable arguments for your JavaScript.
+      Usage::
 
-    Usage::
+        driver.current_url
 
-      driver.execute_script('document.title')
+   .. attribute:: page_source
 
-  - execute_async_script(script, \*args)
+      Source code (HTML,CSS,JS etc.) of the current loaded page.
 
-    Asynchronously Executes JavaScript in the current window/frame.
+      Usage::
 
-    *script:* The JavaScript to execute.
+        driver.page_source
 
-    *\*args:* Any applicable arguments for your JavaScript.
+   .. method:: close()
 
-    Usage::
+      Closes the current window.
 
-      driver.execute_async_script('document.title')
+      Usage::
 
-  - current_url
+        driver.close()
 
-    URL of the current loaded page.
+   .. method:: quit()
 
-    Usage::
+      Quits the driver and closes every associated window.
 
-      driver.current_url
+      Usage::
 
-  - page_source
+        driver.quit()
 
-    Source code (HTML,CSS,JS etc.) of the current loaded page.
+   .. attribute:: current_window_handle
 
-    Usage::
+      Usage::
 
-      driver.page_source
+        driver.current_window_handle
 
-  - close()
+   .. attribute:: window_handles
 
-    Closes the current window.
+      Returns the handles of all windows within the current session.
 
-    Usage::
+      Usage::
 
-      driver.close()
+        driver.window_handles
 
-  - quit()
+   .. method:: switch_to_active_element()
 
-    Quits the driver and closes every associated window.
+      Returns the element with focus, or BODY if nothing has focus.
 
-    Usage::
+      Usage::
 
-      driver.quit()
+        driver.switch_to_active_element()
 
-  - current_window_handle
+   .. method:: switch_to_window(window_name)
 
-    Usage::
+      Switches focus to the specified window.
 
-      driver.current_window_handle
+      *window_name:* The name of the window to switch to.
 
-  - window_handles
+      Usage::
 
-    Returns the handles of all windows within the current session.
+        driver.switch_to_window('main')
 
-    Usage::
+   .. method:: switch_to_frame(index_or_name)
 
-      driver.window_handles
+      Switches focus to the specified frame, by index or name.
 
-  - switch_to_active_element()
+      *index_or_name:* The name of the window to switch to, or an
+      integer representing the index to switch to.
 
-    Returns the element with focus, or BODY if nothing has focus.
+      Usage::
 
-    Usage::
+        driver.switch_to_frame('frame_name')
+        driver.switch_to_frame(1)
 
-      driver.switch_to_active_element()
+   .. method:: switch_to_default_content()
 
-  - switch_to_window(window_name)
+      Switch focus to the default frame.
 
-    Switches focus to the specified window.
+      Usage::
 
-    *window_name:* The name of the window to switch to.
+        driver.switch_to_default_content()
 
-    Usage::
+   .. method:: switch_to_alert()
 
-      driver.switch_to_window('main')
+      Switches focus to an alert on the page.
 
-  - switch_to_frame(index_or_name)
+      Usage::
 
-    Switches focus to the specified frame, by index or name.
+        driver.switch_to_alert()
 
-    *index_or_name:* The name of the window to switch to, or an
-    integer representing the index to switch to.
+   .. method:: back()
 
-    Usage::
+      Goes one step backward in the browser history.
 
-      driver.switch_to_frame('frame_name')
-      driver.switch_to_frame(1)
+      Usage::
 
-  - switch_to_default_content()
+        driver.back()
 
-    Switch focus to the default frame.
+   .. method:: forward()
 
-    Usage::
+      Goes one step forward in the browser history.
 
-      driver.switch_to_default_content()
+      Usage::
 
-  - switch_to_alert()
+        driver.forward()
 
-    Switches focus to an alert on the page.
+   .. method:: refresh()
 
-    Usage::
+      Refreshes the current page.
 
-      driver.switch_to_alert()
+      Usage::
 
+        driver.refresh()
 
-  - back()
+   .. method:: get_cookies()
 
-    Goes one step backward in the browser history.
+      Returns a set of dictionaries, corresponding to cookies visible in
+      the current session.
 
-    Usage::
+      Usage::
 
-      driver.back()
+        driver.get_cookies()
 
+   .. method:: get_cookie(name)
 
-  - forward()
+      Get a single cookie by name. Returns the cookie if found, None if not.
 
-    Goes one step forward in the browser history.
+      *name:* namd of the cookie
 
-    Usage::
+      Usage::
 
-      driver.forward()
+        driver.get_cookie('my_cookie')
 
+   .. method:: delete_cookie(name)
 
-  - refresh()
+      Delete a particular cookie.
 
-    Refreshes the current page.
+      *name:* namd of the cookie
 
-    Usage::
+      Usage::
 
-      driver.refresh()
+        driver.delete_cookie('my_cookie')
 
+   .. method:: delete_all_cookies()
 
-  - get_cookies()
+      Delete all cookies in the scope of the session.
 
-    Returns a set of dictionaries, corresponding to cookies visible in
-    the current session.
+      Usage::
 
-    Usage::
+        driver.delete_all_cookies()
 
-      driver.get_cookies()
+   .. method:: add_cookie(cookie_dict)
 
-  - get_cookie(name)
+      Adds a cookie to your current session.
 
-    Get a single cookie by name. Returns the cookie if found, None if not.
+      *cookie_dict:* A dictionary object, with the desired cookie name
+      as the key, and the value being the desired contents.
 
-    *name:* namd of the cookie
+      Usage::
 
-    Usage::
+        driver.add_cookie({'foo': 'bar',})
 
-      driver.get_cookie('my_cookie')
+   .. method::  implicitly_wait(time_to_wait)
 
-  - delete_cookie(name)
+      Sets a sticky timeout to implicitly wait for an element to be
+      found, or a command to complete. This method only needs to be
+      called one time per session.
 
-    Delete a particular cookie.
+      *time_to_wait:* Amount of time to wait
 
-    *name:* namd of the cookie
+      Usage::
 
-    Usage::
+        driver.implicitly_wait(30)
 
-      driver.delete_cookie('my_cookie')
+   .. method:: set_script_timeout(time_to_wait)
 
-  - delete_all_cookies()
+      Set the amount of time that the script should wait before throwing
+      an error.
 
-    Delete all cookies in the scope of the session.
+      *time_to_wait:* The amount of time to wait
 
-    Usage::
+      Usage::
 
-      driver.delete_all_cookies()
+        driver.set_script_timeout(30)
 
-  - add_cookie(cookie_dict)
+   .. attribute:: desired_capabilities
 
-    Adds a cookie to your current session.
+      returns the drivers current desired capabilities being used
 
-    *cookie_dict:* A dictionary object, with the desired cookie name
-    as the key, and the value being the desired contents.
+   .. method:: get_screenshot_as_file(filename)
 
-    Usage::
+      Gets the screenshot of the current window. Returns False if there
+      is any IOError, else returns True. Use full paths in your
+      filename.
 
-      driver.add_cookie({'foo': 'bar',})
+      *filename:* The full path you wish to save your screenshot to.
 
-  - implicitly_wait(time_to_wait)
+      Usage::
 
-    Sets a sticky timeout to implicitly wait for an element to be
-    found, or a command to complete. This method only needs to be
-    called one time per session.
+        driver.get_screenshot_as_file('/Screenshots/foo.png')
 
-    *time_to_wait:* Amount of time to wait
+   .. method:: get_screenshot_as_base64()
 
-    Usage::
+      Gets the screenshot of the current window as a base64 encoded
+      string which is useful in embedded images in HTML.
 
-      driver.implicitly_wait(30)
+      Usage::
 
-
-  - set_script_timeout(time_to_wait)
-
-    Set the amount of time that the script should wait before throwing
-    an error.
-
-    *time_to_wait:* The amount of time to wait
-
-    Usage::
-
-      driver.set_script_timeout(30)
-
-  - desired_capabilities
-
-    returns the drivers current desired capabilities being used
-
-  - get_screenshot_as_file(filename)
-
-    Gets the screenshot of the current window. Returns False if there
-    is any IOError, else returns True. Use full paths in your
-    filename.
-
-    *filename:* The full path you wish to save your screenshot to.
-
-    Usage::
-
-      driver.get_screenshot_as_file('/Screenshots/foo.png')
-
-  - get_screenshot_as_base64()
-
-    Gets the screenshot of the current window as a base64 encoded
-    string which is useful in embedded images in HTML.
-
-    Usage::
-
-      driver.get_screenshot_as_base64()
+        driver.get_screenshot_as_base64()
 
 WebElement
 ~~~~~~~~~~
