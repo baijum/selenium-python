@@ -24,13 +24,9 @@ Downloading Python bindings for Selenium
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 You can download Python bindings for Selenium from the `PyPI page for
-selenium package <http://pypi.python.org/pypi/selenium>`_.  It has a
-dependency on `rdflib <http://pypi.python.org/pypi/rdflib>`_ , version
-3.1.x.
-
-You can also use `easy_install
-<http://python-distribute.org/distribute_setup.py>`_ or `pip
-<http://pypi.python.org/pypi/pip>`_ to install the bindings::
+selenium package <http://pypi.python.org/pypi/selenium>`_.  You can
+also use `easy_install <http://python-distribute.org/distribute_setup.py>`_
+or `pip <http://pypi.python.org/pypi/pip>`_ to install the bindings::
 
   easy_install selenium
 
