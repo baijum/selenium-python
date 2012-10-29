@@ -927,7 +927,7 @@ will be performed through this WebElement interface.
 
       Gets the attribute value.
 
-   .. method:: s_selected(self)
+   .. method:: is_selected(self)
     
       Whether the element is selected.
 
