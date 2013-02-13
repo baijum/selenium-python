@@ -8,7 +8,7 @@ page.  The normal way to do this is by calling "get":
 
 ::
 
-  driver.get("http://www.google.com");
+  driver.get("http://www.google.com")
 
 WebDriver will wait until the page has fully loaded (that is, the
 "onload" event has fired) before returning control to your test or
@@ -56,11 +56,11 @@ tag, for example) an exception will be raised.
 So, you've got an element.  What can you do with it? First of all, you
 may want to enter some text into a text field::
 
-  element.send_keys("some text");
+  element.send_keys("some text")
 
 You can simulate pressing the arrow keys by using the "Keys" class::
 
-  element.send_keys(" and some", Keys.ARROW_DOWN);
+  element.send_keys(" and some", Keys.ARROW_DOWN)
 
 It is possible to call `send_keys` on any element, which makes it
 possible to test keyboard shortcuts such as those used on GMail.  A
@@ -69,7 +69,7 @@ automatically clear it.  Instead, what you type will be appended to
 what's already there.  You can easily clear the contents of a text
 field or textarea with `clear` method::
 
-  element.clear();
+  element.clear()
 
 
 Filling in forms
@@ -117,7 +117,7 @@ walk up the DOM until it finds the enclosing form and then calls
 submit on that.  If the element isn't in a form, then the
 ``NoSuchElementException`` will be raised::
 
-  element.submit();
+  element.submit()
 
 
 Drag and drop
@@ -131,7 +131,7 @@ amount, or on to another element::
 
   from selenium.webdriver import ActionChains
   action_chains = ActionChains(driver)
-  action_chains.drag_and_drop(element, target);
+  action_chains.drag_and_drop(element, target)
 
 
 Moving between windows and frames
@@ -154,7 +154,7 @@ Alternatively, you can pass a "window handle" to the
 over every open window like so::
 
   for handle in driver.window_handles:
-      driver.switch_to_window(handle);
+      driver.switch_to_window(handle)
 
 You can also swing from frame to frame (or into iframes)::
 
@@ -192,7 +192,7 @@ Earlier, we covered navigating to a page using the "get" command (
 has a number of smaller, task-focused interfaces, and navigation is a
 useful task.  To navigate to a page, you can use `get` method::
 
-  driver.get("http://www.example.com");
+  driver.get("http://www.example.com")
 
 To move backwards and forwards in your browser's history::
 
