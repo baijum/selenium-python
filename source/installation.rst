@@ -15,8 +15,8 @@ Selenium Python bindings provide a convenient API to access Selenium
 WebDrivers like Firefox, Ie and Chrome.  The current supported Python
 versions are 2.6, 2.7, 3.2 and 3.3.
 
-This documentation explains using Selenium 2 WebDriver API.
-Selenium 1 / Selenium RC API is not covered here.
+This documentation explains using Selenium 2 WebDriver API.  Selenium
+1 / Selenium RC API is not covered here.
 
 
 Downloading Python bindings for Selenium
@@ -24,8 +24,9 @@ Downloading Python bindings for Selenium
 
 You can download Python bindings for Selenium from the `PyPI page for
 selenium package <http://pypi.python.org/pypi/selenium>`_.  You can
-also use `easy_install <http://python-distribute.org/distribute_setup.py>`_
-or `pip <http://pypi.python.org/pypi/pip>`_ to install the bindings::
+also use `easy_install
+<http://python-distribute.org/distribute_setup.py>`_ or `pip
+<http://pypi.python.org/pypi/pip>`_ to install the bindings::
 
   easy_install selenium
 
@@ -44,13 +45,20 @@ Detailed instructions for Windows users
 
   You should have internet connection to perform this installation.
 
-1. Install Python 2.7 using the `MSI available in python.org download page <http://www.python.org/download>`_.
+1. Install Python 2.7 using the `MSI available in python.org download
+   page <http://www.python.org/download>`_.
 
-2. Create a folder named ``C:\seltests`` and download `virtualenv.py <https://raw.github.com/pypa/virtualenv/master/virtualenv.py>`_ script into that folder.
+2. Create a folder named ``C:\seltests`` and download `virtualenv.py
+   <https://raw.github.com/pypa/virtualenv/master/virtualenv.py>`_
+   script into that folder.
 
-   If you have downloaded and saved the program properly, please make sure ``virtualenv.py`` file exists at this location in your system:  ``C:\seltests\virtualenv.py``
+   If you have downloaded and saved the program properly, please make
+   sure ``virtualenv.py`` file exists at this location in your system:
+   ``C:\seltests\virtualenv.py``
 
-3. Start a command prompt (using the ``cmd.exe`` program), then change to the ``C:\seltests`` folder and run the ``virtualenv.py`` script as given below.
+3. Start a command prompt (using the ``cmd.exe`` program), then change
+   to the ``C:\seltests`` folder and run the ``virtualenv.py`` script
+   as given below.
 
    ::
 
@@ -59,7 +67,8 @@ Detailed instructions for Windows users
      C:\Python27\python.exe virtualenv.py selenv
 
 
-   This step will create a folder named ``C:\seltests\selenv`` which contains a virtual Python.
+   This step will create a folder named ``C:\seltests\selenv`` which
+   contains a virtual Python.
 
 4. Use the ``pip`` command as given below to install `selenium`
 
@@ -67,10 +76,12 @@ Detailed instructions for Windows users
 
      C:\seltests\selenv\Scripts\pip.exe install selenium
 
-   Now installation has been completed!  You can proceed to test your Selenium scripts.
+   Now installation has been completed!  You can proceed to test your
+   Selenium scripts.
 
-Now you can run your test scripts using the virtual Python.  For example, if you have a created
-script and saved it inside ``C:\seltests\my_selenium_script.py``, you can run it like this.
+Now you can run your test scripts using the virtual Python.  For
+example, if you have a created script and saved it inside
+``C:\seltests\my_selenium_script.py``, you can run it like this.
 
 ::
 
@@ -83,11 +94,11 @@ Downloading Selenium server
 .. note::
 
   The Selenium server is only required, if you want to use the remote
-  WebDriver.  See the :ref:`selenium-remote-webdriver` section
-  for more details.
+  WebDriver.  See the :ref:`selenium-remote-webdriver` section for
+  more details.
 
-Selenium server is a Java program.  Java Runtime Environment (JRE)
-1.6 or newer version is recommended to run Selenium server.
+Selenium server is a Java program.  Java Runtime Environment (JRE) 1.6
+or newer version is recommended to run Selenium server.
 
 You can download Selenium server 2.x from the `download page of
 selenium website <http://seleniumhq.org/download/>`_.  The file name
