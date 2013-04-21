@@ -6,8 +6,8 @@ Getting Started
 Simple Usage
 ~~~~~~~~~~~~
 
-If you have installed Selenium server and Python bindings and able to
-run the server, you can start using it from Python like this.
+If you have installed Selenium Python bindings, you can start using it
+from Python like this.
 
 ::
 
