@@ -46,9 +46,7 @@ Detailed instructions for Windows users
 
 1. Install Python 2.7 using the `MSI available in python.org download page <http://www.python.org/download>`_.
 
-2. Install `virtualenv <http://www.virtualenv.org>`_
-
-   Download this Python script: https://raw.github.com/pypa/virtualenv/master/virtualenv.py
+2. Download `virtualenv.py <https://raw.github.com/pypa/virtualenv/master/virtualenv.py>`_ script.
 
 3. Create a virtual environment (You should be in the directory where the `virtualenv.py` script is downloaded)
 
