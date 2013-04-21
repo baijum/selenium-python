@@ -94,10 +94,14 @@ browser will exit entirely.::
 Using Selenium to write tests
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Selenium will be used mostly for writing test cases.  You can write
-test cases using Python's unittest module.  Here is the modified
-example which uses unittest module.  This is a test for python.org
-search functionality::
+Selenium is mostly used for writing test cases.  The `selenium`
+package itself doesn't provide a testing tool/framework.  You can
+write test cases using Python's unittest module.  The other choices as
+a tool/framework are py.test and nose.
+
+In this chapter, we use `unittest` as the framework of choice.  Here
+is the modified example which uses unittest module.  This is a test
+for `python.org` search functionality::
 
   import unittest
   from selenium import webdriver
@@ -132,6 +136,9 @@ You can run the above test case from a shell like this::
   Ran 1 test in 15.566s
 
   OK
+
+The above results shows that, the test has been successfully
+completed.
 
 
 Walk through of the example
@@ -191,7 +198,7 @@ in it::
 
 .. note::
 
-  The `assertIn` API is only available in Python 2.7 unittest module.
+  The `assertIn` API is only available in Python 2.7 and above.
 
 WebDriver offers a number of ways to find elements using one of the
 `find_element_by_*` methods.  For example, the input text element can
