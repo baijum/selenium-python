@@ -4,10 +4,6 @@ Selenium with Python
 
 :Author: `Baiju Muthukadan <http://baijum.blogspot.com>`_
 
-`Fork me on Github <https://github.com/baijum/selenium-python>`_
-
-`PDF version <http://media.readthedocs.org/pdf/selenium-python/latest/selenium-python.pdf>`_
-
 .. note::
 
    This is not an official documentation.  Official API documentation
