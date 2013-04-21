@@ -46,28 +46,35 @@ Detailed instructions for Windows users
 
 1. Install Python 2.7 using the `MSI available in python.org download page <http://www.python.org/download>`_.
 
-2. Download `virtualenv.py <https://raw.github.com/pypa/virtualenv/master/virtualenv.py>`_ script.
+2. Create a folder named ``C:\seltests`` and download `virtualenv.py <https://raw.github.com/pypa/virtualenv/master/virtualenv.py>`_ script into that folder.
 
-3. Create a virtual environment (You should be in the directory where the `virtualenv.py` script is downloaded)
+   If you have downloaded and saved the program properly, please make sure ``virtualenv.py`` file exists at this location in your system:  ``C:\seltests\virtualenv.py``
+
+3. Start a command prompt (using the ``cmd.exe`` program), change to the ``C:\seltests`` folder and run the ``virtualenv.py`` script as given below.
 
    ::
 
+     C:
+     cd C:\seltests
      C:\Python27\python.exe virtualenv.py selenv
 
 
-   This step will create a folder named `selenv` which can be used to install selenium.
+   This step will create a folder named ``C:\seltests\selenv`` which contains a virtual Python.
 
-4. Install selenium
-
-   ::
-
-     selenv\Scripts\pip.exe install selenium
-
-   Now you can run your scripts using the Python inside the virtual environment.
+4. Use the ``pip`` command as given below to install `selenium`
 
    ::
 
-     selenv\Scripts\python.exe my_selenium_script.py
+     C:\seltests\selenv\Scripts\pip.exe install selenium
+
+   Now installation has been completed!  You can proceed to test your Selenium scripts.
+
+Now you can run your test scripts using the virtual Python.  For example, if you have a created
+script and saved it inside ``C:\seltests\my_selenium_script.py``, you can run it like this.
+
+::
+
+  C:\seltests\selenv\Scripts\python.exe C:\seltests\my_selenium_script.py
 
 
 Downloading Selenium server
