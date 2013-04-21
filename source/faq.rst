@@ -3,6 +3,7 @@
 Appendix: Frequently asked questions
 ------------------------------------
 
+Another FAQ: https://code.google.com/p/selenium/wiki/FrequentlyAskedQuestions
 
 How to use ChromeDriver ?
 ~~~~~~~~~~~~~~~~~~~~~~~~~
