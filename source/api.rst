@@ -11,6 +11,39 @@ WebDriver API
 
 This chapter cover all the interfaces of Selenium WebDriver.
 
+
+*Recommended Import Style*
+
+The API definitions in this chapter shows the absolute location of classes.
+However the recommended import style is as given below::
+
+  from selenium import webdriver
+
+Then, you can access the classes like this::
+
+  webdriver.Firefox
+  webdriver.FirefoxProfile
+  webdriver.Chrome
+  webdriver.ChromeOptions
+  webdriver.Ie
+  webdriver.Opera
+  webdriver.PhantomJS
+  webdriver.Remote
+  webdriver.DesiredCapabilities
+  webdriver.ActionChains
+  webdriver.TouchActions
+  webdriver.Proxy
+
+The special keys class (``Keys``) can be imported like this::
+
+  from selenium.webdriver.common.keys import Keys
+
+The exception classes can be imported like this (Replace the ``TheNameOfTheExceptionClass`` with actual class name)::
+
+  from selenium.common.exceptions import [TheNameOfTheExceptionClass]
+
+*Conventions used in the API*
+
 Some attributes are callable (or methods) and others are non-callable
 (properties).  All the callable attributes are ending with round
 brackets.
