@@ -15,9 +15,7 @@ Selenium Python bindings provide a convenient API to access Selenium
 WebDrivers like Firefox, Ie and Chrome.  The current supported Python
 versions are 2.6, 2.7, 3.2 and 3.3.
 
-Selenium server is a Java program.  Java Runtime Environment (JRE)
-1.6 or newer version is recommended to run Selenium
-server.  This article explain using Selenium 2 WebDriver API.
+This documentation explains using Selenium 2 WebDriver API.
 Selenium 1 / Selenium RC API is not covered here.
 
 
@@ -82,6 +80,9 @@ Downloading Selenium server
   The Selenium server is only required, if you want to use the remote
   WebDriver.  See the :ref:`selenium-remote-webdriver` section
   for more details.
+
+Selenium server is a Java program.  Java Runtime Environment (JRE)
+1.6 or newer version is recommended to run Selenium server.
 
 You can download Selenium server 2.x from the `download page of
 selenium website <http://seleniumhq.org/download/>`_.  The file name
