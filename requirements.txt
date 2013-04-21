@@ -1,3 +1,2 @@
 selenium
-rdflib
-sphinx
+Sphinx
