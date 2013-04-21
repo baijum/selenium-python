@@ -50,7 +50,7 @@ Detailed instructions for Windows users
 
    If you have downloaded and saved the program properly, please make sure ``virtualenv.py`` file exists at this location in your system:  ``C:\seltests\virtualenv.py``
 
-3. Start a command prompt (using the ``cmd.exe`` program), change to the ``C:\seltests`` folder and run the ``virtualenv.py`` script as given below.
+3. Start a command prompt (using the ``cmd.exe`` program), then change to the ``C:\seltests`` folder and run the ``virtualenv.py`` script as given below.
 
    ::
 
