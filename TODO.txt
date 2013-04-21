@@ -1,5 +1,4 @@
 - Cover basics of unittest
 - XPATH (Appendix)
 - Mouse over
-- Fix "Navigating" chapter API
 - Complete: Test Design Considerations
