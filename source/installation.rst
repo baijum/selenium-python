@@ -80,7 +80,7 @@ Detailed instructions for Windows users
    Selenium scripts.
 
 Now you can run your test scripts using the virtual Python.  For
-example, if you have a created script and saved it inside
+example, if you have created a Selenium based script and saved it inside
 ``C:\seltests\my_selenium_script.py``, you can run it like this.
 
 ::
