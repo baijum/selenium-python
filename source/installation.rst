@@ -12,10 +12,10 @@ Selenium Python API you can access all functionalities of Selenium
 WebDriver in an intuitive way.
 
 Selenium Python bindings provide a convenient API to access Selenium
-WebDrivers like Firefox, Ie and Chrome.  The current supported Python
-versions are 2.6, 2.7, 3.2 and 3.3.
+WebDrivers like Firefox, Ie, Chrome, Remote etc..  The current supported
+Python versions are 2.6, 2.7, 3.2 and 3.3.
 
-This documentation explains using Selenium 2 WebDriver API.  Selenium
+This documentation explains Selenium 2 WebDriver API.  Selenium
 1 / Selenium RC API is not covered here.
 
 
