@@ -109,21 +109,21 @@ latest 2.x version of Selenium server.
 If Java Runtime Environment (JRE) is not installed in your system, you
 can download the `JRE from the Oracle website
 <http://www.oracle.com/technetwork/java/javase/downloads/index.html>`_.
-If you have root access in your system, you can also use your
-operating system instructions to install JRE.
+If you are using a GNU/Linux system and have root access in your system,
+you can also use your operating system instructions to install JRE.
 
-
-Running Selenium server
-~~~~~~~~~~~~~~~~~~~~~~~
-
-You should have Java Runtime Environment (JRE) in the system.  If
-`java` command is available in the PATH (environment variable), you
-can start the Selenium server using the command command given below.
-Replace `2.x.x` with actual version of Selenium server you downloaded
-from the site.  If JRE is installed as a non-root user and/or if it is
-not available in the PATH (environment variable), you can type the
-relative/absolute path to the `java` command, for eg:-
-``./jre1.6.0_26/bin/java``::
+If `java` command is available in the PATH (environment variable),
+you can start the Selenium server using this command::
 
   java -jar selenium-server-standalone-2.x.x.jar
 
+Replace `2.x.x` with actual version of Selenium server you downloaded
+from the site.
+
+If JRE is installed as a non-root user and/or if it is
+not available in the PATH (environment variable), you can type the
+relative or absolute path to the `java` command.  Similarly, you can
+provide relative or absolute path to Selenium server jar file.
+Then, the command will look something like this::
+
+  /path/to/java -jar /path/to/selenium-server-standalone-2.x.x.jar
