@@ -4,21 +4,18 @@ Navigating
 ----------
 
 The first thing you'll want to do with WebDriver is navigate to a
-page.  The normal way to do this is by calling "get":
+link.  The normal way to do this is by calling ``get`` method:
 
 ::
 
   driver.get("http://www.google.com")
 
 WebDriver will wait until the page has fully loaded (that is, the
-"onload" event has fired) before returning control to your test or
+``onload`` event has fired) before returning control to your test or
 script.  It's worth noting that if your page uses a lot of AJAX on
 load then WebDriver may not know when it has completely loaded.  If
 you need to ensure such pages are fully loaded then you can use
-"waits".
-
-.. TODO: link to a section on explicit waits in WebDriver
-
+`waits <http://docs.seleniumhq.org/docs/04_webdriver_advanced.jsp#explicit-and-implicit-waits>`_.
 
 Interacting with the page
 ~~~~~~~~~~~~~~~~~~~~~~~~~
