@@ -8,8 +8,8 @@ Another FAQ: https://code.google.com/p/selenium/wiki/FrequentlyAskedQuestions
 How to use ChromeDriver ?
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Download the latest `chromdriver from download page
-<http://code.google.com/p/chromium/downloads/list>`_.  Unzip the
+Download the latest `chromedriver from download page
+<https://code.google.com/p/chromedriver/downloads/list>`_.  Unzip the
 file::
 
   unzip chromedriver_linux32_x.x.x.x.zip
