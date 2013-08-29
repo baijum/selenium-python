@@ -19,7 +19,6 @@ Selenium with Python
    locating-elements
    api
    faq
-   references
 
 
 Indices and tables
