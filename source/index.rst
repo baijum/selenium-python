@@ -17,7 +17,6 @@ Selenium with Python
    getting-started
    navigating
    locating-elements
-   test-design
    api
    faq
    references
