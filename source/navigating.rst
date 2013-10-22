@@ -222,12 +222,3 @@ domain that the cookie will be valid for:
   all_cookies = driver.get_cookies()
   for cookie_name, cookie_value in all_cookies.items():
       print "%s -> %s", cookie_name, cookie_value
-
-
-Next, next steps!
-~~~~~~~~~~~~~~~~~
-
-This has been a high level walkthrough of WebDriver and some of its
-key capabilities.  You may want to look at the `Test Design
-Considerations` chapter to get some ideas about how you can reduce the
-pain of maintaining your tests and how to make your code more modular.
