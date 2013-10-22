@@ -52,7 +52,8 @@ Detailed instructions for Windows users
 
 3. Download `virtualenv
    <https://pypi.python.org/packages/source/v/virtualenv/virtualenv-1.10.1.tar.gz>`_
-   tar ball inside ``C:\seltests`` and extract it.
+   tar ball inside ``C:\seltests`` and extract it.  Ensure the tar bal has been extracted
+   to ``C:\seltests\virtualenv-1.10.1`` folder (To extract you can use WinZip or 7-zip)
 
 4. Start a command prompt (using the ``cmd.exe`` program), then change
    to the ``C:\seltests\virtualenv-1.10.1`` folder and run the ``virtualenv.py`` script
