@@ -147,3 +147,35 @@ WebElement
    :member-order: groupwise
    :show-inheritance:
 
+UI Support
+~~~~~~~~~~
+
+.. automodule:: selenium.webdriver.support.select
+   :members:
+   :undoc-members:
+   :member-order: groupwise
+   :show-inheritance:
+
+.. automodule:: selenium.webdriver.support.wait
+   :members:
+   :undoc-members:
+   :member-order: groupwise
+   :show-inheritance:
+
+Color Support
+~~~~~~~~~~~~~
+
+.. automodule:: selenium.webdriver.support.color
+   :members:
+   :undoc-members:
+   :member-order: groupwise
+   :show-inheritance:
+
+Expected conditions Support
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. automodule:: selenium.webdriver.support.expected_conditions
+   :members:
+   :undoc-members:
+   :member-order: groupwise
+   :show-inheritance:
