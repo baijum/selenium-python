@@ -55,7 +55,7 @@ Detailed instructions for Windows users
    tar ball inside ``C:\seltests`` and extract it.
 
 4. Start a command prompt (using the ``cmd.exe`` program), then change
-   to the ``C:\seltests`` folder and run the ``virtualenv.py`` script
+   to the ``C:\seltests\virtualenv-1.10.1`` folder and run the ``virtualenv.py`` script
    as given below.
 
    ::
