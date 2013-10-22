@@ -17,6 +17,7 @@ Selenium with Python
    getting-started
    navigating
    locating-elements
+   waits
    api
    faq
 
