@@ -52,7 +52,7 @@ returns successfully.  A successful return is for ExpectedCondition
 type is Boolean return true or not null return value for all other
 ExpectedCondition types.
 
-*Expected Conditions*
+**Expected Conditions**
 
 There are some common conditions that are frequently come across when
 automating web browsers.  Listed below are Implementations of
