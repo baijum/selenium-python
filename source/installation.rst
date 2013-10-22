@@ -48,29 +48,27 @@ Detailed instructions for Windows users
 1. Install Python 2.7 using the `MSI available in python.org download
    page <http://www.python.org/download>`_.
 
-2. Create a folder named ``C:\seltests`` and download `virtualenv.py
-   <https://raw.github.com/pypa/virtualenv/master/virtualenv.py>`_
-   script into that folder.
+2. Create a folder named ``C:\seltests``
 
-   If you have downloaded and saved the program properly, please make
-   sure ``virtualenv.py`` file exists at this location in your system:
-   ``C:\seltests\virtualenv.py``
+3. Download `virtualenv
+   <https://pypi.python.org/packages/source/v/virtualenv/virtualenv-1.10.1.tar.gz>`_
+   tar ball inside ``C:\seltests`` and extract it.
 
-3. Start a command prompt (using the ``cmd.exe`` program), then change
+4. Start a command prompt (using the ``cmd.exe`` program), then change
    to the ``C:\seltests`` folder and run the ``virtualenv.py`` script
    as given below.
 
    ::
 
      C:
-     cd C:\seltests
-     C:\Python27\python.exe virtualenv.py selenv
+     cd C:\seltests\virtualenv-1.10.1
+     C:\Python27\python.exe virtualenv.py C:\seltests\selenv
 
 
    This step will create a folder named ``C:\seltests\selenv`` which
    contains a virtual Python.
 
-4. Use the ``pip`` command as given below to install `selenium`
+5. Use the ``pip`` command as given below to install `selenium`
 
    ::
 
