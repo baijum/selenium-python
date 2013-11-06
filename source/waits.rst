@@ -83,7 +83,7 @@ own utility package for them.
   from selenium.webdriver.support import expected_conditions as EC
 
   wait = WebDriverWait(driver, 10)
-  element = wait.until(EC.element_to_be_clickable((By.Id,'someid')))
+  element = wait.until(EC.element_to_be_clickable((By.ID,'someid')))
 
 The expected_conditions module contains a set of predefined conditions
 to use with WebDriverWait.
