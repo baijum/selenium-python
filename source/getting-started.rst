@@ -66,7 +66,7 @@ in it::
 WebDriver offers a number of ways to find elements using one of the
 `find_element_by_*` methods.  For example, the input text element can
 be located by its `name` attribute using `find_element_by_name`
-method.  Detailed explanation of findind elements is available in the
+method.  Detailed explanation of finding elements is available in the
 :ref:`locating-elements` chapter::
 
   elem = driver.find_element_by_name("q")
@@ -223,8 +223,8 @@ site.  You can confirm it by asserting "Google" in the title::
 The `tearDown` method will get called after every test method.  This
 is a place to do all cleanup actions.  In the current method, the
 browser window is closed.  You can also call `quit` method instead of
-`close`.  The `quit` will exit all entire browser where as `close`
-will close one tab, but if it just one tab, by default most browser
+`close`.  The `quit` will exit entire browser, where as `close`
+will close a tab, but if it is just one tab, by default most browser
 will exit entirely.::
 
       def tearDown(self):
