@@ -77,11 +77,11 @@ Filling in forms
 
 We've already seen how to enter text into a textarea or text field,
 but what about the other elements? You can "toggle" the state of
-checkboxes, and you can use "setSelected" to set something like an
+drop down, and you can use "setSelected" to set something like an
 `OPTION` tag selected.  Dealing with `SELECT` tags isn't too bad::
 
-    select = driver.find_element_by_xpath("//select")
-    all_options = select.find_elements_by_tag_name("option")
+    element = driver.find_element_by_xpath("//select[@name='name']")
+    all_options = element.find_elements_by_tag_name("option")
     for option in all_options:
         print "Value is: %s" % option.get_attribute("value")
         option.click()
@@ -90,19 +90,31 @@ This will find the first "SELECT" element on the page, and cycle
 through each of it's OPTIONs in turn, printing out their values, and
 selecting each in turn.
 
-.. As you can see, this isn't the most efficient
-.. way of dealing with SELECT elements . WebDriver's support classes
-.. include one called "Select", which provides useful methods for
-.. interacting with these.
+As you can see, this isn't the most efficient
+way of dealing with SELECT elements . WebDriver's support classes
+include one called "Select", which provides useful methods for
+interacting with these.
 
-.. ::
+::
 
-..     select = driver.find_element_by_xpath("//select").select()  #<- FIXME: API
-..     select.deselectAll() #<- FIXME: API
-..     select.selectByVisibleText("Edam") #<- FIXME: API
+    select = Select(driver.find_element_by_name('name'))
+    select.select_by_index(index)
+    select.select_by_visible_text("text")
+    select.select_by_value(value)
 
-.. This will deselect all OPTIONs from the first SELECT on the page, and
-.. then select the OPTION with the displayed text of "Edam".
+
+WebDriver also provides features for deselecting all the selected options::
+
+    select = Select(driver.find_element_by_id('id'))
+    select.deselect_all()
+
+This will deselect all OPTIONs from the first SELECT on the page.
+
+Suppose in a test, we need the list of all default selected options, Select
+class provides a method that returns a list::
+
+	select = Select(driver.find_element_by_xpath("xpath"))
+    all_options = select.all_selected_options()
 
 Once you've finished filling out the form, you probably want to submit
 it. One way to do this would be to find the "submit" button and click
@@ -168,6 +180,10 @@ and you can specify the frame by its index too.  That is::
 would go to the frame named "child" of the first subframe of the frame
 called "frameName".  **All frames are evaluated as if from *top*.**
 
+Once we are done with working on frames, we will have to come back
+to the parent frame which can be done using::
+
+  driver.switch_to_default_content()
 
 Popup dialogs
 ~~~~~~~~~~~~~
