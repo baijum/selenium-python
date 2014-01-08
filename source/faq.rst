@@ -14,7 +14,7 @@ file::
 
   unzip chromedriver_linux32_x.x.x.x.zip
 
-You should see a ``chromedriver`` executable.  Now you can instance of
+You should see a ``chromedriver`` executable.  Now you can create an instance of
 Chrome WebDriver like this::
 
   driver = webdriver.Chrome(executable_path="/path/to/chromedriver")
