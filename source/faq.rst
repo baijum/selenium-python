@@ -14,7 +14,7 @@ file::
 
   unzip chromedriver_linux32_x.x.x.x.zip
 
-You should see a ``chromedriver`` executable.  Now you can instance of
+You should see a ``chromedriver`` executable.  Now you can create an instance of
 Chrome WebDriver like this::
 
   driver = webdriver.Chrome(executable_path="/path/to/chromedriver")
@@ -30,7 +30,7 @@ Ref: http://seleniumhq.org/docs/03_webdriver.html#how-xpath-works-in-webdriver
 Selenium delegate XPath queries down to the browser's own XPath
 engine, so Selenium support XPath supports whatever the browser
 supports.  In browsers which don't have native XPath engines (IE
-6,7,8), Selenium support XPath 1.0 only.
+6,7,8), Selenium supports XPath 1.0 only.
 
 
 How to scroll down to the bottom of a page ?
