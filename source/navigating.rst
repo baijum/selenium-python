@@ -15,7 +15,7 @@ WebDriver will wait until the page has fully loaded (that is, the
 script.  It's worth noting that if your page uses a lot of AJAX on
 load then WebDriver may not know when it has completely loaded.  If
 you need to ensure such pages are fully loaded then you can use
-`waits <http://docs.seleniumhq.org/docs/04_webdriver_advanced.jsp#explicit-and-implicit-waits>`_.
+:ref:`waits <waits>`.
 
 Interacting with the page
 ~~~~~~~~~~~~~~~~~~~~~~~~~
