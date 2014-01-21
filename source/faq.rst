@@ -113,3 +113,15 @@ First download the Firebug XPI file, later you call the
   fp.set_preference("extensions.firebug.currentVersion", "1.8.4") #Avoid startup screen
   browser = webdriver.Firefox(firefox_profile=fp)
 
+How to take screenshot of the current window ?
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Use the `save_screenshot` method provided by the webdriver::
+
+  from selenium import webdriver
+
+  driver = webdriver.Firefox()
+  driver.get('http://www.python.org/')
+  driver.save_screenshot('screenshot.png')
+  driver.quit()
+
