@@ -108,10 +108,14 @@ WebDriver also provides features for deselecting all the selected options::
 This will deselect all OPTIONs from the first SELECT on the page.
 
 Suppose in a test, we need the list of all default selected options, Select
-class provides a method that returns a list::
+class provides a property method that returns a list::
 
 	select = Select(driver.find_element_by_xpath("xpath"))
-    all_options = select.all_selected_options()
+    all_selected_options = select.all_selected_options
+    
+To get all available options::
+
+    options = select.options
 
 Once you've finished filling out the form, you probably want to submit
 it. One way to do this would be to find the "submit" button and click
