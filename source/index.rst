@@ -2,7 +2,7 @@
 Selenium with Python
 ********************
 
-:Author: `Baiju Muthukadan <http://baijum.blogspot.com>`_
+:Author: `Baiju Muthukadan <http://muthukadan.net>`_
 
 .. note::
 
