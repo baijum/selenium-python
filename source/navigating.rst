@@ -93,7 +93,7 @@ include one called "Select", which provides useful methods for
 interacting with these.
 
 ::
-
+    from selenium.webdriver.support.ui import Select
     select = Select(driver.find_element_by_name('name'))
     select.select_by_index(index)
     select.select_by_visible_text("text")
