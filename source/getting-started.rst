@@ -77,7 +77,7 @@ keyboard.  Special keys can be send using `Keys` class imported from
   elem.send_keys("selenium")
   elem.send_keys(Keys.RETURN)
 
-After submission of the page, you should get the resulf if there is any::
+After submission of the page, you should get the result if there is any::
 
 Finally, the browser window is closed.  You can also call `quit`
 method instead of `close`.  The `quit` will exit entire browser where
