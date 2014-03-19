@@ -37,12 +37,12 @@ accomplished.
   from selenium.webdriver.support.ui import WebDriverWait # available since 2.4.0
   from selenium.webdriver.support import expected_conditions as EC # available since 2.26.0
 
-  ff = webdriver.Firefox()
-  ff.get("http://somedomain/url_that_delays_loading")
+  driver = webdriver.Firefox()
+  driver.get("http://somedomain/url_that_delays_loading")
   try:
-      element = WebDriverWait(ff, 10).until(EC.presence_of_element_located((By.ID, "myDynamicElement")))
+      element = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, "myDynamicElement")))
   finally:
-      ff.quit()
+      driver.quit()
 
 
 This waits up to 10 seconds before throwing a TimeoutException or if
@@ -101,9 +101,7 @@ implicit wait is set for the life of the WebDriver object instance.
 
   from selenium import webdriver
 
-  ff = webdriver.Firefox()
-  ff.implicitly_wait(10) # seconds
-  ff.get("http://somedomain/url_that_delays_loading")
-  myDynamicElement = ff.find_element_by_id("myDynamicElement")
-
-
+  driver = webdriver.Firefox()
+  driver.implicitly_wait(10) # seconds
+  driver.get("http://somedomain/url_that_delays_loading")
+  myDynamicElement = driver.find_element_by_id("myDynamicElement")
