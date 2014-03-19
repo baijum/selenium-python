@@ -191,9 +191,6 @@ in it::
 
           self.assertIn("Python", driver.title)
 
-.. note::
-
-  The `assertIn` API is only available in Python 2.7 and above.
 
 WebDriver offers a number of ways to find elements using one of the
 `find_element_by_*` methods.  For example, the input text element can
