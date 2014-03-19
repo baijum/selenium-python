@@ -13,7 +13,7 @@ WebDriver in an intuitive way.
 
 Selenium Python bindings provide a convenient API to access Selenium
 WebDrivers like Firefox, Ie, Chrome, Remote etc..  The current supported
-Python versions are 2.6, 2.7, 3.2 and 3.3.
+Python versions are 2.7, 3.2, 3.3 and 3.4.
 
 This documentation explains Selenium 2 WebDriver API.  Selenium
 1 / Selenium RC API is not covered here.
@@ -23,19 +23,19 @@ Downloading Python bindings for Selenium
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 You can download Python bindings for Selenium from the `PyPI page for
-selenium package <http://pypi.python.org/pypi/selenium>`_.  You can
-also use `easy_install
-<http://python-distribute.org/distribute_setup.py>`_ or `pip
-<http://pypi.python.org/pypi/pip>`_ to install the bindings::
-
-  easy_install selenium
-
-or::
+selenium package <http://pypi.python.org/pypi/selenium>`_.  However,
+a better approach would be to use
+`pip <http://www.pip-installer.org/en/latest/installing.html>`_ to
+install the selenium package.  Python 3.4 has pip available in the
+`standard library <http://docs.python.org/3.4/installing/index.html>`_.
+Once you have pip installed, you can install selenium like this::
 
   pip install selenium
 
 You may consider using `virtualenv <http://www.virtualenv.org>`_
-to create isolated Python environments.
+to create isolated Python environments.  Python 3.4 has `pyvenv
+<http://docs.python.org/3.4/using/scripts.html#scripts-pyvenv>`_
+which is almost same as virtualenv.
 
 
 Detailed instructions for Windows users
@@ -45,46 +45,21 @@ Detailed instructions for Windows users
 
   You should have internet connection to perform this installation.
 
-1. Install Python 2.7 using the `MSI available in python.org download
+1. Install Python 3.4 using the `MSI available in python.org download
    page <http://www.python.org/download>`_.
 
-2. Create a folder named ``C:\seltests``
-
-3. Download `virtualenv
-   <https://pypi.python.org/packages/source/v/virtualenv/virtualenv-1.10.1.tar.gz>`_
-   tar ball inside ``C:\seltests`` and extract it.  Ensure the tar bal has been extracted
-   to ``C:\seltests\virtualenv-1.10.1`` folder (To extract you can use WinZip or 7-zip)
-
-4. Start a command prompt (using the ``cmd.exe`` program), then change
-   to the ``C:\seltests\virtualenv-1.10.1`` folder and run the ``virtualenv.py`` script
-   as given below.
+2. Start a command prompt using the ``cmd.exe`` program and run the
+   ``pip`` command as given below to install `selenium`.
 
    ::
+   
+     C:\Python34\Scripts\pip.exe install selenium
 
-     C:
-     cd C:\seltests\virtualenv-1.10.1
-     C:\Python27\python.exe virtualenv.py C:\seltests\selenv
+Now you can run your test scripts using Python.  For example,
+if you have created a Selenium based script and saved it inside
+``C:\my_selenium_script.py``, you can run it like this::
 
-
-   This step will create a folder named ``C:\seltests\selenv`` which
-   contains a virtual Python.
-
-5. Use the ``pip`` command as given below to install `selenium`
-
-   ::
-
-     C:\seltests\selenv\Scripts\pip.exe install selenium
-
-   Now installation has been completed!  You can proceed to test your
-   Selenium scripts.
-
-Now you can run your test scripts using the virtual Python.  For
-example, if you have created a Selenium based script and saved it inside
-``C:\seltests\my_selenium_script.py``, you can run it like this.
-
-::
-
-  C:\seltests\selenv\Scripts\python.exe C:\seltests\my_selenium_script.py
+  C:\Python34\python.exe C:\my_selenium_script.py
 
 
 Downloading Selenium server
