@@ -20,7 +20,6 @@ from Python like this.
   elem = driver.find_element_by_name("q")
   elem.send_keys("selenium")
   elem.send_keys(Keys.RETURN)
-  assert "Google" in driver.title
   driver.close()
 
 The above script can be saved into a file (eg:-
@@ -78,10 +77,7 @@ keyboard.  Special keys can be send using `Keys` class imported from
   elem.send_keys("selenium")
   elem.send_keys(Keys.RETURN)
 
-After submission of the page, you should be reached in the Google
-site::
-
-  assert "Google" in driver.title
+After submission of the page, you should get the result if there is any::
 
 Finally, the browser window is closed.  You can also call `quit`
 method instead of `close`.  The `quit` will exit entire browser where
@@ -119,7 +115,6 @@ for `python.org` search functionality::
           elem = driver.find_element_by_name("q")
           elem.send_keys("selenium")
           elem.send_keys(Keys.RETURN)
-          self.assertIn("Google", driver.title)
 
       def tearDown(self):
           self.driver.close()
@@ -215,10 +210,8 @@ keyboard.  Special keys can be send using `Keys` class imported from
           elem.send_keys("selenium")
           elem.send_keys(Keys.RETURN)
 
-After submission of the page, you should be reached in the Google
-site.  You can confirm it by asserting "Google" in the title::
-
-          self.assertIn("Google", driver.title)
+After submission of the page, you should get result as per search if
+there is any.
 
 The `tearDown` method will get called after every test method.  This
 is a place to do all cleanup actions.  In the current method, the
