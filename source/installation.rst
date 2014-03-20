@@ -69,7 +69,8 @@ Downloading Selenium server
 
   The Selenium server is only required, if you want to use the remote
   WebDriver.  See the :ref:`selenium-remote-webdriver` section for
-  more details.
+  more details.  If you are a beginner learning Selenium, you can
+  skip this section and proceed with next chapter.
 
 Selenium server is a Java program.  Java Runtime Environment (JRE) 1.6
 or newer version is recommended to run Selenium server.
