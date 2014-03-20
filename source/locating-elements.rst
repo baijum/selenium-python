@@ -208,3 +208,26 @@ The continue.html link can be located like this::
   continue_link = driver.find_element_by_link_text('Continue')
   continue_link = driver.find_element_by_partial_link_text('Conti')
 
+
+Locating Elements by Tag Name
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Use this when you want to locate an element by tag name. With this
+strategy, the first element with the give tag name will be returned.
+If no element has a matching tag name, a ``NoSuchElementException``
+will be raised.
+
+For instance, conside this page source::
+
+  <html>
+   <body>
+    <h1>Welcome</h1>
+    <p>Site content goes here.</p>
+  </body>
+  <html>
+
+The heading (h1) element can be located like this::
+
+  heading1 = driver.find_element_by_tag_name('h1')
+
+  
