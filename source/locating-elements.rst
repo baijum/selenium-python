@@ -250,3 +250,26 @@ For instance, consider this page source::
 The "p" element can be located like this::
 
   content = driver.find_element_by_class_name('content')
+
+Locating Elements by CSS Selectors
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Use this when you want to locate an element by CSS selector syntaxt.
+With this strategy, the first element with the matching CSS selector
+will be returned.  If no element has a matching CSS selector,
+a ``NoSuchElementException`` will be raised.
+
+For instance, consider this page source::
+
+  <html>
+   <body>
+    <p class="content">Site content goes here.</p>
+  </body>
+  <html>
+
+The "p" element can be located like this::
+
+  content = driver.find_element_by_css_selector('p.content')
+  
+`SouceLabs has a good documentation <http://saucelabs.com/resources/selenium/css-selectors>`_
+on CSS selectors.
