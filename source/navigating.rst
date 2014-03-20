@@ -110,7 +110,7 @@ This will deselect all OPTIONs from the first SELECT on the page.
 Suppose in a test, we need the list of all default selected options, Select
 class provides a property method that returns a list::
 
-	select = Select(driver.find_element_by_xpath("xpath"))
+    select = Select(driver.find_element_by_xpath("xpath"))
     all_selected_options = select.all_selected_options
     
 To get all available options::
