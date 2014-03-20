@@ -193,7 +193,7 @@ strategy, the first element with the link text value matching the
 location will be returned.  If no element has a matching link text
 attribute, a ``NoSuchElementException`` will be raised.
 
-For instance, conside this page source::
+For instance, consider this page source::
 
   <html>
    <body>
@@ -230,4 +230,23 @@ The heading (h1) element can be located like this::
 
   heading1 = driver.find_element_by_tag_name('h1')
 
-  
+
+Locating Elements by Class Name
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Use this when you want to locate an element by class attribute name.
+With this strategy, the first element with the matching class attribute
+name will be returned.  If no element has a matching class attribute name,
+a ``NoSuchElementException`` will be raised.
+
+For instance, consider this page source::
+
+  <html>
+   <body>
+    <p class="content">Site content goes here.</p>
+  </body>
+  <html>
+
+The "p" element can be located like this::
+
+  content = driver.find_element_by_class_name('content')
