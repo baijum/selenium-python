@@ -71,7 +71,8 @@ Another way to find content type is using the `requests
 <http://python-requests.org>`_ module, you can use it like this::
 
   import requests
-  print requests.head('http://www.python.org').headers['content-type']
+  content_type = requests.head('http://www.python.org').headers['content-type']
+  print(content_type)
 
 Once the content type is identified, you can use it to set the firefox
 profile preference: ``browser.helperApps.neverAsk.saveToDisk``

@@ -80,7 +80,7 @@ drop down, and you can use "setSelected" to set something like an
     element = driver.find_element_by_xpath("//select[@name='name']")
     all_options = element.find_elements_by_tag_name("option")
     for option in all_options:
-        print "Value is: %s" % option.get_attribute("value")
+        print("Value is: %s" % option.get_attribute("value"))
         option.click()
 
 This will find the first "SELECT" element on the page, and cycle
@@ -241,4 +241,4 @@ domain that the cookie will be valid for:
   # And now output all the available cookies for the current URL
   all_cookies = driver.get_cookies()
   for cookie_name, cookie_value in all_cookies.items():
-      print "%s -> %s", cookie_name, cookie_value
+      print("%s -> %s", cookie_name, cookie_value)
