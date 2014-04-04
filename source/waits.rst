@@ -12,11 +12,11 @@ this issue.  Waiting provides some time interval between actions
 performed - mostly locating element or any other operation with the
 element.
 
-Selenium webdriver two types of waits - implicit & explicit.  An
-explicit wait makes WebDriver to wait for a certain condition to occur
-before proceeding further with executions.  An implicit wait makes
-WebDriver to poll the DOM for a certain amount of time when trying to
-locate an element.
+Selenium Webdriver provides two types of waits - implicit & explicit.
+An explicit wait makes WebDriver to wait for a certain condition to
+occur before proceeding further with executions.  An implicit wait
+makes WebDriver to poll the DOM for a certain amount of time when
+trying to locate an element.
 
 
 Explicit Waits
