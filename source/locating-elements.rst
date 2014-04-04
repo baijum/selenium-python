@@ -271,5 +271,5 @@ The "p" element can be located like this::
 
   content = driver.find_element_by_css_selector('p.content')
   
-`SouceLabs has a good documentation <http://saucelabs.com/resources/selenium/css-selectors>`_
+`Sauce Labs has good documentation <http://saucelabs.com/resources/selenium/css-selectors>`_
 on CSS selectors.
