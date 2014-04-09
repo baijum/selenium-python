@@ -1,6 +1,6 @@
 .. _faq:
 
-Appendix: Frequently asked questions
+Appendix: Frequently Asked Questions
 ------------------------------------
 
 Another FAQ: https://code.google.com/p/selenium/wiki/FrequentlyAskedQuestions
@@ -19,15 +19,14 @@ Chrome WebDriver like this::
 
   driver = webdriver.Chrome(executable_path="/path/to/chromedriver")
 
-The rest of the example should work as given in other other
-documentation.
+The rest of the example should work as given in other documentation.
 
-Does Selenium 2 supports XPath 2.0 ?
+Does Selenium 2 support XPath 2.0 ?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Ref: http://seleniumhq.org/docs/03_webdriver.html#how-xpath-works-in-webdriver
 
-Selenium delegate XPath queries down to the browser's own XPath
+Selenium delegates XPath queries down to the browser's own XPath
 engine, so Selenium support XPath supports whatever the browser
 supports.  In browsers which don't have native XPath engines (IE
 6,7,8), Selenium supports XPath 1.0 only.
@@ -58,6 +57,7 @@ How to auto save files using custom Firefox profile ?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Ref: http://stackoverflow.com/questions/1176348/access-to-file-download-dialog-in-firefox
+
 Ref: http://blog.codecentric.de/en/2010/07/file-downloads-with-selenium-mission-impossible/
 
 The first step is to identify the type of file you want to auto save.
