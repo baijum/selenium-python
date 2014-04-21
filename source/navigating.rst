@@ -90,9 +90,8 @@ selecting each in turn.
 As you can see, this isn't the most efficient
 way of dealing with SELECT elements . WebDriver's support classes
 include one called "Select", which provides useful methods for
-interacting with these.
+interacting with these::
 
-::
     from selenium.webdriver.support.ui import Select
     select = Select(driver.find_element_by_name('name'))
     select.select_by_index(index)
