@@ -195,7 +195,7 @@ in it::
 WebDriver offers a number of ways to find elements using one of the
 `find_element_by_*` methods.  For example, the input text element can
 be located by its `name` attribute using `find_element_by_name`
-method.  Detailed explanation of findind elements is available in the
+method.  Detailed explanation of finding elements is available in the
 :ref:`locating-elements` chapter::
 
           elem = driver.find_element_by_name("q")
