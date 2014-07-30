@@ -100,6 +100,13 @@ content type.
 The ``browser.download.dir`` option specify the directory where you
 want to download the files.
 
+How to upload files into file inputs ?
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Select the ``<input type="file">`` element and call the ``send_keys()`` method passing 
+the file path, either the path relative to the test script, or an absolute path.
+Keep in mind the differences in path names between Windows and Unix systems.
+
 How to use firebug with Firefox ?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
