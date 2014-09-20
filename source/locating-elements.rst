@@ -28,6 +28,30 @@ methods to locate elements in a page:
 - `find_elements_by_css_selector`
 
 
+Apart from the public methods given above, there are two private
+methods which might be useful with locators in page objects.  These
+are the two private methods: `find_element` and `find_elements`.
+
+Example usage::
+
+  from selenium.webdriver.common.by import By
+
+  driver.find_element(By.XPATH, '//button[text()="Some text"]')
+  driver.find_elements(By.XPATH, '//button')
+
+
+These are the attributes available for `By` class::
+
+    ID = "id"
+    XPATH = "xpath"
+    LINK_TEXT = "link text"
+    PARTIAL_LINK_TEXT = "partial link text"
+    NAME = "name"
+    TAG_NAME = "tag name"
+    CLASS_NAME = "class name"
+    CSS_SELECTOR = "css selector"
+
+
 Locating by Id
 ~~~~~~~~~~~~~~
 
@@ -270,6 +294,6 @@ For instance, consider this page source::
 The "p" element can be located like this::
 
   content = driver.find_element_by_css_selector('p.content')
-  
+
 `Sauce Labs has good documentation <http://saucelabs.com/resources/selenium/css-selectors>`_
 on CSS selectors.

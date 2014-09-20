@@ -109,6 +109,41 @@ Special Keys
    :show-inheritance:
 
 
+Locate elements By
+~~~~~~~~~~~~~~~~~~
+
+These are the attributes which can be used to locate elements.  See
+the :ref:`locating-elements` chapter for example usages.
+
+.. automodule:: selenium.webdriver.common.by
+   :members:
+   :undoc-members:
+   :member-order: groupwise
+   :show-inheritance:
+
+
+Desired Capabilities
+~~~~~~~~~~~~~~~~~~~~
+
+See the :ref:`selenium-remote-webdriver` section for example usages of desired capabilities.
+
+.. automodule:: selenium.webdriver.common.desired_capabilities
+   :members:
+   :undoc-members:
+   :member-order: groupwise
+   :show-inheritance:
+
+
+Utilities
+~~~~~~~~~
+
+.. automodule:: selenium.webdriver.common.utils
+   :members:
+   :undoc-members:
+   :member-order: groupwise
+   :show-inheritance:
+
+
 Firefox WebDriver
 ~~~~~~~~~~~~~~~~~
 
