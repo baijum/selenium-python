@@ -174,9 +174,9 @@ case class.  Here you are creating the instance of Firefox WebDriver.
       def setUp(self):
           self.driver = webdriver.Firefox()
 
-This is the test case method. The test case method should always start with characters `test`. The first line inside this method
-create a local reference to the driver object created in `setUp`
-method.
+This is the test case method. The test case method should always start
+with characters `test`.  The first line inside this method create a
+local reference to the driver object created in `setUp` method.
 
 ::
 
