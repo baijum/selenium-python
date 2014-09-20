@@ -18,7 +18,7 @@ from Python like this.
   driver.get("http://www.python.org")
   assert "Python" in driver.title
   elem = driver.find_element_by_name("q")
-  elem.send_keys("selenium")
+  elem.send_keys("pycon")
   elem.send_keys(Keys.RETURN)
   driver.close()
 
@@ -74,7 +74,7 @@ Next we are sending keys, this is similar to entering keys using your
 keyboard.  Special keys can be send using `Keys` class imported from
 `selenium.webdriver.common.keys`::
 
-  elem.send_keys("selenium")
+  elem.send_keys("pycon")
   elem.send_keys(Keys.RETURN)
 
 After submission of the page, you should get the result if there is any::
@@ -113,7 +113,7 @@ for `python.org` search functionality::
           driver.get("http://www.python.org")
           self.assertIn("Python", driver.title)
           elem = driver.find_element_by_name("q")
-          elem.send_keys("selenium")
+          elem.send_keys("pycon")
           elem.send_keys(Keys.RETURN)
 
       def tearDown(self):
@@ -204,7 +204,7 @@ Next we are sending keys, this is similar to entering keys using your
 keyboard.  Special keys can be send using `Keys` class imported from
 `selenium.webdriver.common.keys`::
 
-          elem.send_keys("selenium")
+          elem.send_keys("pycon")
           elem.send_keys(Keys.RETURN)
 
 After submission of the page, you should get result as per search if
