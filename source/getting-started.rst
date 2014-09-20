@@ -20,6 +20,7 @@ from Python like this.
   elem = driver.find_element_by_name("q")
   elem.send_keys("pycon")
   elem.send_keys(Keys.RETURN)
+  assert "No results found." not in driver.page_source
   driver.close()
 
 The above script can be saved into a file (eg:-
@@ -77,7 +78,10 @@ keyboard.  Special keys can be send using `Keys` class imported from
   elem.send_keys("pycon")
   elem.send_keys(Keys.RETURN)
 
-After submission of the page, you should get the result if there is any::
+After submission of the page, you should get the result if there is any.
+To ensure that some results are found, make an assertion::
+
+  assert "No results found." not in driver.page_source
 
 Finally, the browser window is closed.  You can also call `quit`
 method instead of `close`.  The `quit` will exit entire browser where
@@ -114,6 +118,7 @@ for `python.org` search functionality::
           self.assertIn("Python", driver.title)
           elem = driver.find_element_by_name("q")
           elem.send_keys("pycon")
+          assert "No results found." not in driver.page_source
           elem.send_keys(Keys.RETURN)
 
       def tearDown(self):
@@ -208,7 +213,10 @@ keyboard.  Special keys can be send using `Keys` class imported from
           elem.send_keys(Keys.RETURN)
 
 After submission of the page, you should get result as per search if
-there is any.
+there is any.  To ensure that some results are found, make an
+assertion::
+
+  assert "No results found." not in driver.page_source
 
 The `tearDown` method will get called after every test method.  This
 is a place to do all cleanup actions.  In the current method, the
