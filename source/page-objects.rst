@@ -52,7 +52,13 @@ The ``page.py`` will look like this::
       locator = 'q'
 
 
-  class MainPage(object):
+  class BasePage(object):
+
+      def __init__(self, driver):
+          self.driver = driver
+
+
+  class MainPage(BasePage):
 
       search_text_element = SearchTextElement()
 
@@ -64,7 +70,7 @@ The ``page.py`` will look like this::
           element.click()
 
 
-  class SearchResultsPage(object):
+  class SearchResultsPage(BasePage):
 
       def is_results_found(self):
           pass
