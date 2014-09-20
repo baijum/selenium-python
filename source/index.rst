@@ -20,6 +20,7 @@ Selenium with Python
    navigating
    locating-elements
    waits
+   page-objects
    api
    faq
 
