@@ -60,7 +60,7 @@ strategy, the first element with the `id` attribute value matching the
 location will be returned.  If no element has a matching `id`
 attribute, a ``NoSuchElementException`` will be raised.
 
-For instance, conside this page source::
+For instance, consider this page source::
 
   <html>
    <body>
