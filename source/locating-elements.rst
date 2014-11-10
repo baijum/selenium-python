@@ -60,7 +60,7 @@ strategy, the first element with the `id` attribute value matching the
 location will be returned.  If no element has a matching `id`
 attribute, a ``NoSuchElementException`` will be raised.
 
-For instance, conside this page source::
+For instance, consider this page source::
 
   <html>
    <body>
@@ -237,7 +237,7 @@ Locating Elements by Tag Name
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Use this when you want to locate an element by tag name. With this
-strategy, the first element with the give tag name will be returned.
+strategy, the first element with the given tag name will be returned.
 If no element has a matching tag name, a ``NoSuchElementException``
 will be raised.
 
