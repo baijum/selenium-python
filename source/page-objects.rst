@@ -5,8 +5,8 @@ Page Objects
 
 .. note::
 
-   This chaper is a work in progress, right now I don't have time to
-   finish it.  If anyone interested, please send pull request in
+   Code in this chapter works and is quite self-descriptive, but a little description wouldn't hurt.
+   If anyone interested, please send pull request in
    `Github <https://github.com/baijum/selenium-python>`_.  Here is an
    example implementation of the page objects pattern:
    https://github.com/baijum/pitracker/tree/master/test/acceptance
@@ -63,7 +63,7 @@ The ``page.py`` will look like this::
       search_text_element = SearchTextElement()
 
       def is_title_matches(self):
-          pass
+          return "Python" in self.driver.title
 
       def click_go_button(self):
           element = self.driver.find_element(*MainPageLocators.GO_BUTTON)
@@ -73,7 +73,8 @@ The ``page.py`` will look like this::
   class SearchResultsPage(BasePage):
 
       def is_results_found(self):
-          pass
+          #Probably should search for this text in the specific page element, but as for now it works fine
+          return "No results found." not in self.driver.page_source
 
 The ``element.py`` will look like this::
 
@@ -85,14 +86,14 @@ The ``element.py`` will look like this::
       def __set__(self, obj, value):
           driver = obj.driver
           WebDriverWait(driver, 100).until(
-              lambda driver: driver.find_element_by_id(self.locator))
-          driver.find_element_by_id(self.locator).send_keys(value)
+              lambda driver: driver.find_element_by_name(self.locator))
+          driver.find_element_by_name(self.locator).send_keys(value)
 
       def __get__(self, obj, owner):
           driver = obj.driver
           WebDriverWait(driver, 100).until(
-              lambda driver: driver.find_element_by_id(self.locator))
-          element = driver.find_element_by_id(self.locator)
+              lambda driver: driver.find_element_by_name(self.locator))
+          element = driver.find_element_by_name(self.locator)
           return element.get_attribute("value")
 
 The ``locators.py`` will look like this::
