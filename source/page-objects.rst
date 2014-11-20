@@ -19,7 +19,6 @@ website and ensure some results are found.
 
   import unittest
   from selenium import webdriver
-  from selenium.webdriver.common.keys import Keys
   import page
 
   class PythonOrgSearch(unittest.TestCase):
