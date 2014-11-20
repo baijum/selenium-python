@@ -5,15 +5,24 @@ Page Objects
 
 .. note::
 
-   Code in this chapter works and is quite self-descriptive, but a little description wouldn't hurt.
-   If anyone interested, please send pull request in
-   `Github <https://github.com/baijum/selenium-python>`_.  Here is an
-   example implementation of the page objects pattern:
+   Code in this chapter works and is quite self-descriptive, but a
+   little description wouldn't hurt.  If anyone interested, please
+   send pull request in `Github
+   <https://github.com/baijum/selenium-python>`_.  Here is an example
+   implementation of the page objects pattern:
    https://github.com/baijum/pitracker/tree/master/test/acceptance
 
-This chapter is a tutorial introduction to use page objects design
-pattern.  Here is a test case which searches for a word in python.org
-website and ensure some results are found.
+This chapter is a tutorial introduction to page objects design
+pattern.  A page object represents an area in the web application user
+interface that your test is interating.  Page objects reduces the
+amount of duplicated code and if the user interface changes, the fix
+need only changes in one place.
+
+Test case
+~~~~~~~~~
+
+Here is a test case which searches for a word in python.org website
+and ensure some results are found.
 
 ::
 
@@ -40,6 +49,9 @@ website and ensure some results are found.
 
   if __name__ == "__main__":
       unittest.main()
+
+Page object classes
+~~~~~~~~~~~~~~~~~~~
 
 The ``page.py`` will look like this::
 
@@ -75,6 +87,9 @@ The ``page.py`` will look like this::
           #Probably should search for this text in the specific page element, but as for now it works fine
           return "No results found." not in self.driver.page_source
 
+Page elements
+~~~~~~~~~~~~~
+
 The ``element.py`` will look like this::
 
   from selenium.webdriver.support.ui import WebDriverWait
@@ -94,6 +109,9 @@ The ``element.py`` will look like this::
               lambda driver: driver.find_element_by_name(self.locator))
           element = driver.find_element_by_name(self.locator)
           return element.get_attribute("value")
+
+Locators
+~~~~~~~~
 
 The ``locators.py`` will look like this::
 
