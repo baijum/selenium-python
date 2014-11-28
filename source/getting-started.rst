@@ -84,8 +84,8 @@ To ensure that some results are found, make an assertion::
   assert "No results found." not in driver.page_source
 
 Finally, the browser window is closed.  You can also call `quit`
-method instead of `close`.  The `quit` will exit entire browser where
-as `close` will close one tab, but if it just one tab, by default most
+method instead of `close`.  The `quit` will exit entire browser whereas
+close` will close one tab, but if just one tab was open, by default most
 browser will exit entirely.::
 
   driver.close()
@@ -96,7 +96,7 @@ Using Selenium to write tests
 
 Selenium is mostly used for writing test cases.  The `selenium`
 package itself doesn't provide a testing tool/framework.  You can
-write test cases using Python's unittest module.  The other choices as
+write test cases using Python's unittest module.  The other options for
 a tool/framework are py.test and nose.
 
 In this chapter, we use `unittest` as the framework of choice.  Here
@@ -137,7 +137,7 @@ You can run the above test case from a shell like this::
 
   OK
 
-The above results shows that, the test has been successfully
+The above result shows that the test has been successfully
 completed.
 
 
@@ -160,7 +160,7 @@ provide keys in the keyboard like RETURN, F1, ALT etc.
 
 The test case class is inherited from `unittest.TestCase`.
 Inheriting from `TestCase` class is the way to tell `unittest` module
-that, this is a test case::
+that this is a test case::
 
   class PythonOrgSearch(unittest.TestCase):
 
@@ -221,9 +221,9 @@ assertion::
 The `tearDown` method will get called after every test method.  This
 is a place to do all cleanup actions.  In the current method, the
 browser window is closed.  You can also call `quit` method instead of
-`close`.  The `quit` will exit entire browser, where as `close`
-will close a tab, but if it is just one tab, by default most browser
-will exit entirely.::
+`close`.  The `quit` will exit the entire browser, whereas `close`
+will close a tab, but if it is the only tab opened, by default most
+browser will exit entirely.::
 
       def tearDown(self):
           self.driver.close()
@@ -243,12 +243,12 @@ To run the server, use this command::
 
   java -jar selenium-server-standalone-2.x.x.jar
 
-While running the Selenium server, you could see a message looks like
+While running the Selenium server, you could see a message looking like
 this::
 
   15:43:07.541 INFO - RemoteWebDriver instances should connect to: http://127.0.0.1:4444/wd/hub
 
-The above line says that, you can use this URL for connecting to
+The above line says that you can use this URL for connecting to
 remote WebDriver.  Here are some examples::
 
   from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
