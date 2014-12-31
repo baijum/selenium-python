@@ -34,7 +34,7 @@ and ensure some results are found.
 
       def setUp(self):
           self.driver = webdriver.Firefox()
-          driver.get("http://www.python.org")
+          self.driver.get("http://www.python.org")
 
       def test_search_in_python_org(self):
           main_page = page.MainPage(self.driver)
