@@ -189,7 +189,7 @@ Popup dialogs
 ~~~~~~~~~~~~~
 
 Selenium WebDriver has built-in support for handling popup dialog
-boxes.  After you've triggerd and action that would open a popup, you
+boxes.  After you've triggerd action that would open a popup, you
 can access the alert with the following::
 
   alert = driver.switch_to_alert()
