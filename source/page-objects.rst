@@ -6,8 +6,8 @@ Page Objects
 .. note::
 
    Code in this chapter works and is quite self-descriptive, but a
-   little description wouldn't hurt.  If anyone interested, please
-   send pull request in `Github
+   little description wouldn't hurt.  If anyone is interested, please
+   send pull request on `Github
    <https://github.com/baijum/selenium-python>`_.  Here is an example
    implementation of the page objects pattern:
    https://github.com/baijum/pitracker/tree/master/test/acceptance
