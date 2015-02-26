@@ -85,7 +85,7 @@ strategy, the first element with the `name` attribute value matching
 the location will be returned.  If no element has a matching `name`
 attribute, a ``NoSuchElementException`` will be raised.
 
-For instance, conside this page source::
+For instance, consider this page source::
 
    <html>
     <body>
@@ -133,7 +133,7 @@ or name attribute (ideally a parent element) you can locate your
 target element based on the relationship.  This is much less likely to
 change and can make your tests more robust.
 
-For instance, conside this page source::
+For instance, consider this page source::
 
    <html>
     <body>
@@ -241,7 +241,7 @@ strategy, the first element with the given tag name will be returned.
 If no element has a matching tag name, a ``NoSuchElementException``
 will be raised.
 
-For instance, conside this page source::
+For instance, consider this page source::
 
   <html>
    <body>
