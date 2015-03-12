@@ -56,7 +56,7 @@ ExpectedCondition types.
 
 **Expected Conditions**
 
-There are some common conditions that are frequently come across when
+There are some common conditions that are frequent when
 automating web browsers.  Listed below are Implementations of
 each. Selenium Python binding provides some convienence methods so you
 don't have to code an expected_condition class yourself or create your
