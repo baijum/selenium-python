@@ -267,7 +267,7 @@ remote WebDriver.  Here are some examples::
      desired_capabilities=DesiredCapabilities.HTMLUNITWITHJS)
 
 The desired capabilities is a dictionary, so instead of using the
-default dictionaries, you can specifies the values explicitly::
+default dictionaries, you can specify the values explicitly::
 
   driver = webdriver.Remote(
      command_executor='http://127.0.0.1:4444/wd/hub',
