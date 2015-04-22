@@ -143,8 +143,7 @@ amount, or on to another element::
 
   from selenium.webdriver import ActionChains
   action_chains = ActionChains(driver)
-  action_chains.drag_and_drop(element, target)
-
+  action_chains.drag_and_drop(element, target).perform()
 
 Moving between windows and frames
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
