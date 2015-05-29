@@ -252,6 +252,7 @@ this::
 The above line says that you can use this URL for connecting to
 remote WebDriver.  Here are some examples::
 
+  from selenium import webdriver
   from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
 
   driver = webdriver.Remote(
