@@ -14,9 +14,14 @@ Page Objects
 
 This chapter is a tutorial introduction to page objects design
 pattern.  A page object represents an area in the web application user
-interface that your test is interating.  Page objects reduces the
-amount of duplicated code and if the user interface changes, the fix
-need only changes in one place.
+interface that your test is interacting.
+
+Benefits of using page object pattern:
+
+* Creating reusable code that can be shared across multiple test cases
+* Reducing the amount of duplicated code
+* If the user interface changes, the fix needs changes in only one place
+
 
 Test case
 ~~~~~~~~~
@@ -63,6 +68,8 @@ and ensure some results are found.
 
 Page object classes
 ~~~~~~~~~~~~~~~~~~~
+
+The page object pattern intends creating an object for each web page. By following this technique a layer of separation between the test code and technical implementsation is created. 
 
 The ``page.py`` will look like this::
 
@@ -135,6 +142,8 @@ The ``element.py`` will look like this::
 
 Locators
 ~~~~~~~~
+
+One of the practices is to separate the locator strings from the place where they are being used. In this example, locators of the same page belong to same class.
 
 The ``locators.py`` will look like this::
 
