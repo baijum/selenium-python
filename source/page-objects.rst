@@ -3,15 +3,6 @@
 Page Objects
 ------------
 
-.. note::
-
-   Code in this chapter works and is quite self-descriptive, but a
-   little description wouldn't hurt.  If anyone is interested, please
-   send pull request on `Github
-   <https://github.com/baijum/selenium-python>`_.  Here is an example
-   implementation of the page objects pattern:
-   https://github.com/baijum/pitracker/tree/master/test/acceptance
-
 This chapter is a tutorial introduction to page objects design
 pattern.  A page object represents an area in the web application user
 interface that your test is interacting.
@@ -69,7 +60,9 @@ and ensure some results are found.
 Page object classes
 ~~~~~~~~~~~~~~~~~~~
 
-The page object pattern intends creating an object for each web page. By following this technique a layer of separation between the test code and technical implementsation is created. 
+The page object pattern intends creating an object for each web page.
+By following this technique a layer of separation between the test
+code and technical implementsation is created.
 
 The ``page.py`` will look like this::
 
@@ -143,7 +136,9 @@ The ``element.py`` will look like this::
 Locators
 ~~~~~~~~
 
-One of the practices is to separate the locator strings from the place where they are being used. In this example, locators of the same page belong to same class.
+One of the practices is to separate the locator strings from the place
+where they are being used.  In this example, locators of the same page
+belong to same class.
 
 The ``locators.py`` will look like this::
 
