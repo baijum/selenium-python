@@ -40,7 +40,7 @@ and ensure some results are found.
           the results were not empty.
           """
 
-          #Load the main page. In this case the home page of Python.og.
+          #Load the main page. In this case the home page of Python.org.
           main_page = page.MainPage(self.driver)
           #Checks if the word "Python" is in title
           assert main_page.is_title_matches(), "python.org title doesn't match."
