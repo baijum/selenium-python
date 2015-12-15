@@ -3,7 +3,7 @@
 Locating Elements
 -----------------
 
-There are vaious strategies to locate elements in a page.  You can use
+There are various strategies to locate elements in a page.  You can use
 the most appropriate one for your case.  Selenium provides the following
 methods to locate elements in a page:
 
