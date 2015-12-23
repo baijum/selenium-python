@@ -9,7 +9,7 @@ How to use ChromeDriver ?
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Download the latest `chromedriver from download page
-<https://code.google.com/p/chromedriver/downloads/list>`_.  Unzip the
+<https://sites.google.com/a/chromium.org/chromedriver/downloads>`_.  Unzip the
 file::
 
   unzip chromedriver_linux32_x.x.x.x.zip
