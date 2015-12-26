@@ -278,7 +278,7 @@ The "p" element can be located like this::
 Locating Elements by CSS Selectors
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Use this when you want to locate an element by CSS selector syntaxt.
+Use this when you want to locate an element by CSS selector syntax.
 With this strategy, the first element with the matching CSS selector
 will be returned.  If no element has a matching CSS selector,
 a ``NoSuchElementException`` will be raised.
