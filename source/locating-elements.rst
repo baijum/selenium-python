@@ -103,7 +103,7 @@ The username & password elements can be located like this::
   username = driver.find_element_by_name('username')
   password = driver.find_element_by_name('password')
 
-This will give the "Login" button as it occur before the "Clear"
+This will give the "Login" button as it occurs before the "Clear"
 button::
 
   continue = driver.find_element_by_name('continue')
