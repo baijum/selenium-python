@@ -62,7 +62,7 @@ Page object classes
 
 The page object pattern intends creating an object for each web page.
 By following this technique a layer of separation between the test
-code and technical implementsation is created.
+code and technical implementation is created.
 
 The ``page.py`` will look like this::
 
