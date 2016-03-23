@@ -13,7 +13,7 @@ WebDriver in an intuitive way.
 
 Selenium Python bindings provide a convenient API to access Selenium
 WebDrivers like Firefox, Ie, Chrome, Remote etc.  The current supported
-Python versions are 2.7, 3.2, 3.3 and 3.4.
+Python versions are 2.7, 3.2 and above.
 
 This documentation explains Selenium 2 WebDriver API.  Selenium
 1 / Selenium RC API is not covered here.
@@ -23,18 +23,18 @@ Downloading Python bindings for Selenium
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 You can download Python bindings for Selenium from the `PyPI page for
-selenium package <http://pypi.python.org/pypi/selenium>`_.  However,
+selenium package <https://pypi.python.org/pypi/selenium>`_.  However,
 a better approach would be to use
-`pip <http://www.pip-installer.org/en/latest/installing.html>`_ to
-install the selenium package.  Python 3.4 has pip available in the
-`standard library <http://docs.python.org/3.4/installing/index.html>`_.
+`pip <https://pip.pypa.io/en/latest/installing/>`_ to
+install the selenium package.  Python 3.5 has pip available in the
+`standard library <https://docs.python.org/3.5/installing/index.html>`_.
 Using `pip`, you can install selenium like this::
 
   pip install selenium
 
 You may consider using `virtualenv <http://www.virtualenv.org>`_
-to create isolated Python environments.  Python 3.4 has `pyvenv
-<http://docs.python.org/3.4/using/scripts.html#scripts-pyvenv>`_
+to create isolated Python environments.  Python 3.5 has `pyvenv
+<https://docs.python.org/3.5/using/scripts.html#scripts-pyvenv>`_
 which is almost same as virtualenv.
 
 
@@ -45,7 +45,7 @@ Detailed instructions for Windows users
 
   You should have internet connection to perform this installation.
 
-1. Install Python 3.4 using the `MSI available in python.org download
+1. Install Python 3.5 using the `MSI available in python.org download
    page <http://www.python.org/download>`_.
 
 2. Start a command prompt using the ``cmd.exe`` program and run the
@@ -53,13 +53,13 @@ Detailed instructions for Windows users
 
    ::
    
-     C:\Python34\Scripts\pip.exe install selenium
+     C:\Python35\Scripts\pip.exe install selenium
 
 Now you can run your test scripts using Python.  For example,
 if you have created a Selenium based script and saved it inside
 ``C:\my_selenium_script.py``, you can run it like this::
 
-  C:\Python34\python.exe C:\my_selenium_script.py
+  C:\Python35\python.exe C:\my_selenium_script.py
 
 
 Downloading Selenium server
