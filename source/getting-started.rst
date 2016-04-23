@@ -31,8 +31,8 @@ The above script can be saved into a file (eg:-
 The `python` which you are running should have the `selenium` module
 installed.
 
-Walk through of the example
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Example Explained
+~~~~~~~~~~~~~~~~~
 
 The `selenium.webdriver` module provides all the WebDriver
 implementations.  Currently supported WebDriver implementations are
