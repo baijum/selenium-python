@@ -1,7 +1,7 @@
 Selenium Python Bindings Documentation
 ======================================
 
-https://selenium-python.readthedocs.org
+https://selenium-python.readthedocs.io
 
 NOTE: THIS IS NOT AN OFFICIAL DOCUMENTATION
 
