@@ -7,7 +7,7 @@ WebDriver API
 
    This is not an official documentation.  Official API documentation
    is available `here
-   <http://selenium.googlecode.com/svn/trunk/docs/api/py/index.html>`_.
+   <https://seleniumhq.github.io/selenium/docs/api/py/api.html>`_.
 
 This chapter cover all the interfaces of Selenium WebDriver.
 
