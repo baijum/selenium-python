@@ -18,6 +18,7 @@ from Python like this.
   driver.get("http://www.python.org")
   assert "Python" in driver.title
   elem = driver.find_element_by_name("q")
+  elem.clear()
   elem.send_keys("pycon")
   elem.send_keys(Keys.RETURN)
   assert "No results found." not in driver.page_source
@@ -36,7 +37,7 @@ Example Explained
 
 The `selenium.webdriver` module provides all the WebDriver
 implementations.  Currently supported WebDriver implementations are
-Firefox, Chrome, Ie and Remote.  The `Keys` class provide keys in the
+Firefox, Chrome, IE and Remote.  The `Keys` class provide keys in the
 keyboard like RETURN, F1, ALT etc.
 
 ::
@@ -73,8 +74,11 @@ method.  Detailed explanation of finding elements is available in the
 
 Next we are sending keys, this is similar to entering keys using your
 keyboard.  Special keys can be send using `Keys` class imported from
-`selenium.webdriver.common.keys`::
+`selenium.webdriver.common.keys`.  To be safe, we'll first clear any
+prepopulated text in the input field (e.g. "Search") so it doesn't
+affect our search results.
 
+  elem.clear()
   elem.send_keys("pycon")
   elem.send_keys(Keys.RETURN)
 
