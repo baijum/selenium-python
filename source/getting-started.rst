@@ -73,7 +73,7 @@ method.  Detailed explanation of finding elements is available in the
   elem = driver.find_element_by_name("q")
 
 Next we are sending keys, this is similar to entering keys using your
-keyboard.  Special keys can be send using `Keys` class imported from
+keyboard.  Special keys can be sent using `Keys` class imported from
 `selenium.webdriver.common.keys`.  To be safe, we'll first clear any
 prepopulated text in the input field (e.g. "Search") so it doesn't
 affect our search results::
