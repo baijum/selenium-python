@@ -58,7 +58,7 @@ ExpectedCondition types.
 
 There are some common conditions that are frequently of use when
 automating web browsers.  Listed below are the names of
-each. Selenium Python binding provides some convienence methods so you
+each. Selenium Python binding provides some `convenience methods <http://selenium-python.readthedocs.io/api.html#module-selenium.webdriver.support.expected_conditions>`_ so you
 don't have to code an expected_condition class yourself or create your
 own utility package for them.
 
