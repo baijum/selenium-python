@@ -189,7 +189,7 @@ The "Clear" button element can be located like this::
 These examples cover some basics, but in order to learn more, the
 following references are recommended:
 
-* `W3Schools XPath Tutorial <http://www.w3schools.com/xsl/xpath_intro.asp>`_
+* `W3Schools XPath Tutorial <https://www.w3schools.com/xml/xpath_intro.asp>`_
 * `W3C XPath Recommendation <http://www.w3.org/TR/xpath>`_
 * `XPath Tutorial
   <http://www.zvon.org/comp/r/tut-XPath_1.html>`_
