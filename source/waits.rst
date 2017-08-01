@@ -90,6 +90,34 @@ own utility package for them.
 The expected_conditions module contains a set of predefined conditions
 to use with WebDriverWait.
 
+You can always create your own conditions when none of the previous convenience
+methods fit your requirements. You only need to create a class
+which __call__ method returns False when the condition isn't meet.
+
+
+::
+
+  class element_has_css_class(object):
+    """ An expectation for checking that an element has a particular css class.
+    locator - used to find the element
+    returns the WebElement once it has the particular css class
+    """
+    def __init__(self, locator, css_class):
+      self.locator = locator
+      self.css_class = css_class
+
+    def __call__(self, driver):
+      element = driver.find_element(*self.locator)   # Finding the referenced element
+      if self.css_class in element.get_attribute("class"):
+          return element
+      else:
+          return False
+          
+  # Wait until an element with id='myNewInput' has class 'myCSSClass'
+  wait = WebDriverWait(driver, 10)
+  element = wait.until(element_has_css_class((By.ID, 'myNewInput'), "myCSSClass"))
+
+
 
 Implicit Waits
 ~~~~~~~~~~~~~~
