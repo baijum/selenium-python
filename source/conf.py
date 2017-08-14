@@ -41,7 +41,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'Selenium Python Bindings'
-copyright = u'2011-2014, Baiju Muthukadan'
+copyright = u'2011-2017, Baiju Muthukadan'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
@@ -91,12 +91,27 @@ pygments_style = 'sphinx'
 
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
-html_theme = 'default'
+html_theme = 'alabaster'
+
+html_sidebars = {
+    '**': [
+        'about.html',
+        'navigation.html',
+        'relations.html',
+        'searchbox.html',
+        'donate.html',
+    ]
+}
 
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
 # documentation.
 #html_theme_options = {}
+
+html_theme_options = {
+        'logo': 'logo.png',
+        'show_related': 'true',
+}
 
 # Add any paths that contain custom themes here, relative to this directory.
 #html_theme_path = []
@@ -222,7 +237,7 @@ man_pages = [
 epub_title = u'Selenium Python Bindings'
 epub_author = u'Baiju Muthukadan'
 epub_publisher = u'Baiju Muthukadan'
-epub_copyright = u'2011-2014, Baiju Muthukadan'
+epub_copyright = u'2011-2017, Baiju Muthukadan'
 
 # The language of the text. It defaults to the language option
 # or en if the language is not set.
