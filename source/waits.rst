@@ -90,15 +90,18 @@ own utility package for them.
 The expected_conditions module contains a set of predefined conditions
 to use with WebDriverWait.
 
-You can always create your own conditions when none of the previous convenience
-methods fit your requirements. You only need to create a class
-which __call__ method returns False when the condition isn't meet.
+**Custom Wait Conditions**
+
+You can also create custom wait conditions when none of the previous convenience
+methods fit your requirements.  A custom wait condition can be created using a class
+with `__call__` method which returns `False` when the condition doesn't match.
 
 
 ::
 
   class element_has_css_class(object):
-    """ An expectation for checking that an element has a particular css class.
+    """An expectation for checking that an element has a particular css class.
+
     locator - used to find the element
     returns the WebElement once it has the particular css class
     """
