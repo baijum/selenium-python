@@ -189,7 +189,7 @@ The "Clear" button element can be located like this::
 These examples cover some basics, but in order to learn more, the
 following references are recommended:
 
-* `W3Schools XPath Tutorial <http://www.w3schools.com/xsl/xpath_intro.asp>`_
+* `W3Schools XPath Tutorial <https://www.w3schools.com/xml/xpath_intro.asp>`_
 * `W3C XPath Recommendation <http://www.w3.org/TR/xpath>`_
 * `XPath Tutorial
   <http://www.zvon.org/comp/r/tut-XPath_1.html>`_
@@ -199,9 +199,9 @@ There are also a couple of very useful Add-ons that can assist in
 discovering the XPath of an element:
 
 * `XPath Checker
-  <https://addons.mozilla.org/en-US/firefox/addon/1095?id=1095>`_ -
+  <https://addons.mozilla.org/en-US/firefox/addon/xpath-checker/>`_ -
   suggests XPath and can be used to test XPath results.
-* `Firebug <https://addons.mozilla.org/en-US/firefox/addon/1843>`_ -
+* `Firebug <https://addons.mozilla.org/en-US/firefox/addon/firebug/>`_ -
   XPath suggestions are just one of the many powerful features of this
   very useful add-on.
 * `XPath Helper
@@ -295,5 +295,5 @@ The "p" element can be located like this::
 
   content = driver.find_element_by_css_selector('p.content')
 
-`Sauce Labs has good documentation <http://saucelabs.com/resources/selenium/css-selectors>`_
+`Sauce Labs has good documentation <https://saucelabs.com/resources/articles/selenium-tips-css-selectors>`_
 on CSS selectors.
