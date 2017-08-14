@@ -9,13 +9,13 @@ WebDriver API
    is available `here
    <https://seleniumhq.github.io/selenium/docs/api/py/api.html>`_.
 
-This chapter cover all the interfaces of Selenium WebDriver.
+This chapter covers all the interfaces of Selenium WebDriver.
 
 
 **Recommended Import Style**
 
-The API definitions in this chapter shows the absolute location of classes.
-However the recommended import style is as given below::
+The API definitions in this chapter show the absolute location of classes.
+However, the recommended import style is as given below::
 
   from selenium import webdriver
 
@@ -38,7 +38,8 @@ The special keys class (``Keys``) can be imported like this::
 
   from selenium.webdriver.common.keys import Keys
 
-The exception classes can be imported like this (Replace the ``TheNameOfTheExceptionClass`` with actual class name given below)::
+The exception classes can be imported like this (Replace the ``TheNameOfTheExceptionClass``
+with the actual class name given below)::
 
   from selenium.common.exceptions import [TheNameOfTheExceptionClass]
 
@@ -52,13 +53,13 @@ Here is an example for property:
 
   - current_url
 
-    URL of the current loaded page.
+    URL of the currently loaded page.
 
     Usage::
 
       driver.current_url
 
-Here is an example for a method:
+Here is an example of a method:
 
   - close()
 

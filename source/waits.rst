@@ -22,7 +22,7 @@ trying to locate an element.
 Explicit Waits
 ~~~~~~~~~~~~~~
 
-An explicit wait is code you define to wait for a certain condition
+An explicit wait is a code you define to wait for a certain condition
 to occur before proceeding further in the code.  The extreme case of
 this is time.sleep(), which sets the condition to an exact time period
 to wait.  There are some convenience methods provided that help you

@@ -63,7 +63,7 @@ Detailed instructions for Windows users
 
 .. Note::
 
-  You should have internet connection to perform this installation.
+  You should have an internet connection to perform this installation.
 
 1. Install Python 3.6 using the `MSI available in python.org download
    page <http://www.python.org/download>`_.
@@ -87,7 +87,7 @@ Downloading Selenium server
 
 .. note::
 
-  **The Selenium server is only required, if you want to use the remote
+  **The Selenium server is only required if you want to use the remote
   WebDriver**.  See the :ref:`selenium-remote-webdriver` section for
   more details.  If you are a beginner learning Selenium, you can
   skip this section and proceed with next chapter.
@@ -112,13 +112,13 @@ you can start the Selenium server using this command::
 
   java -jar selenium-server-standalone-2.x.x.jar
 
-Replace `2.x.x` with actual version of Selenium server you downloaded
+Replace `2.x.x` with the actual version of Selenium server you downloaded
 from the site.
 
 If JRE is installed as a non-root user and/or if it is
 not available in the PATH (environment variable), you can type the
 relative or absolute path to the `java` command.  Similarly, you can
-provide relative or absolute path to Selenium server jar file.
+provide a relative or absolute path to Selenium server jar file.
 Then, the command will look something like this::
 
   /path/to/java -jar /path/to/selenium-server-standalone-2.x.x.jar

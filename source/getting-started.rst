@@ -67,15 +67,15 @@ in it::
 WebDriver offers a number of ways to find elements using one of the
 `find_element_by_*` methods.  For example, the input text element can
 be located by its `name` attribute using `find_element_by_name`
-method.  Detailed explanation of finding elements is available in the
+method.  A detailed explanation of finding elements is available in the
 :ref:`locating-elements` chapter::
 
   elem = driver.find_element_by_name("q")
 
-Next we are sending keys, this is similar to entering keys using your
+Next, we are sending keys, this is similar to entering keys using your
 keyboard.  Special keys can be sent using `Keys` class imported from
 `selenium.webdriver.common.keys`.  To be safe, we'll first clear any
-prepopulated text in the input field (e.g. "Search") so it doesn't
+pre-populated text in the input field (e.g. "Search") so it doesn't
 affect our search results::
 
   elem.clear()
@@ -210,14 +210,14 @@ method.  Detailed explanation of finding elements is available in the
 
           elem = driver.find_element_by_name("q")
 
-Next we are sending keys, this is similar to entering keys using your
+Next, we are sending keys, this is similar to entering keys using your
 keyboard.  Special keys can be send using `Keys` class imported from
 `selenium.webdriver.common.keys`::
 
           elem.send_keys("pycon")
           elem.send_keys(Keys.RETURN)
 
-After submission of the page, you should get result as per search if
+After submission of the page, you should get the result as per search if
 there is any.  To ensure that some results are found, make an
 assertion::
 

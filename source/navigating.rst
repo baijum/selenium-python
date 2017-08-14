@@ -64,7 +64,7 @@ possible to test keyboard shortcuts such as those used on GMail.  A
 side-effect of this is that typing something into a text field won't
 automatically clear it.  Instead, what you type will be appended to
 what's already there.  You can easily clear the contents of a text
-field or textarea with `clear` method::
+field or textarea with the `clear` method::
 
   element.clear()
 
@@ -73,7 +73,7 @@ Filling in forms
 ~~~~~~~~~~~~~~~~
 
 We've already seen how to enter text into a textarea or text field,
-but what about the other elements? You can "toggle" the state of
+but what about the other elements? You can "toggle" the state of the
 drop down, and you can use "setSelected" to set something like an
 `OPTION` tag selected.  Dealing with `SELECT` tags isn't too bad::
 
@@ -88,8 +88,8 @@ through each of it's OPTIONs in turn, printing out their values, and
 selecting each in turn.
 
 As you can see, this isn't the most efficient
-way of dealing with SELECT elements . WebDriver's support classes
-include one called "Select", which provides useful methods for
+way of dealing with SELECT elements. WebDriver's support classes
+include one called a "Select", which provides useful methods for
 interacting with these::
 
     from selenium.webdriver.support.ui import Select
@@ -188,12 +188,12 @@ Popup dialogs
 ~~~~~~~~~~~~~
 
 Selenium WebDriver has built-in support for handling popup dialog
-boxes.  After you've triggerd action that would open a popup, you
+boxes.  After you've triggered action that would open a popup, you
 can access the alert with the following::
 
   alert = driver.switch_to_alert()
 
-This will return the currently open alert object.  With this object
+This will return the currently open alert object.  With this object,
 you can now accept, dismiss, read its contents or even type into a
 prompt.  This interface works equally well on alerts, confirms,
 prompts.  Refer to the API documentation for more information.
@@ -209,14 +209,14 @@ useful task.  To navigate to a page, you can use `get` method::
 
   driver.get("http://www.example.com")
 
-To move backwards and forwards in your browser's history::
+To move backward and forward in your browser's history::
 
   driver.forward()
   driver.back()
 
 Please be aware that this functionality depends entirely on the
 underlying driver.  It's just possible that something unexpected may
-happen when you call these methods if you're used to the behaviour of
+happen when you call these methods if you're used to the behavior of
 one browser over another.
 
 
