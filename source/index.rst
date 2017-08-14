@@ -8,9 +8,15 @@ Selenium with Python
 
 .. note::
 
-   This is not an official documentation.  Official API documentation
-   is available `here
-   <https://seleniumhq.github.io/selenium/docs/api/py/api.html>`_.
+   This is not an official documentation.  If you would like to
+   contribute to this documentation, you can `fork this project in
+   Github and send pull requests
+   <https://github.com/baijum/selenium-python>`_.  You can also send
+   your feedback to my email: baiju.m.mail AT gmail DOT com.  So far
+   more around 40 community members have contributed to this project
+   (See the closed pull requests).  I encourage contributors to add
+   more sections and make it a good documentation!
+
 
 .. toctree::
    :numbered:
