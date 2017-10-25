@@ -49,7 +49,7 @@ and ensure some results are found.
           main_page.click_go_button()
           search_results_page = page.SearchResultsPage(self.driver)
           #Verifies that the results page is not empty
-	      assert search_results_page.is_results_found(), "No results found."
+	  assert search_results_page.is_results_found(), "No results found."
 
       def tearDown(self):
           self.driver.close()
