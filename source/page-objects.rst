@@ -123,6 +123,7 @@ The ``element.py`` will look like this::
           driver = obj.driver
           WebDriverWait(driver, 100).until(
               lambda driver: driver.find_element_by_name(self.locator))
+          driver.find_element_by_name(self.locator).clear()
           driver.find_element_by_name(self.locator).send_keys(value)
 
       def __get__(self, obj, owner):
