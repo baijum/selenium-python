@@ -134,11 +134,47 @@ See the :ref:`selenium-remote-webdriver` section for example usages of desired c
    :member-order: groupwise
    :show-inheritance:
 
+Touch Actions
+~~~~~~~~~~~~~
+
+.. automodule:: selenium.webdriver.common.touch_actions
+   :members:
+   :undoc-members:
+   :member-order: groupwise
+   :show-inheritance:
+
+Proxy
+~~~~~
+
+.. automodule:: selenium.webdriver.common.proxy
+   :members:
+   :undoc-members:
+   :member-order: groupwise
+   :show-inheritance:
+
 
 Utilities
 ~~~~~~~~~
 
 .. automodule:: selenium.webdriver.common.utils
+   :members:
+   :undoc-members:
+   :member-order: groupwise
+   :show-inheritance:
+
+Service
+~~~~~~~
+
+.. automodule:: selenium.webdriver.common.service
+   :members:
+   :undoc-members:
+   :member-order: groupwise
+   :show-inheritance:
+
+Aplication Cache
+~~~~~~~~~~~~~~~~
+
+.. automodule:: selenium.webdriver.common.html5.application_cache
    :members:
    :undoc-members:
    :member-order: groupwise
@@ -154,6 +190,42 @@ Firefox WebDriver
    :member-order: groupwise
    :show-inheritance:
 
+Firefox WebDriver Options
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. automodule:: selenium.webdriver.firefox.options
+   :members:
+   :undoc-members:
+   :member-order: groupwise
+   :show-inheritance:
+
+Firefox WebDriver Profile
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. automodule:: selenium.webdriver.firefox.firefox_profile
+   :members:
+   :undoc-members:
+   :member-order: groupwise
+   :show-inheritance:
+
+Firefox WebDriver Binary
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. automodule:: selenium.webdriver.firefox.firefox_binary
+   :members:
+   :undoc-members:
+   :member-order: groupwise
+   :show-inheritance:
+
+Firefox WebDriver Extension Connection
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. automodule:: selenium.webdriver.firefox.extension_connection
+   :members:
+   :undoc-members:
+   :member-order: groupwise
+   :show-inheritance:
+
 Chrome WebDriver
 ~~~~~~~~~~~~~~~~
 
@@ -163,6 +235,24 @@ Chrome WebDriver
    :member-order: groupwise
    :show-inheritance:
 
+Chrome WebDriver Options
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. automodule:: selenium.webdriver.chrome.options
+   :members:
+   :undoc-members:
+   :member-order: groupwise
+   :show-inheritance:
+
+
+Chrome WebDriver Service
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. automodule:: selenium.webdriver.chrome.service
+   :members:
+   :undoc-members:
+   :member-order: groupwise
+   :show-inheritance:
 
 Remote WebDriver
 ~~~~~~~~~~~~~~~~
@@ -173,9 +263,8 @@ Remote WebDriver
    :member-order: groupwise
    :show-inheritance:
 
-
-WebElement
-~~~~~~~~~~
+Remote WebDriver WebElement
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. automodule:: selenium.webdriver.remote.webelement
    :members:
@@ -183,14 +272,126 @@ WebElement
    :member-order: groupwise
    :show-inheritance:
 
-UI Support
-~~~~~~~~~~
+Remote WebDriver Command
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. automodule:: selenium.webdriver.remote.command
+   :members:
+   :undoc-members:
+   :member-order: groupwise
+   :show-inheritance:
+
+Remote WebDriver Error Handler
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. automodule:: selenium.webdriver.remote.errorhandler
+   :members:
+   :undoc-members:
+   :member-order: groupwise
+   :show-inheritance:
+
+Remote WebDriver Mobile
+~~~~~~~~~~~~~~~~~~~~~~~
+
+.. automodule:: selenium.webdriver.remote.mobile
+   :members:
+   :undoc-members:
+   :member-order: groupwise
+   :show-inheritance:
+
+Remote WebDriver Remote Connection
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. automodule:: selenium.webdriver.remote.remote_connection
+   :members:
+   :undoc-members:
+   :member-order: groupwise
+   :show-inheritance:
+
+Remote WebDriver Utils
+~~~~~~~~~~~~~~~~~~~~~~
+
+.. automodule:: selenium.webdriver.remote.utils
+   :members:
+   :undoc-members:
+   :member-order: groupwise
+   :show-inheritance:
+
+
+Internet Explorer WebDriver
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. automodule:: selenium.webdriver.ie.webdriver
+   :members:
+   :undoc-members:
+   :member-order: groupwise
+   :show-inheritance:
+
+Android WebDriver
+~~~~~~~~~~~~~~~~~
+
+.. automodule:: selenium.webdriver.android.webdriver
+   :members:
+   :undoc-members:
+   :member-order: groupwise
+   :show-inheritance:
+
+Opera WebDriver
+~~~~~~~~~~~~~~~
+
+.. automodule:: selenium.webdriver.opera.webdriver
+   :members:
+   :undoc-members:
+   :member-order: groupwise
+   :show-inheritance:
+
+PhantomJS WebDriver
+~~~~~~~~~~~~~~~~~~~
+
+.. automodule:: selenium.webdriver.phantomjs.webdriver
+   :members:
+   :undoc-members:
+   :member-order: groupwise
+   :show-inheritance:
+
+PhantomJS WebDriver Service
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. automodule:: selenium.webdriver.phantomjs.service
+   :members:
+   :undoc-members:
+   :member-order: groupwise
+   :show-inheritance:
+
+Safari WebDriver
+~~~~~~~~~~~~~~~~
+
+.. automodule:: selenium.webdriver.safari.webdriver
+   :members:
+   :undoc-members:
+   :member-order: groupwise
+   :show-inheritance:
+
+Safari WebDriver Service
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. automodule:: selenium.webdriver.safari.service
+   :members:
+   :undoc-members:
+   :member-order: groupwise
+   :show-inheritance:
+
+Select Support
+~~~~~~~~~~~~~~
 
 .. automodule:: selenium.webdriver.support.select
    :members:
    :undoc-members:
    :member-order: groupwise
    :show-inheritance:
+
+Wait Support
+~~~~~~~~~~~~
 
 .. automodule:: selenium.webdriver.support.wait
    :members:
@@ -202,6 +403,24 @@ Color Support
 ~~~~~~~~~~~~~
 
 .. automodule:: selenium.webdriver.support.color
+   :members:
+   :undoc-members:
+   :member-order: groupwise
+   :show-inheritance:
+
+Event Firing WebDriver Support
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. automodule:: selenium.webdriver.support.event_firing_webdriver
+   :members:
+   :undoc-members:
+   :member-order: groupwise
+   :show-inheritance:
+
+Abstract Event Listener Support
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. automodule:: selenium.webdriver.support.abstract_event_listener
    :members:
    :undoc-members:
    :member-order: groupwise
