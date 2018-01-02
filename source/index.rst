@@ -13,7 +13,7 @@ Selenium with Python
    Github and send pull requests
    <https://github.com/baijum/selenium-python>`_.  You can also send
    your feedback to my email: baiju.m.mail AT gmail DOT com.  So far
-   around 40 community members have contributed to this project
+   40+ community members have contributed to this project
    (See the closed pull requests).  I encourage contributors to add
    more sections and make it a good documentation!
 
