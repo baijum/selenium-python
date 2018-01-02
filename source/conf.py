@@ -41,7 +41,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'Selenium Python Bindings'
-copyright = u'2011-2017, Baiju Muthukadan'
+copyright = u'2011-2018, Baiju Muthukadan'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
@@ -237,7 +237,7 @@ man_pages = [
 epub_title = u'Selenium Python Bindings'
 epub_author = u'Baiju Muthukadan'
 epub_publisher = u'Baiju Muthukadan'
-epub_copyright = u'2011-2017, Baiju Muthukadan'
+epub_copyright = u'2011-2018, Baiju Muthukadan'
 
 # The language of the text. It defaults to the language option
 # or en if the language is not set.
