@@ -181,7 +181,7 @@ Service
    :member-order: groupwise
    :show-inheritance:
 
-Aplication Cache
+Application Cache
 ~~~~~~~~~~~~~~~~
 
 .. automodule:: selenium.webdriver.common.html5.application_cache
