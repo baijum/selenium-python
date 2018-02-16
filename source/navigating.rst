@@ -84,7 +84,7 @@ drop down, and you can use "setSelected" to set something like an
         option.click()
 
 This will find the first "SELECT" element on the page, and cycle
-through each of it's OPTIONs in turn, printing out their values, and
+through each of its OPTIONs in turn, printing out their values, and
 selecting each in turn.
 
 As you can see, this isn't the most efficient
@@ -104,12 +104,12 @@ WebDriver also provides features for deselecting all the selected options::
     select = Select(driver.find_element_by_id('id'))
     select.deselect_all()
 
-This will deselect all OPTIONs from the first SELECT on the page.
+This will deselect all OPTIONs from that particular SELECT on the page.
 
 Suppose in a test, we need the list of all default selected options, Select
 class provides a property method that returns a list::
 
-    select = Select(driver.find_element_by_xpath("xpath"))
+    select = Select(driver.find_element_by_xpath("//select[@name='name']"))
     all_selected_options = select.all_selected_options
     
 To get all available options::
