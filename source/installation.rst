@@ -35,7 +35,7 @@ Using `pip`, you can install selenium like this::
 You may consider using `virtualenv <http://www.virtualenv.org>`_
 to create isolated Python environments.  Python 3.6 has `pyvenv
 <https://docs.python.org/3.6/using/scripts.html#scripts-pyvenv>`_
-which is almost same as virtualenv.
+which is almost the same as virtualenv.
 
 Drivers
 ~~~~~~~
