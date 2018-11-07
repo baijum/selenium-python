@@ -182,7 +182,7 @@ Service
    :show-inheritance:
 
 Application Cache
-~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~
 
 .. automodule:: selenium.webdriver.common.html5.application_cache
    :members:
