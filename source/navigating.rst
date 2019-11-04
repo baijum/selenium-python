@@ -12,8 +12,8 @@ link.  The normal way to do this is by calling ``get`` method:
 
 WebDriver will wait until the page has fully loaded (that is, the
 ``onload`` event has fired) before returning control to your test or
-script.  It's worth noting that if your page uses a lot of AJAX on
-load then WebDriver may not know when it has completely loaded.  If
+script.  *Be aware that if your page uses a lot of AJAX on
+load then WebDriver may not know when it has completely loaded*.  If
 you need to ensure such pages are fully loaded then you can use
 :ref:`waits <waits>`.
 
@@ -223,8 +223,8 @@ one browser over another.
 Cookies
 ~~~~~~~
 
-Before we leave these next steps, you may be interested in
-understanding how to use cookies.  First of all, you need to be on the
+Before moving to the next section of the tutorial, you may be interested in
+understanding how to use cookies. First of all, you need to be on the
 domain that the cookie will be valid for:
 
 ::

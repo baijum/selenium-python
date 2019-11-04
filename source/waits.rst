@@ -3,7 +3,7 @@
 Waits
 -----
 
-These days most of the web apps are using AJAX techniques.  When a
+These days, most of the web apps are using AJAX techniques.  When a
 page is loaded by the browser, the elements within that page may load at
 different time intervals.  This makes locating elements difficult: if
 an element is not yet present in the DOM, a locate function will raise
@@ -47,12 +47,12 @@ accomplished.
       driver.quit()
 
 
-This waits up to 10 seconds before throwing a TimeoutException unless 
-it finds the element to return within 10 seconds.  WebDriverWait
-by default calls the ExpectedCondition every 500 milliseconds until it
-returns successfully.  A successful return is for ExpectedCondition
-type is Boolean return true or not null return value for all other
-ExpectedCondition types.
+In the code above, Selenium will wait for a maximum of 10 seconds for an element
+matching the given criteria to be found. If no element is found in that time, 
+a TimeoutException is thrown. By default, WebDriverWait calls the 
+ExpectedCondition every 500 milliseconds until it returns success. 
+ExpectedCondition will return `true` (Boolean) in case of success or `not null` 
+if it fails to locate an element.
 
 **Expected Conditions**
 
@@ -127,7 +127,7 @@ Implicit Waits
 
 An implicit wait tells WebDriver to poll the DOM for a certain
 amount of time when trying to find any element (or elements)
-not immediately available.  The default setting is 0.  Once set, the
+not immediately available.  The default setting is 0 (zero).  Once set, the
 implicit wait is set for the life of the WebDriver object.
 
 ::
