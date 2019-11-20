@@ -54,8 +54,8 @@ Next, the instance of Firefox WebDriver is created.
 The `driver.get` method will navigate to a page given by the URL.
 WebDriver will wait until the page has fully loaded (that is, the
 "onload" event has fired) before returning control to your test or
-script.  It's worth noting that if your page uses a lot of AJAX on
-load then WebDriver may not know when it has completely loaded.::
+script. *Be aware that if your page uses a lot of AJAX on
+load then WebDriver may not know when it has completely loaded*::
 
   driver.get("http://www.python.org")
 
@@ -191,8 +191,8 @@ local reference to the driver object created in `setUp` method.
 The `driver.get` method will navigate to a page given by the URL.
 WebDriver will wait until the page has fully loaded (that is, the
 "onload" event has fired) before returning control to your test or
-script.  It's worth noting that if your page uses a lot of AJAX on
-load then WebDriver may not know when it has completely loaded.::
+script. *Be aware that if your page uses a lot of AJAX on
+load then WebDriver may not know when it has completely loaded*::
 
           driver.get("http://www.python.org")
 

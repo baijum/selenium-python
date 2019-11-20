@@ -29,8 +29,11 @@ methods to locate elements in a page:
 
 
 Apart from the public methods given above, there are two private
-methods which might be useful with locators in page objects.  These
-are the two private methods: `find_element` and `find_elements`.
+methods which might be useful for locating page elements:
+
+- `find_element`
+- `find_elements`
+
 
 Example usage::
 
@@ -55,10 +58,10 @@ These are the attributes available for `By` class::
 Locating by Id
 ~~~~~~~~~~~~~~
 
-Use this when you know `id` attribute of an element.  With this
-strategy, the first element with the `id` attribute value matching the
-location will be returned.  If no element has a matching `id`
-attribute, a ``NoSuchElementException`` will be raised.
+Use this when you know the `id` attribute of an element. With this
+strategy, the first element with a matching `id` attribute will 
+be returned.  If no element has a matching `id` attribute, 
+a ``NoSuchElementException`` will be raised.
 
 For instance, consider this page source::
 
@@ -80,10 +83,10 @@ The form element can be located like this::
 Locating by Name
 ~~~~~~~~~~~~~~~~
 
-Use this when you know `name` attribute of an element.  With this
-strategy, the first element with the `name` attribute value matching
-the location will be returned.  If no element has a matching `name`
-attribute, a ``NoSuchElementException`` will be raised.
+Use this when you know the `name` attribute of an element.  With this
+strategy, the first element with a matching `name` attribute will 
+be returned.  If no element has a matching `name` attribute, 
+a ``NoSuchElementException`` will be raised.
 
 For instance, consider this page source::
 
@@ -115,8 +118,8 @@ Locating by XPath
 XPath is the language used for locating nodes in an XML document.  As
 HTML can be an implementation of XML (XHTML), Selenium users can
 leverage this powerful language to target elements in their web
-applications.  XPath extends beyond (as well as supporting) the simple
-methods of locating by id or name attributes, and opens up all sorts
+applications.  XPath supports the simple methods of locating by 
+id or name attributes and extends them by opening up all sorts
 of new possibilities such as locating the third checkbox on the page.
 
 One of the main reasons for using XPath is when you don't have a
@@ -157,7 +160,7 @@ The form elements can be located like this::
 
 2. First form element in the HTML
 
-3. The form element with attribute named `id` and the value `loginForm`
+3. The form element with attribute `id` set to `loginForm`
 
 The username element can be located like this::
 
@@ -165,14 +168,11 @@ The username element can be located like this::
   username = driver.find_element_by_xpath("//form[@id='loginForm']/input[1]")
   username = driver.find_element_by_xpath("//input[@name='username']")
 
-1. First form element with an input child element with attribute named
-   `name` and the value `username`
+1. First form element with an input child element with `name` set to `username`
 
-2. First input child element of the form element with attribute named
-   `id` and the value `loginForm`
+2. First input child element of the form element with attribute `id` set to `loginForm`
 
-3. First input element with attribute named 'name' and the value
-   `username`
+3. First input element with attribute `name` set to `username`
 
 The "Clear" button element can be located like this::
 
@@ -180,11 +180,10 @@ The "Clear" button element can be located like this::
   clear_button = driver.find_element_by_xpath("//form[@id='loginForm']/input[4]")
 
 
-1. Input with attribute named `name` and the value `continue` and
-   attribute named `type` and the value `button`
+1. Input with attribute `name` set to `continue` and
+   attribute `type` set to `button`
 
-2. Fourth input child element of the form element with attribute named
-   `id` and value `loginForm`
+2. Fourth input child element of the form element with attribute `id` set to `loginForm`
 
 These examples cover some basics, but in order to learn more, the
 following references are recommended:
@@ -212,9 +211,9 @@ discovering the XPath of an element:
 Locating Hyperlinks by Link Text
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Use this when you know link text used within an anchor tag.  With this
-strategy, the first element with the link text value matching the
-location will be returned.  If no element has a matching link text
+Use this when you know the link text used within an anchor tag. With this
+strategy, the first element with the link text matching the provided value 
+will be returned.  If no element has a matching link text
 attribute, a ``NoSuchElementException`` will be raised.
 
 For instance, consider this page source::
@@ -258,9 +257,9 @@ The heading (h1) element can be located like this::
 Locating Elements by Class Name
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Use this when you want to locate an element by class attribute name.
-With this strategy, the first element with the matching class attribute
-name will be returned.  If no element has a matching class attribute name,
+Use this when you want to locate an element by class name.
+With this strategy, the first element with the matching class name 
+attribute will be returned.  If no element has a matching class name attribute,
 a ``NoSuchElementException`` will be raised.
 
 For instance, consider this page source::
@@ -278,9 +277,9 @@ The "p" element can be located like this::
 Locating Elements by CSS Selectors
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Use this when you want to locate an element by CSS selector syntax.
-With this strategy, the first element with the matching CSS selector
-will be returned.  If no element has a matching CSS selector,
+Use this when you want to locate an element using CSS selector syntax.
+With this strategy, the first element matching the given CSS selector
+will be returned.  If no element matches the provided CSS selector,
 a ``NoSuchElementException`` will be raised.
 
 For instance, consider this page source::
