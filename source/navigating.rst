@@ -191,7 +191,7 @@ Selenium WebDriver has built-in support for handling popup dialog
 boxes.  After you've triggered action that would open a popup, you
 can access the alert with the following::
 
-  alert = driver.switch_to_alert()
+  alert = driver.switch_to.alert
 
 This will return the currently open alert object.  With this object,
 you can now accept, dismiss, read its contents or even type into a
