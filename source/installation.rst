@@ -122,3 +122,28 @@ provide a relative or absolute path to Selenium server jar file.
 Then, the command will look something like this::
 
   /path/to/java -jar /path/to/selenium-server-standalone-2.x.x.jar
+
+
+Installing from Git sources
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+To build Selenium Python from the source code, clone `the official repository
+<https://github.com/SeleniumHQ/selenium.git>`_. It contains the source code for
+all official Selenium flavors, like Python, Java, Ruby and others. The Python
+code resides in the ``/py`` directory. To build, you will also need the `Bazel
+<https://www.bazel.build>`_ build system.
+
+.. note::
+
+  Currently, as Selenium gets near to the 4.0.0 release, it requires Bazel 3.2.0
+  (`Install instructions <https://docs.bazel.build/versions/3.2.0/install.html>`_),
+  even though 3.3.0 is already available.
+
+To build a Wheel from the sources, run the following command from the repository
+root::
+
+  bazel //py:selenium-wheel
+
+This command will prepare the source code with some preprocessed JS files needed
+by some webdriver modules and build the ``.whl`` package inside the
+``./bazel-bin/py/`` directory. Afterwards, you can use ``pip`` to install it.
