@@ -13,7 +13,7 @@ WebDriver in an intuitive way.
 
 Selenium Python bindings provide a convenient API to access Selenium
 WebDrivers like Firefox, Ie, Chrome, Remote etc.  The current supported
-Python versions are 2.7, 3.5 and above.
+Python versions are 3.5 and above.
 
 This documentation explains Selenium 2 WebDriver API.  Selenium
 1 / Selenium RC API is not covered here.
@@ -33,8 +33,8 @@ Using `pip`, you can install selenium like this::
   pip install selenium
 
 You may consider using `virtualenv <http://www.virtualenv.org>`_
-to create isolated Python environments.  Python 3.6 has `pyvenv
-<https://docs.python.org/3.6/using/scripts.html#scripts-pyvenv>`_
+to create isolated Python environments.  Python 3 has `venv
+<https://docs.python.org/3/library/venv.html>`_
 which is almost the same as virtualenv.
 
 Drivers
