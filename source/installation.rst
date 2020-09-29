@@ -22,9 +22,8 @@ This documentation explains Selenium 2 WebDriver API.  Selenium
 Downloading Python bindings for Selenium
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-You can download Python bindings for Selenium from the `PyPI page for
-selenium package <https://pypi.python.org/pypi/selenium>`_.  However,
-a better approach would be to use
+
+Use
 `pip <https://pip.pypa.io/en/latest/installing/>`_ to
 install the selenium package.  Python 3.6 has pip available in the
 `standard library <https://docs.python.org/3.6/installing/index.html>`_.
@@ -36,6 +35,9 @@ You may consider using `virtualenv <http://www.virtualenv.org>`_
 to create isolated Python environments.  Python 3 has `venv
 <https://docs.python.org/3/library/venv.html>`_
 which is almost the same as virtualenv.
+
+You can also download Python bindings for Selenium from the _`PyPI page for
+selenium package <https://pypi.python.org/pypi/selenium>`_. and install manually.
 
 Drivers
 ~~~~~~~
