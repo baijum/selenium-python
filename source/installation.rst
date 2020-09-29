@@ -36,7 +36,7 @@ to create isolated Python environments.  Python 3 has `venv
 <https://docs.python.org/3/library/venv.html>`_
 which is almost the same as virtualenv.
 
-You can also download Python bindings for Selenium from the _`PyPI page for
+You can also download Python bindings for Selenium from the `PyPI page for
 selenium package <https://pypi.python.org/pypi/selenium>`_. and install manually.
 
 Drivers
