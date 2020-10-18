@@ -59,6 +59,7 @@ Other supported browsers will have their own drivers available. Links to some of
 | **Safari**:  | https://webkit.org/blog/6900/webdriver-support-in-safari-10/          |
 +--------------+-----------------------------------------------------------------------+
 
+For more information about driver installation, please refer the `official documentation <https://www.selenium.dev/documentation/en/webdriver/driver_requirements/>`_.
 
 Detailed instructions for Windows users
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
