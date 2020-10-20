@@ -15,7 +15,7 @@ Selenium with Python
    your feedback to my email: baiju.m.mail AT gmail DOT com.  So far
    50+ community members have contributed to this project
    (See the closed pull requests).  I encourage contributors to add
-   more sections and make it a good documentation!  If you know any
+   more sections and make it an awesome documentation!  If you know any
    translation of this document, please send a PR to update the
    below list.
 
