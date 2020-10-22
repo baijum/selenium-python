@@ -33,6 +33,7 @@ you could find it using any of::
   element = driver.find_element_by_id("passwd-id")
   element = driver.find_element_by_name("passwd")
   element = driver.find_element_by_xpath("//input[@id='passwd-id']")
+  element = driver.find_element_by_css_selector("input#passwd-id")
 
 You can also look for a link by its text, but be careful! The text
 must be an exact match! You should also be careful when using `XPATH
