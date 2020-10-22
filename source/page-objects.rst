@@ -3,9 +3,9 @@
 Page Objects
 ------------
 
-This chapter is a tutorial introduction to page objects design
-pattern.  A page object represents an area in the web application user
-interface that your test is interacting.
+This chapter is a tutorial introduction to page objects design pattern.  A page
+object represents an area in the web application user interface that your test
+is interacting.
 
 Benefits of using page object pattern:
 
@@ -17,8 +17,8 @@ Benefits of using page object pattern:
 Test case
 ~~~~~~~~~
 
-Here is a test case which searches for a word in python.org website
-and ensure some results are found.
+Here is a test case which searches for a word in python.org website and ensure
+some results are found.
 
 ::
 
@@ -57,12 +57,13 @@ and ensure some results are found.
   if __name__ == "__main__":
       unittest.main()
 
+
 Page object classes
 ~~~~~~~~~~~~~~~~~~~
 
-The page object pattern intends creating an object for each web page.
-By following this technique a layer of separation between the test
-code and technical implementation is created.
+The page object pattern intends creating an object for each web page.  By
+following this technique a layer of separation between the test code and
+technical implementation is created.
 
 The ``page.py`` will look like this::
 
@@ -107,6 +108,7 @@ The ``page.py`` will look like this::
           # element, but as for now it works fine
           return "No results found." not in self.driver.page_source
 
+
 Page elements
 ~~~~~~~~~~~~~
 
@@ -134,12 +136,13 @@ The ``element.py`` will look like this::
           element = driver.find_element_by_name(self.locator)
           return element.get_attribute("value")
 
+
 Locators
 ~~~~~~~~
 
-One of the practices is to separate the locator strings from the place
-where they are being used.  In this example, locators of the same page
-belong to same class.
+One of the practices is to separate the locator strings from the place where
+they are being used.  In this example, locators of the same page belong to same
+class.
 
 The ``locators.py`` will look like this::
 

@@ -106,8 +106,7 @@ The username & password elements can be located like this::
   username = driver.find_element_by_name('username')
   password = driver.find_element_by_name('password')
 
-This will give the "Login" button as it occurs before the "Clear"
-button::
+This will give the "Login" button as it occurs before the "Clear" button::
 
   continue = driver.find_element_by_name('continue')
 
@@ -208,7 +207,7 @@ of an element:
 Locating Hyperlinks by Link Text
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Use this when you know the link text used within an anchor tag. With this
+Use this when you know the link text used within an anchor tag.  With this
 strategy, the first element with the link text matching the provided value will
 be returned.  If no element has a matching link text attribute, a
 ``NoSuchElementException`` will be raised.
@@ -232,8 +231,8 @@ The continue.html link can be located like this::
 Locating Elements by Tag Name
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Use this when you want to locate an element by tag name. With this strategy, the
-first element with the given tag name will be returned.  If no element has a
+Use this when you want to locate an element by tag name.  With this strategy,
+the first element with the given tag name will be returned.  If no element has a
 matching tag name, a ``NoSuchElementException`` will be raised.
 
 For instance, consider this page source::
@@ -290,5 +289,6 @@ The "p" element can be located like this::
 
   content = driver.find_element_by_css_selector('p.content')
 
-`Sauce Labs has good documentation <https://saucelabs.com/resources/articles/selenium-tips-css-selectors>`_
-on CSS selectors.
+`Sauce Labs has good documentation
+<https://saucelabs.com/resources/articles/selenium-tips-css-selectors>`_ on CSS
+selectors.

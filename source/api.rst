@@ -5,8 +5,8 @@ WebDriver API
 
 .. note::
 
-   This is not an official documentation.  Official API documentation
-   is available `here
+   This is not an official documentation.  Official API documentation is
+   available `here
    <https://seleniumhq.github.io/selenium/docs/api/py/api.html>`_.
 
 This chapter covers all the interfaces of Selenium WebDriver.
@@ -46,8 +46,7 @@ with the actual class name given below)::
 **Conventions used in the API**
 
 Some attributes are callable (or methods) and others are non-callable
-(properties).  All the callable attributes are ending with round
-brackets.
+(properties).  All the callable attributes are ending with round brackets.
 
 Here is an example for property:
 

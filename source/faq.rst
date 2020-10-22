@@ -26,10 +26,10 @@ Does Selenium 2 support XPath 2.0 ?
 
 Ref: http://seleniumhq.org/docs/03_webdriver.html#how-xpath-works-in-webdriver
 
-Selenium delegates XPath queries down to the browser's own XPath
-engine, so Selenium support XPath supports whatever the browser
-supports.  In browsers which don't have native XPath engines (IE
-6,7,8), Selenium supports XPath 1.0 only.
+Selenium delegates XPath queries down to the browser's own XPath engine, so
+Selenium support XPath supports whatever the browser supports.  In browsers
+which don't have native XPath engines (IE 6,7,8), Selenium supports XPath 1.0
+only.
 
 
 How to scroll down to the bottom of a page ?
@@ -37,21 +37,20 @@ How to scroll down to the bottom of a page ?
 
 Ref: http://blog.varunin.com/2011/08/scrolling-on-pages-using-selenium.html
 
-You can use the `execute_script` method to execute javascript on the
-loaded page.  So, you can call the JavaScript API to scroll to the
-bottom or any other position of a page.
+You can use the `execute_script` method to execute javascript on the loaded
+page.  So, you can call the JavaScript API to scroll to the bottom or any other
+position of a page.
 
 Here is an example to scroll to the bottom of a page::
 
   driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
 
-The `window <http://www.w3schools.com/jsref/obj_window.asp>`_ object
-in DOM has a `scrollTo
-<http://www.w3schools.com/jsref/met_win_scrollto.asp>`_ method to
+The `window <http://www.w3schools.com/jsref/obj_window.asp>`_ object in DOM has
+a `scrollTo <http://www.w3schools.com/jsref/met_win_scrollto.asp>`_ method to
 scroll to any position of an opened window.  The `scrollHeight
-<http://www.w3schools.com/jsref/dom_obj_all.asp>`_ is a common
-property for all elements.  The `document.body.scrollHeight` will give
-the height of the entire body of the page.
+<http://www.w3schools.com/jsref/dom_obj_all.asp>`_ is a common property for all
+elements.  The `document.body.scrollHeight` will give the height of the entire
+body of the page.
 
 How to auto save files using custom Firefox profile ?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -74,8 +73,8 @@ Another way to find content type is using the `requests
   content_type = requests.head('http://www.python.org').headers['content-type']
   print(content_type)
 
-Once the content type is identified, you can use it to set the firefox
-profile preference: ``browser.helperApps.neverAsk.saveToDisk``
+Once the content type is identified, you can use it to set the firefox profile
+preference: ``browser.helperApps.neverAsk.saveToDisk``
 
 Here is an example::
 
@@ -94,24 +93,24 @@ Here is an example::
   browser.get("http://pypi.python.org/pypi/selenium")
   browser.find_element_by_partial_link_text("selenium-2").click()
 
-In the above example, ``application/octet-stream`` is used as the
-content type.
+In the above example, ``application/octet-stream`` is used as the content type.
 
-The ``browser.download.dir`` option specify the directory where you
-want to download the files.
+The ``browser.download.dir`` option specify the directory where you want to
+download the files.
 
 How to upload files into file inputs ?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Select the ``<input type="file">`` element and call the ``send_keys()`` method passing 
-the file path, either the path relative to the test script, or an absolute path.
-Keep in mind the differences in path names between Windows and Unix systems.
+Select the ``<input type="file">`` element and call the ``send_keys()`` method
+passing the file path, either the path relative to the test script, or an
+absolute path.  Keep in mind the differences in path names between Windows and
+Unix systems.
 
 How to use firebug with Firefox ?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-First download the Firebug XPI file, later you call the
-``add_extension`` method available for the firefox profile::
+First download the Firebug XPI file, later you call the ``add_extension`` method
+available for the firefox profile::
 
   from selenium import webdriver
 
