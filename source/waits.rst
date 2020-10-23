@@ -120,6 +120,11 @@ match.
   element = wait.until(element_has_css_class((By.ID, 'myNewInput'), "myCSSClass"))
 
 
+.. note:: **polling2 Library**
+
+   You may also consider using `polling2
+   <https://polling2.readthedocs.io/en/latest/examples.html#polling-for-selenium-webdriver-elements>`_
+   lirbary which you need to install separately.
 
 Implicit Waits
 ~~~~~~~~~~~~~~
