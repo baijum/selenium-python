@@ -98,6 +98,8 @@ Selenium is mostly used for writing test cases.  The `selenium` package itself
 doesn't provide a testing tool/framework.  You can write test cases using
 Python's unittest module.  The other options for a tool/framework are pytest
 and nose.
+- https://docs.pytest.org/en/stable/
+- https://nose.readthedocs.io/en/latest/
 
 In this chapter, we use `unittest` as the framework of choice.  Here is the
 modified example which uses unittest module.  This is a test for `python.org`
@@ -142,7 +144,7 @@ The above result shows that the test has been successfully completed.
 
 
 Walkthrough of the example
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Initially, all the basic modules required are imported.  The `unittest
 <http://docs.python.org/library/unittest.html>`_ module is a built-in Python
