@@ -85,7 +85,7 @@ ensure that some results are found, make an assertion::
   assert "No results found." not in driver.page_source
 
 Finally, the browser window is closed.  You can also call `quit` method instead
-of `close`.  The `quit` will exit entire browser whereas close` will close one
+of `close`.  The `quit` will exit entire browser whereas `close` will close one
 tab, but if just one tab was open, by default most browser will exit entirely.::
 
   driver.close()
@@ -96,7 +96,7 @@ Using Selenium to write tests
 
 Selenium is mostly used for writing test cases.  The `selenium` package itself
 doesn't provide a testing tool/framework.  You can write test cases using
-Python's unittest module.  The other options for a tool/framework are py.test
+Python's unittest module.  The other options for a tool/framework are pytest
 and nose.
 
 In this chapter, we use `unittest` as the framework of choice.  Here is the
@@ -141,7 +141,7 @@ You can run the above test case from a shell like this::
 The above result shows that the test has been successfully completed.
 
 
-Walk through of the example
+Walkthrough of the example
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Initially, all the basic modules required are imported.  The `unittest
@@ -149,7 +149,7 @@ Initially, all the basic modules required are imported.  The `unittest
 based on Java's JUnit.  This module provides the framework for organizing the
 test cases.  The `selenium.webdriver` module provides all the WebDriver
 implementations.  Currently supported WebDriver implementations are Firefox,
-Chrome, Ie and Remote.  The `Keys` class provide keys in the keyboard like
+Chrome, IE and Remote.  The `Keys` class provides keys in the keyboard like
 RETURN, F1, ALT etc.
 
 ::
