@@ -126,7 +126,7 @@ search functionality::
           self.driver.close()
 
   if __name__ == "__main__":
-      unittest.main()
+      unittest.main(argv=['first-arg-is-ignored'], exit=False)
 
 
 You can run the above test case from a shell like this::
