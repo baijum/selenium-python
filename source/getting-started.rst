@@ -140,7 +140,7 @@ You can run the above test case from a shell like this::
 
 The above result shows that the test has been successfully completed.
 
-Note: To run the above test in IPython or Jupyter, we need to pass arguments in main method as shown below:      
+Note: To run the above test in IPython or Jupyter, you should pass a couple of arguments to the `main` function as shown below:
 ::
 
   unittest.main(argv=['first-arg-is-ignored'], exit=False)
