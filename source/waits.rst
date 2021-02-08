@@ -124,7 +124,7 @@ match.
 
    You may also consider using `polling2
    <https://polling2.readthedocs.io/en/latest/examples.html#polling-for-selenium-webdriver-elements>`_
-   lirbary which you need to install separately.
+   library which you need to install separately.
 
 Implicit Waits
 ~~~~~~~~~~~~~~
