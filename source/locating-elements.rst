@@ -73,7 +73,7 @@ For instance, consider this page source::
      <input name="continue" type="submit" value="Login" />
     </form>
    </body>
-  <html>
+  </html>
 
 The form element can be located like this::
 
@@ -99,7 +99,7 @@ For instance, consider this page source::
       <input name="continue" type="button" value="Clear" />
      </form>
    </body>
-   <html>
+   </html>
 
 The username & password elements can be located like this::
 
@@ -144,7 +144,7 @@ For instance, consider this page source::
       <input name="continue" type="button" value="Clear" />
      </form>
    </body>
-   <html>
+   </html>
 
 The form elements can be located like this::
 
@@ -220,7 +220,7 @@ For instance, consider this page source::
     <a href="continue.html">Continue</a>
     <a href="cancel.html">Cancel</a>
   </body>
-  <html>
+  </html>
 
 The continue.html link can be located like this::
 
@@ -242,7 +242,7 @@ For instance, consider this page source::
     <h1>Welcome</h1>
     <p>Site content goes here.</p>
   </body>
-  <html>
+  </html>
 
 The heading (h1) element can be located like this::
 
@@ -263,7 +263,7 @@ For instance, consider this page source::
    <body>
     <p class="content">Site content goes here.</p>
   </body>
-  <html>
+  </html>
 
 The "p" element can be located like this::
 
@@ -284,7 +284,7 @@ For instance, consider this page source::
    <body>
     <p class="content">Site content goes here.</p>
   </body>
-  <html>
+  </html>
 
 The "p" element can be located like this::
 
