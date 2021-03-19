@@ -22,6 +22,9 @@ Selenium with Python
    - `Chinese <https://selenium-python-zh.readthedocs.io/en/latest/>`_
    - `Japanese <https://kurozumi.github.io/selenium-python/index.html>`_
 
+Are you a beginner? Then you may find it easier to use
+`Helium <https://github.com/mherrmann/helium>`_. It uses Selenium and Python
+under the hood but solves many problems that beginners often struggle with.
 
 .. toctree::
    :numbered:
