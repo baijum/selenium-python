@@ -9,6 +9,7 @@ application user interface.
 
 Benefits of using page object pattern:
 
+* Easy to read test cases
 * Creating reusable code that can share across multiple test cases
 * Reducing the amount of duplicated code
 * If the user interface changes, the fix needs changes in only one place
