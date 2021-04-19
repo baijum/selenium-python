@@ -3,13 +3,13 @@
 Page Objects
 ------------
 
-This chapter is a tutorial introduction to page objects design pattern.  A page
-object represents an area in the web application user interface that your test
-is interacting.
+This chapter is a tutorial introduction to the Page Objects design pattern.  A
+page object represents an area where the test interacts within the web
+application user interface.
 
 Benefits of using page object pattern:
 
-* Creating reusable code that can be shared across multiple test cases
+* Creating reusable code that can share across multiple test cases
 * Reducing the amount of duplicated code
 * If the user interface changes, the fix needs changes in only one place
 
@@ -17,8 +17,9 @@ Benefits of using page object pattern:
 Test case
 ~~~~~~~~~
 
-Here is a test case which searches for a word in python.org website and ensure
-some results are found.
+Here is a test case that searches for a word on the `python.org` website and
+ensures some results. The following section will introduce the `page` module
+where the page objects will be defined.
 
 ::
 
@@ -34,11 +35,10 @@ some results are found.
           self.driver.get("http://www.python.org")
 
       def test_search_in_python_org(self):
-          """
-          Tests python.org search feature. Searches for the word "pycon" then verified that some results show up.
-          Note that it does not look for any particular text in search results page. This test verifies that
-          the results were not empty.
-          """
+          """Tests python.org search feature. Searches for the word "pycon" then
+          verified that some results show up.  Note that it does not look for
+          any particular text in search results page. This test verifies that
+          the results were not empty."""
 
           #Load the main page. In this case the home page of Python.org.
           main_page = page.MainPage(self.driver)
@@ -61,9 +61,9 @@ some results are found.
 Page object classes
 ~~~~~~~~~~~~~~~~~~~
 
-The page object pattern intends creating an object for each web page.  By
-following this technique a layer of separation between the test code and
-technical implementation is created.
+The page object pattern intends to create an object for each part of a web page.
+This technique helps build a separation between the test code and the actual
+code that interacts with the web page.
 
 The ``page.py`` will look like this::
 
@@ -78,7 +78,8 @@ The ``page.py`` will look like this::
 
 
   class BasePage(object):
-      """Base class to initialize the base page that will be called from all pages"""
+      """Base class to initialize the base page that will be called from all
+      pages"""
 
       def __init__(self, driver):
           self.driver = driver
@@ -92,10 +93,12 @@ The ``page.py`` will look like this::
 
       def is_title_matches(self):
           """Verifies that the hardcoded text "Python" appears in page title"""
+
           return "Python" in self.driver.title
 
       def click_go_button(self):
           """Triggers the search"""
+
           element = self.driver.find_element(*MainPageLocators.GO_BUTTON)
           element.click()
 
@@ -122,6 +125,7 @@ The ``element.py`` will look like this::
 
       def __set__(self, obj, value):
           """Sets the text to the value supplied"""
+
           driver = obj.driver
           WebDriverWait(driver, 100).until(
               lambda driver: driver.find_element_by_name(self.locator))
@@ -130,6 +134,7 @@ The ``element.py`` will look like this::
 
       def __get__(self, obj, owner):
           """Gets the text of the specified object"""
+
           driver = obj.driver
           WebDriverWait(driver, 100).until(
               lambda driver: driver.find_element_by_name(self.locator))
@@ -141,8 +146,8 @@ Locators
 ~~~~~~~~
 
 One of the practices is to separate the locator strings from the place where
-they are being used.  In this example, locators of the same page belong to same
-class.
+they are getting used.  In this example, locators of the same page belong to the
+same class.
 
 The ``locators.py`` will look like this::
 
@@ -150,8 +155,11 @@ The ``locators.py`` will look like this::
 
   class MainPageLocators(object):
       """A class for main page locators. All main page locators should come here"""
+
       GO_BUTTON = (By.ID, 'submit')
 
   class SearchResultsPageLocators(object):
-      """A class for search results locators. All search results locators should come here"""
+      """A class for search results locators. All search results locators should
+      come here"""
+
       pass
