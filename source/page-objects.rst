@@ -19,7 +19,7 @@ Test case
 ~~~~~~~~~
 
 Here is a test case that searches for a word on the `python.org` website and
-ensures some results. The following section will introduce the `page` module
+ensures some results.  The following section will introduce the `page` module
 where the page objects will be defined.
 
 ::

@@ -96,8 +96,9 @@ Using Selenium to write tests
 
 Selenium is mostly used for writing test cases.  The `selenium` package itself
 doesn't provide a testing tool/framework.  You can write test cases using
-Python's unittest module.  The other options for a tool/framework are `pytest <https://docs.pytest.org/en/stable/>`_
-and `nose <https://nose.readthedocs.io/en/latest/>`_.
+Python's unittest module.  The other options for a tool/framework are `pytest
+<https://docs.pytest.org/en/stable/>`_ and `nose
+<https://nose.readthedocs.io/en/latest/>`_.
 
 In this chapter, we use `unittest` as the framework of choice.  Here is the
 modified example which uses unittest module.  This is a test for `python.org`
@@ -140,8 +141,8 @@ You can run the above test case from a shell like this::
 
 The above result shows that the test has been successfully completed.
 
-Note: To run the above test in IPython or Jupyter, you should pass a couple of arguments to the `main` function as shown below:
-::
+Note: To run the above test in IPython or Jupyter, you should pass a couple of
+arguments to the `main` function as shown below::
 
   unittest.main(argv=['first-arg-is-ignored'], exit=False)
   
@@ -190,7 +191,7 @@ to the driver object created in `setUp` method.
 
 The `driver.get` method will navigate to a page given by the URL.  WebDriver
 will wait until the page has fully loaded (that is, the "onload" event has
-fired) before returning control to your test or script. *Be aware that if your
+fired) before returning control to your test or script.  *Be aware that if your
 page uses a lot of AJAX on load then WebDriver may not know when it has
 completely loaded*::
 
