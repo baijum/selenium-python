@@ -18,25 +18,70 @@ This documentation explains Selenium 2 WebDriver API.  Selenium 1 / Selenium RC
 API is not covered here.
 
 
-Downloading Python bindings for Selenium
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Installing Python bindings for Selenium
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-
-Use `pip <https://pip.pypa.io/en/latest/installing/>`_ to install the selenium
-package.  Python 3.6 has pip available in the `standard library
-<https://docs.python.org/3.6/installing/index.html>`_.  Using `pip`, you can
+Use `pip <https://pip.pypa.io/en/latest/installation/>`_ to install the selenium
+package.  Python 3 has pip available in the `standard library
+<https://docs.python.org/3/installing/index.html>`_.  Using `pip`, you can
 install selenium like this::
 
   pip install selenium
 
-You may consider using `virtualenv <http://www.virtualenv.org>`_ to create
-isolated Python environments.  Python 3 has `venv
+You may consider using `virtualenv <https://virtualenv.pypa.io/en/latest/>`_ to
+create isolated Python environments.  Python 3 has `venv
 <https://docs.python.org/3/library/venv.html>`_ which is almost the same as
 virtualenv.
 
 You can also download Python bindings for Selenium from the `PyPI page for
 selenium package <https://pypi.python.org/pypi/selenium>`_. and install
 manually.
+
+
+Instructions for Windows users
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+1. Install Python 3 using the `MSI available in python.org download page
+   <http://www.python.org/download>`_.
+
+2. Start a command prompt using the ``cmd.exe`` program and run the ``pip``
+   command as given below to install `selenium`.
+
+   ::
+
+     C:\Python39\Scripts\pip.exe install selenium
+
+Now you can run your test scripts using Python.  For example, if you have
+created a Selenium based script and saved it inside
+``C:\my_selenium_script.py``, you can run it like this::
+
+  C:\Python39\python.exe C:\my_selenium_script.py
+
+
+Installing from Git sources
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+To build Selenium Python from the source code, clone `the official repository
+<https://github.com/SeleniumHQ/selenium.git>`_.  It contains the source code for
+all official Selenium flavors, like Python, Java, Ruby and others.  The Python
+code resides in the ``/py`` directory.  To build, you will also need the `Bazel
+<https://www.bazel.build>`_ build system.
+
+.. note::
+
+  Currently, as Selenium gets near to the 4.0.0 release, it requires Bazel 3.2.0
+  (`Install instructions
+  <https://docs.bazel.build/versions/3.2.0/install.html>`_), even though 3.3.0
+  is already available.
+
+To build a Wheel from the sources, run the following command from the repository
+root::
+
+  bazel //py:selenium-wheel
+
+This command will prepare the source code with some preprocessed JS files needed
+by some webdriver modules and build the ``.whl`` package inside the
+``./bazel-bin/py/`` directory.  Afterwards, you can use ``pip`` to install it.
 
 Drivers
 ~~~~~~~
@@ -67,29 +112,6 @@ the more popular browser drivers follow.
 For more information about driver installation, please refer the `official
 documentation
 <https://www.selenium.dev/documentation/en/webdriver/driver_requirements/>`_.
-
-Detailed instructions for Windows users
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-.. Note::
-
-  You should have an internet connection to perform this installation.
-
-1. Install Python 3.6 using the `MSI available in python.org download page
-   <http://www.python.org/download>`_.
-
-2. Start a command prompt using the ``cmd.exe`` program and run the ``pip``
-   command as given below to install `selenium`.
-
-   ::
-   
-     C:\Python35\Scripts\pip.exe install selenium
-
-Now you can run your test scripts using Python.  For example, if you have
-created a Selenium based script and saved it inside
-``C:\my_selenium_script.py``, you can run it like this::
-
-  C:\Python35\python.exe C:\my_selenium_script.py
 
 
 Downloading Selenium server
@@ -130,29 +152,3 @@ command.  Similarly, you can provide a relative or absolute path to Selenium
 server jar file.  Then, the command will look something like this::
 
   /path/to/java -jar /path/to/selenium-server-standalone-2.x.x.jar
-
-
-Installing from Git sources
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-To build Selenium Python from the source code, clone `the official repository
-<https://github.com/SeleniumHQ/selenium.git>`_.  It contains the source code for
-all official Selenium flavors, like Python, Java, Ruby and others.  The Python
-code resides in the ``/py`` directory.  To build, you will also need the `Bazel
-<https://www.bazel.build>`_ build system.
-
-.. note::
-
-  Currently, as Selenium gets near to the 4.0.0 release, it requires Bazel 3.2.0
-  (`Install instructions
-  <https://docs.bazel.build/versions/3.2.0/install.html>`_), even though 3.3.0
-  is already available.
-
-To build a Wheel from the sources, run the following command from the repository
-root::
-
-  bazel //py:selenium-wheel
-
-This command will prepare the source code with some preprocessed JS files needed
-by some webdriver modules and build the ``.whl`` package inside the
-``./bazel-bin/py/`` directory.  Afterwards, you can use ``pip`` to install it.
