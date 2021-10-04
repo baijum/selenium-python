@@ -100,7 +100,7 @@ Other supported browsers will have their own drivers available. Links to some of
 the more popular browser drivers follow.
 
 +--------------+-----------------------------------------------------------------------+
-| **Chrome**:  | https://sites.google.com/a/chromium.org/chromedriver/downloads        |
+| **Chrome**:  | https://sites.google.com/chromium.org/driver/                         |
 +--------------+-----------------------------------------------------------------------+
 | **Edge**:    | https://developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/ |
 +--------------+-----------------------------------------------------------------------+
