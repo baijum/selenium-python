@@ -141,7 +141,7 @@ For instance, consider this page source::
 
 The form elements can be located like this::
 
-  login_form = driver.find_element(By.XPATH"/html/body/form[1]")
+  login_form = driver.find_element(By.XPATH, "/html/body/form[1]")
   login_form = driver.find_element(By.XPATH, "//form[1]")
   login_form = driver.find_element(By.XPATH, "//form[@id='loginForm']")
 
