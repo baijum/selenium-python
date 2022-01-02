@@ -45,7 +45,7 @@ These are the various ways the attributes are used to locate elements on a page:
   find_element(By.CLASS_NAME, "class name")
   find_element(By.CSS_SELECTOR, "css selector")
 
-  If you want to locate several elements with the same attibute replace find_element with find_elements.
+If you want to locate several elements with the same attibute replace find_element with find_elements.
 
 
 Locating by Id
