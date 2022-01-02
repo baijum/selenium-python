@@ -28,10 +28,10 @@ ways to find elements.  For example, given an element defined as::
 
 you could find it using any of::
 
-  element = driver.find_element_by_id("passwd-id")
-  element = driver.find_element_by_name("passwd")
-  element = driver.find_element_by_xpath("//input[@id='passwd-id']")
-  element = driver.find_element_by_css_selector("input#passwd-id")
+  element = driver.find_element(By.ID, "passwd-id")
+  element = driver.find_element(By.NAME, "passwd")
+  element = driver.find_element(By.XPATH, "//input[@id='passwd-id']")
+  element = driver.find_element(By.CSS_SELECTOR, "input#passwd-id")
 
 You can also look for a link by its text, but be careful! The text must be an
 exact match! You should also be careful when using `XPATH in WebDriver`.  If
@@ -74,8 +74,8 @@ about the other elements? You can "toggle" the state of the drop down, and you
 can use "setSelected" to set something like an `OPTION` tag selected.  Dealing
 with `SELECT` tags isn't too bad::
 
-    element = driver.find_element_by_xpath("//select[@name='name']")
-    all_options = element.find_elements_by_tag_name("option")
+    element = driver.find_element(By.XPATH, "//select[@name='name']")
+    all_options = element.find_elements(By.TAG_NAME, "option")
     for option in all_options:
         print("Value is: %s" % option.get_attribute("value"))
         option.click()
@@ -88,7 +88,7 @@ elements. WebDriver's support classes include one called a "Select", which
 provides useful methods for interacting with these::
 
     from selenium.webdriver.support.ui import Select
-    select = Select(driver.find_element_by_name('name'))
+    select = Select(driver.find_element(By.NAME, 'name'))
     select.select_by_index(index)
     select.select_by_visible_text("text")
     select.select_by_value(value)
@@ -96,7 +96,7 @@ provides useful methods for interacting with these::
 
 WebDriver also provides features for deselecting all the selected options::
 
-    select = Select(driver.find_element_by_id('id'))
+    select = Select(driver.find_element(By.ID, 'id'))
     select.deselect_all()
 
 This will deselect all OPTIONs from that particular SELECT on the page.
@@ -104,7 +104,7 @@ This will deselect all OPTIONs from that particular SELECT on the page.
 Suppose in a test, we need the list of all default selected options, Select
 class provides a property method that returns a list::
 
-    select = Select(driver.find_element_by_xpath("//select[@name='name']"))
+    select = Select(driver.find_element(By.XPATH, "//select[@name='name']"))
     all_selected_options = select.all_selected_options
     
 To get all available options::
@@ -131,8 +131,8 @@ Drag and drop
 You can use drag and drop, either moving an element by a certain amount, or on
 to another element::
 
-  element = driver.find_element_by_name("source")
-  target = driver.find_element_by_name("target")
+  element = driver.find_element(By.NAME, "source")
+  target = driver.find_element(By.NAME, "target")
 
   from selenium.webdriver import ActionChains
   action_chains = ActionChains(driver)
