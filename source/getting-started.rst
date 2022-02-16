@@ -120,7 +120,7 @@ search functionality::
           elem = driver.find_element_by_name("q")
           elem.send_keys("pycon")
           elem.send_keys(Keys.RETURN)
-          assert "No results found." not in driver.page_source
+          self.assertNotIn("No results found.", driver.page_source)
           
 
       def tearDown(self):
@@ -220,7 +220,7 @@ Special keys can be send using `Keys` class imported from
 After submission of the page, you should get the result as per search if there
 is any.  To ensure that some results are found, make an assertion::
 
-  assert "No results found." not in driver.page_source
+  self.assertNotIn("No results found.", driver.page_source)
 
 The `tearDown` method will get called after every test method.  This is a place
 to do all cleanup actions.  In the current method, the browser window is closed.
