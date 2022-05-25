@@ -5,8 +5,7 @@ Locating Elements
 
 .. note::
 
-   If you are using Selenium 4.0.0 or higher, there is a deprecation notice for the find_element_by\_\* functions. 
-   `DeprecationWarning: find_element_by\_\* commands are deprecated. Please use find_element() instead`
+   If you are using Selenium 4.0.0 or higher, there is a deprecation notice for the find_element_by_* functions. Please use find_element() instead.
 
 There are various strategies to locate elements in a page.  You can use the most
 appropriate one for your case.  Selenium provides the following methods to
