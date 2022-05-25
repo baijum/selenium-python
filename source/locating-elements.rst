@@ -12,32 +12,54 @@ There are various strategies to locate elements in a page.  You can use the most
 appropriate one for your case.  Selenium provides the following methods to
 locate elements in a page. :ref:`1<Deprecation of locator methods>`
 
-- `find_element_by_id`
-- `find_element_by_name`
-- `find_element_by_xpath`
-- `find_element_by_link_text`
-- `find_element_by_partial_link_text`
-- `find_element_by_tag_name`
-- `find_element_by_class_name`
-- `find_element_by_css_selector`
+.. list-table:: Available Locator Methods
+   :header-rows: 1
 
-
-**To find multiple elements (these methods will return a list):**
-
-- `find_elements_by_name`
-- `find_elements_by_xpath`
-- `find_elements_by_link_text`
-- `find_elements_by_partial_link_text`
-- `find_elements_by_tag_name`
-- `find_elements_by_class_name`
-- `find_elements_by_css_selector`
-
-
-Apart from the methods given above, there are two methods which
-might be useful for locating page elements:
-
-- `find_element`
-- `find_elements`
+   * - HTML locator
+     - Description
+     - Legacy method (single element)
+     - Legacy method (multiples/list)
+     - Selenium 4.0.0+
+   * - class name
+     - css selector
+     - id
+     - link text
+     - partial link text
+     - name
+     - tag name
+     - xpath
+   * - Locate element whose class name contains the search value. Compound class names are not permitted.
+     - Locate element matching a CSS selector
+     - Locate element whose ID attribute matches the search value
+     - Locate anchor element whose visible text matches the search value
+     - Locate anchor element whose visible text contains the search value
+     - Locate element whose NAME attribute matches the search value
+     - Locate element whose tag name matches the search value
+     - Locate element matching an XPath expression
+   * - find_element_by_class_name
+     - find_element_by_css_selector
+     - find_element_by_id
+     - find_element_by_link_text
+     - find_element_by_partial_link_text
+     - find_element_by_name
+     - find_element_by_tag_name
+     - find_element_by_xpath
+   * - find_elements_by_class_name
+     - find_elements_by_css_selector
+     - find_elements_by_id
+     - find_elements_by_link_text
+     - find_elements_by_partial_link_text
+     - find_elements_by_name
+     - find_elements_by_tag_name
+     - find_elements_by_xpath
+   * - By.CLASS_NAME
+     - By.CSS_SELECTOR
+     - By.ID
+     - By.LINK_TEXT
+     - By.PARTIAL_TEXT
+     - By.NAME
+     - By.TAG_NAME
+     - By.XPATH
 
 Example usage::
 
@@ -48,18 +70,6 @@ Example usage::
   
   foobarRows = driver.find_elements(By.XPATH, '//table[@id="foobar"]/tbody/tr')
   # list all rows in `table` element with attribute `id` set to 'foobar'
-
-
-These are the attributes available for `By` class::
-
-    ID = "id"
-    XPATH = "xpath"
-    LINK_TEXT = "link text"
-    PARTIAL_LINK_TEXT = "partial link text"
-    NAME = "name"
-    TAG_NAME = "tag name"
-    CLASS_NAME = "class name"
-    CSS_SELECTOR = "css selector"
 
 
 Locating by Id
