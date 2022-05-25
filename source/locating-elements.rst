@@ -10,7 +10,7 @@ Locating Elements
 
 There are various strategies to locate elements in a page.  You can use the most
 appropriate one for your case.  Selenium provides the following methods to
-locate elements in a page:
+locate elements in a page. :ref:`1<Deprecation of locator methods>`
 
 - `find_element_by_id`
 - `find_element_by_name`
@@ -33,22 +33,21 @@ locate elements in a page:
 - `find_elements_by_css_selector`
 
 
-Apart from the public methods given above, there are two private methods which
+Apart from the methods given above, there are two methods which
 might be useful for locating page elements:
 
 - `find_element`
 - `find_elements`
 
-
 Example usage::
 
   from selenium.webdriver.common.by import By
   
-  # returns single button (only or first instance)
   myButton = driver.find_element(By.XPATH, '//button[text()="Some text"]')
+  # find single button (only or first instance)
   
-  # returns list of all rows in table of id 'foobar'
-  foobarRows = driver.find_elements(By.XPATH, '//table[@id="foobar"]/th/tr')
+  foobarRows = driver.find_elements(By.XPATH, '//table[@id="foobar"]/tbody/tr')
+  # list all rows in `table` element with attribute `id` set to 'foobar'
 
 
 These are the attributes available for `By` class::
@@ -87,8 +86,8 @@ The form element can be located like this::
 
   login_form = driver.find_element_by_id('loginForm')
   
-  # alternate method (v4.0.0+)
   login_form = driver.find_element(By.ID, 'loginForm')
+  # (v4.0.0+) Alternate method
 
 
 Locating by Name
@@ -121,8 +120,8 @@ This will give the "Login" button as it occurs before the "Clear" button::
 
   continue = driver.find_element_by_name('continue')
   
-  # alternate method (v4.0.0+)
   continue = driver.find_element(By.NAME, 'continue')
+  # (v4.0.0+) Alternate method
 
 
 Locating by XPath
@@ -160,7 +159,7 @@ For instance, consider this page source::
    </body>
    </html>
 
-The form element can be located like this [#]_::
+The form element can be located like this: :ref:`2<Absolute path warning>`)::
 
    login_form = driver.find_element_by_xpath("/html/body/form[1]")
    # Find form element by absolute path
@@ -173,8 +172,6 @@ The form element can be located like this [#]_::
    
    login_form = driver.find_element(By.XPATH, "//form[@id='loginForm']")
    # (v4.0.0+) Find first `input` element with attribute `name` set to `username`
-
-.. [#] Note: Use absolute paths only if necessary. Methods will break if the HTML is changed even slightly.
 
 The username element can be located like this::
 
@@ -247,6 +244,10 @@ The continue.html link can be located like this::
 
   continue_link = driver.find_element_by_link_text('Continue')
   continue_link = driver.find_element_by_partial_link_text('Conti')
+  
+  continue_link = driver.find_element(By.LINK_TEXT, 'Continue')
+  continue_link = driver.find_element(By.PARTIAL_LINK_TEXT, 'Conti')
+  # (v4.0.0+) Alternate methods
 
 
 Locating Elements by Tag Name
@@ -268,6 +269,9 @@ For instance, consider this page source::
 The heading (h1) element can be located like this::
 
   heading1 = driver.find_element_by_tag_name('h1')
+  
+  heading1 = driver.find_element(By.TAG_NAME, 'h1')
+  # (v4.0.0+) Alternate method
 
 
 Locating Elements by Class Name
@@ -289,6 +293,9 @@ For instance, consider this page source::
 The "p" element can be located like this::
 
   content = driver.find_element_by_class_name('content')
+  
+  content = driver.find_element(By.CLASS_NAME, 'content')
+  # (v4.0.0+) Alternate method
 
 Locating Elements by CSS Selectors
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -309,8 +316,21 @@ For instance, consider this page source::
 
 The "p" element can be located like this::
 
-  content = driver.find_element_by_css_selector('p.content')
+   content = driver.find_element_by_css_selector('p.content')
+   
+   content = driver.find_element(By.CSS_SELECTOR, 'p.content')
+   # (v4.0.0+) Alternate method
 
 `Sauce Labs has good documentation
 <https://saucelabs.com/resources/articles/selenium-tips-css-selectors>`_ on CSS
 selectors.
+
+Footnotes
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. _Deprecation of locator methods
+[1] If you are using Selenium 4.0.0 or higher, there is a deprecation notice for find_element_by\_* methods. 
+Please use find_element(By.*) instead.
+
+.. _Absolute path warning
+[2] Use absolute paths only if necessary. Methods will break if the HTML is changed even slightly.
