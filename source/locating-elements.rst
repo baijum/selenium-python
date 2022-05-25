@@ -3,9 +3,10 @@
 Locating Elements
 -----------------
 
-.. note::
+::
 
-   If you are using Selenium 4.0.0 or higher, there is a deprecation notice for the find_element_by_* functions. Please use find_element() instead.
+   Note: If you are using Selenium 4.0.0 or higher, there is a deprecation notice for find_element_by_* methods. 
+   Please use find_element(By.*) instead.
 
 There are various strategies to locate elements in a page.  You can use the most
 appropriate one for your case.  Selenium provides the following methods to
@@ -42,9 +43,12 @@ might be useful for locating page elements:
 Example usage::
 
   from selenium.webdriver.common.by import By
-
-  driver.find_element(By.XPATH, '//button[text()="Some text"]')
-  driver.find_elements(By.XPATH, '//button')
+  
+  # returns single button (only or first instance)
+  myButton = driver.find_element(By.XPATH, '//button[text()="Some text"]')
+  
+  # returns list of all rows in table of id 'foobar'
+  foobarRows = driver.find_elements(By.XPATH, '//table[@id="foobar"]/th/tr')
 
 
 These are the attributes available for `By` class::
