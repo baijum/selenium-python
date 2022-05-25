@@ -86,6 +86,9 @@ For instance, consider this page source::
 The form element can be located like this::
 
   login_form = driver.find_element_by_id('loginForm')
+  
+  # alternate method (v4.0.0+)
+  login_form = driver.find_element(By.ID, 'loginForm')
 
 
 Locating by Name
@@ -117,6 +120,9 @@ The username & password elements can be located like this::
 This will give the "Login" button as it occurs before the "Clear" button::
 
   continue = driver.find_element_by_name('continue')
+  
+  # alternate method (v4.0.0+)
+  continue = driver.find_element(By.NAME, 'continue')
 
 
 Locating by XPath
