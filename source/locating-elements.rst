@@ -160,46 +160,48 @@ For instance, consider this page source::
    </body>
    </html>
 
-The form elements can be located like this::
+The form element can be located like this [#]_::
 
-  login_form = driver.find_element_by_xpath("/html/body/form[1]")
-  login_form = driver.find_element_by_xpath("//form[1]")
-  login_form = driver.find_element_by_xpath("//form[@id='loginForm']")
+   login_form = driver.find_element_by_xpath("/html/body/form[1]")
+   # Find form element by absolute path
+   
+   login_form = driver.find_element_by_xpath("//form[1]")
+   # Find the first form element in the html
+   
+   login_form = driver.find_element_by_xpath("//form[@id='loginForm']")
+   # Find the form element with attribute `id` set to `loginForm`
+   
+   login_form = driver.find_element(By.XPATH, "//form[@id='loginForm']")
+   # (v4.0.0+) Find first `input` element with attribute `name` set to `username`
 
-
-1. Absolute path (would break if the HTML was changed only slightly)
-
-2. First form element in the HTML
-
-3. The form element with attribute `id` set to `loginForm`
+.. [#] Note: Use absolute paths only if necessary. Methods will break if the HTML is changed even slightly.
 
 The username element can be located like this::
 
-  username = driver.find_element_by_xpath("//form[input/@name='username']")
-  username = driver.find_element_by_xpath("//form[@id='loginForm']/input[1]")
-  username = driver.find_element_by_xpath("//input[@name='username']")
-
-1. First form element with an input child element with `name` set to `username`
-
-2. First input child element of the form element with attribute `id` set to
-   `loginForm`
-
-3. First input element with attribute `name` set to `username`
+    username = driver.find_element_by_xpath("//form[input/@name='username']")
+    # Find first `form` element with an `input` child element with `name` set to `username`
+    
+    username = driver.find_element_by_xpath("//form[@id='loginForm']/input[1]")
+    # Find first `input` child element of the `form` element with attribute `id` set to `loginForm`
+    
+    username = driver.find_element_by_xpath("//input[@name='username']")
+    # Find first `input` element with attribute `name` set to `username`
+    
+    username = driver.find_element(By.XPATH, "//input[@name='username']")
+    # (v4.0.0+) Find first `input` element with attribute `name` set to `username`
 
 The "Clear" button element can be located like this::
 
   clear_button = driver.find_element_by_xpath("//input[@name='continue'][@type='button']")
+  # Find `input` with attribute `name` set to `continue` and attribute `type` set to `button`
+  
   clear_button = driver.find_element_by_xpath("//form[@id='loginForm']/input[4]")
+  # Find fourth `input` child of the `form` element with attribute `id` set to `loginForm`
+  
+  clear_button = driver.find_element(By.XPATH, "//input[@name='continue'][@type='button']")
+  # (v4.0.0+) Find `input` element with attribute `type` set to `button` and `name` set to `continue`
 
-
-1. Input with attribute `name` set to `continue` and attribute `type` set to
-   `button`
-
-2. Fourth input child element of the form element with attribute `id` set to
-   `loginForm`
-
-These examples cover some basics, but in order to learn more, the following
-references are recommended:
+These examples cover a few basics only. To learn more, the following references are recommended:
 
 * `W3Schools XPath Tutorial <https://www.w3schools.com/xml/xpath_intro.asp>`_
 * `W3C XPath Recommendation <http://www.w3.org/TR/xpath>`_
@@ -207,15 +209,20 @@ references are recommended:
   <http://www.zvon.org/comp/r/tut-XPath_1.html>`_
   - with interactive examples.
 
-Here is a couple of very useful Add-ons that can assist in discovering the XPath
-of an element:
+Additionally, there are useful browser extensions to assist in discovering XPaths:
 
 * `xPath Finder
   <https://addons.mozilla.org/en-US/firefox/addon/xpath_finder>`_ -
-  Plugin to get the elements xPath.
+  for Firefox
 * `XPath Helper
   <https://chrome.google.com/webstore/detail/hgimnogjllphhhkhlmebbmlgjoejdpjl>`_ -
   for Google Chrome
+* `Ruto XPath Finder
+  <https://chrome.google.com/webstore/detail/ruto-xpath-finder/ilcoelkkcokgeeijnopjnolmmighnppp>`_ -
+  for Google Chrome, specifically engineered for use with Selenium
+* `SelectorsHub
+  <https://selectorshub.com/selectorshub/>`_ -
+  for most major browsers (Chrome, Safari, Firefox, Edge)
 
 
 Locating Hyperlinks by Link Text
