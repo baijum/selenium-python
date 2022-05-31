@@ -13,11 +13,12 @@ Python like this.
 
   from selenium import webdriver
   from selenium.webdriver.common.keys import Keys
+  from selenium.webdriver.common.by import By
 
   driver = webdriver.Firefox()
   driver.get("http://www.python.org")
   assert "Python" in driver.title
-  elem = driver.find_element_by_name("q")
+  elem = driver.find_element(By.NAME, "q")
   elem.clear()
   elem.send_keys("pycon")
   elem.send_keys(Keys.RETURN)
@@ -36,12 +37,14 @@ Example Explained
 
 The `selenium.webdriver` module provides all the WebDriver implementations.
 Currently supported WebDriver implementations are Firefox, Chrome, IE and
-Remote.  The `Keys` class provide keys in the keyboard like RETURN, F1, ALT etc.
+Remote.  The `Keys` class provide keys in the keyboard like RETURN, F1, ALT etc. 
+The `By` class is used to locate elements within a document. 
 
 ::
 
   from selenium import webdriver
   from selenium.webdriver.common.keys import Keys
+  from selenium.webdriver.common.by import By
 
 Next, the instance of Firefox WebDriver is created.
 
@@ -61,13 +64,13 @@ The next line is an assertion to confirm that title has "Python" word in it::
 
   assert "Python" in driver.title
 
-WebDriver offers a number of ways to find elements using one of the
-`find_element_by_*` methods.  For example, the input text element can be located
-by its `name` attribute using `find_element_by_name` method.  A detailed
-explanation of finding elements is available in the :ref:`locating-elements`
+WebDriver offers a number of ways to find elements using the
+`find_element` method.  For example, the input text element can be located
+by its `name` attribute using the `find_element` method and using By.NAME as its first parameter.  
+A detailed explanation of finding elements is available in the :ref:`locating-elements`
 chapter::
 
-  elem = driver.find_element_by_name("q")
+  elem = driver.find_element(By.NAME, "q")
 
 Next, we are sending keys, this is similar to entering keys using your keyboard.
 Special keys can be sent using `Keys` class imported from
@@ -107,6 +110,7 @@ search functionality::
   import unittest
   from selenium import webdriver
   from selenium.webdriver.common.keys import Keys
+  from selenium.webdriver.common.by import By
 
   class PythonOrgSearch(unittest.TestCase):
 
@@ -117,7 +121,7 @@ search functionality::
           driver = self.driver
           driver.get("http://www.python.org")
           self.assertIn("Python", driver.title)
-          elem = driver.find_element_by_name("q")
+          elem = driver.find_element(By.NAME, "q")
           elem.send_keys("pycon")
           elem.send_keys(Keys.RETURN)
           self.assertNotIn("No results found.", driver.page_source)
@@ -157,13 +161,14 @@ based on Java's JUnit.  This module provides the framework for organizing the
 test cases.  The `selenium.webdriver` module provides all the WebDriver
 implementations.  Currently supported WebDriver implementations are Firefox,
 Chrome, IE and Remote.  The `Keys` class provides keys in the keyboard like
-RETURN, F1, ALT etc.
+RETURN, F1, ALT etc. The `By` class is used to locate elements within a document.
 
 ::
 
   import unittest
   from selenium import webdriver
   from selenium.webdriver.common.keys import Keys
+  from selenium.webdriver.common.by import By
 
 The test case class is inherited from `unittest.TestCase`.  Inheriting from
 `TestCase` class is the way to tell `unittest` module that this is a test case::
@@ -202,13 +207,13 @@ The next line is an assertion to confirm that title has "Python" word in it::
           self.assertIn("Python", driver.title)
 
 
-WebDriver offers a number of ways to find elements using one of the
-`find_element_by_*` methods.  For example, the input text element can be located
-by its `name` attribute using `find_element_by_name` method.  Detailed
+WebDriver offers a number of ways to find elements using the
+`find_element` method.  For example, the input text element can be located
+by its `name` attribute using the `find_element` method.  Detailed
 explanation of finding elements is available in the :ref:`locating-elements`
 chapter::
 
-          elem = driver.find_element_by_name("q")
+          elem = driver.find_element(By.NAME, "q")
 
 Next, we are sending keys, this is similar to entering keys using your keyboard.
 Special keys can be send using `Keys` class imported from

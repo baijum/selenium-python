@@ -4,34 +4,13 @@ Locating Elements
 -----------------
 
 There are various strategies to locate elements in a page.  You can use the most
-appropriate one for your case.  Selenium provides the following methods to
+appropriate one for your case.  Selenium provides the following method to
 locate elements in a page:
 
-- `find_element_by_id`
-- `find_element_by_name`
-- `find_element_by_xpath`
-- `find_element_by_link_text`
-- `find_element_by_partial_link_text`
-- `find_element_by_tag_name`
-- `find_element_by_class_name`
-- `find_element_by_css_selector`
-
+- `find_element`
 
 **To find multiple elements (these methods will return a list):**
 
-- `find_elements_by_name`
-- `find_elements_by_xpath`
-- `find_elements_by_link_text`
-- `find_elements_by_partial_link_text`
-- `find_elements_by_tag_name`
-- `find_elements_by_class_name`
-- `find_elements_by_css_selector`
-
-
-Apart from the public methods given above, there are two private methods which
-might be useful for locating page elements:
-
-- `find_element`
 - `find_elements`
 
 
@@ -42,17 +21,31 @@ Example usage::
   driver.find_element(By.XPATH, '//button[text()="Some text"]')
   driver.find_elements(By.XPATH, '//button')
 
-
+The attributes available for the `By` class are used to locate elements on a page.
 These are the attributes available for `By` class::
 
     ID = "id"
+    NAME = "name"
     XPATH = "xpath"
     LINK_TEXT = "link text"
     PARTIAL_LINK_TEXT = "partial link text"
-    NAME = "name"
     TAG_NAME = "tag name"
     CLASS_NAME = "class name"
     CSS_SELECTOR = "css selector"
+
+The 'By' class is used to specify which attribute is used to locate elements on a page.
+These are the various ways the attributes are used to locate elements on a page::
+
+  find_element(By.ID, "id")
+  find_element(By.NAME, "name")
+  find_element(By.XPATH, "xpath")
+  find_element(By.LINK_TEXT, "link text")
+  find_element(By.PARTIAL_LINK_TEXT, "partial link text")
+  find_element(By.TAG_NAME, "tag name")
+  find_element(By.CLASS_NAME, "class name")
+  find_element(By.CSS_SELECTOR, "css selector")
+
+If you want to locate several elements with the same attribute replace find_element with find_elements.
 
 
 Locating by Id
@@ -77,7 +70,7 @@ For instance, consider this page source::
 
 The form element can be located like this::
 
-  login_form = driver.find_element_by_id('loginForm')
+  login_form = driver.find_element(By.ID, 'loginForm')
 
 
 Locating by Name
@@ -103,12 +96,12 @@ For instance, consider this page source::
 
 The username & password elements can be located like this::
 
-  username = driver.find_element_by_name('username')
-  password = driver.find_element_by_name('password')
+  username = driver.find_element(By.NAME, 'username')
+  password = driver.find_element(By.NAME, 'password')
 
 This will give the "Login" button as it occurs before the "Clear" button::
 
-  continue = driver.find_element_by_name('continue')
+  continue = driver.find_element(By.NAME, 'continue')
 
 
 Locating by XPath
@@ -148,9 +141,9 @@ For instance, consider this page source::
 
 The form elements can be located like this::
 
-  login_form = driver.find_element_by_xpath("/html/body/form[1]")
-  login_form = driver.find_element_by_xpath("//form[1]")
-  login_form = driver.find_element_by_xpath("//form[@id='loginForm']")
+  login_form = driver.find_element(By.XPATH, "/html/body/form[1]")
+  login_form = driver.find_element(By.XPATH, "//form[1]")
+  login_form = driver.find_element(By.XPATH, "//form[@id='loginForm']")
 
 
 1. Absolute path (would break if the HTML was changed only slightly)
@@ -161,9 +154,9 @@ The form elements can be located like this::
 
 The username element can be located like this::
 
-  username = driver.find_element_by_xpath("//form[input/@name='username']")
-  username = driver.find_element_by_xpath("//form[@id='loginForm']/input[1]")
-  username = driver.find_element_by_xpath("//input[@name='username']")
+  username = driver.find_element(By.XPATH, "//form[input/@name='username']")
+  username = driver.find_element(By.XPATH, "//form[@id='loginForm']/input[1]")
+  username = driver.find_element(By.XPATH, "//input[@name='username']")
 
 1. First form element with an input child element with `name` set to `username`
 
@@ -174,8 +167,8 @@ The username element can be located like this::
 
 The "Clear" button element can be located like this::
 
-  clear_button = driver.find_element_by_xpath("//input[@name='continue'][@type='button']")
-  clear_button = driver.find_element_by_xpath("//form[@id='loginForm']/input[4]")
+  clear_button = driver.find_element(By.XPATH, "//input[@name='continue'][@type='button']")
+  clear_button = driver.find_element(By.XPATH, "//form[@id='loginForm']/input[4]")
 
 
 1. Input with attribute `name` set to `continue` and attribute `type` set to
@@ -224,8 +217,8 @@ For instance, consider this page source::
 
 The continue.html link can be located like this::
 
-  continue_link = driver.find_element_by_link_text('Continue')
-  continue_link = driver.find_element_by_partial_link_text('Conti')
+  continue_link = driver.find_element(By.LINK_TEXT, 'Continue')
+  continue_link = driver.find_element(By.PARTIAL_LINK_TEXT, 'Conti')
 
 
 Locating Elements by Tag Name
@@ -246,7 +239,7 @@ For instance, consider this page source::
 
 The heading (h1) element can be located like this::
 
-  heading1 = driver.find_element_by_tag_name('h1')
+  heading1 = driver.find_element(By.TAG_NAME, 'h1')
 
 
 Locating Elements by Class Name
@@ -267,7 +260,7 @@ For instance, consider this page source::
 
 The "p" element can be located like this::
 
-  content = driver.find_element_by_class_name('content')
+  content = driver.find_element(By.CLASS_NAME, 'content')
 
 Locating Elements by CSS Selectors
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -288,7 +281,7 @@ For instance, consider this page source::
 
 The "p" element can be located like this::
 
-  content = driver.find_element_by_css_selector('p.content')
+  content = driver.find_element(By.CSS_SELECTOR, 'p.content')
 
 `Sauce Labs has good documentation
 <https://saucelabs.com/resources/articles/selenium-tips-css-selectors>`_ on CSS
