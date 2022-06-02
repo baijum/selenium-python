@@ -52,8 +52,7 @@ These are the various ways the attributes are used to locate elements on a page:
   find_element(By.CLASS_NAME, "class name")
   find_element(By.CSS_SELECTOR, "css selector")
 
-If you want to locate several elements with the same attribute replace find_element with find_elements.
-
+If you want to locate several elements with the same attribute replace `find_element` with `find_elements`.
 
 Locating by Id
 ~~~~~~~~~~~~~~
@@ -77,7 +76,7 @@ For instance, consider this page source::
 
 The form element can be located like this::
 
-  login_form = driver.find_element_by_id('loginForm')
+  login_form = driver.find_element(By.ID, 'loginForm')
 
   login_form = driver.find_element(By.ID, 'loginForm')
   # (v4.0.0+) Alternate method
@@ -113,7 +112,7 @@ The below snippet will return the "Login" button as it occurs before the "Clear"
 The "Clear" button will not be returned because the two buttons share the same "name" attribute
 of "continue". The "find_element_*" method is `singular` and will return only the first instance encountered. ::
 
-  continue = driver.find_element_by_name('continue')
+  continue = driver.find_element(By.NAME, 'continue')
 
   continue = driver.find_element(By.NAME, 'continue')
   # (v4.0.0+) Alternate method
@@ -172,18 +171,18 @@ The username "input" element can be located like this::
 
     username = driver.find_element_by_xpath("//form[input/@name='username']")
     # Find `input` child element of `form`
-	# with `name` set to `username`
+	  # with `name` set to `username`
 
     username = driver.find_element_by_xpath("//form[@id='loginForm']/input[1]")
     # Find first `input` child element of `form`
-	# with `input` set to `loginForm`
+	  # with `input` set to `loginForm`
 
     username = driver.find_element_by_xpath("//input[@name='username']")
     # Find `input` element with `name` set to `username`
 
     username = driver.find_element(By.XPATH, "//input[@name='username']")
     # (v4.0.0+) Find first `input` element with
-	# attribute `name` set to `username`
+	  # attribute `name` set to `username`
 
 The "Clear" input button type element can be located like this::
 
@@ -243,8 +242,8 @@ For instance, consider this page source::
 
 The continue.html anchor link can be located like this::
 
-  continue_link = driver.find_element_by_link_text('Continue')
-  continue_link = driver.find_element_by_partial_link_text('Conti')
+  continue_link = driver.find_element(By.LINK_TEXT, 'Continue')
+  continue_link = driver.find_element(By.PARTIAL_LINK_TEXT, 'Conti')
 
   continue_link = driver.find_element(By.LINK_TEXT, 'Continue')
   continue_link = driver.find_element(By.PARTIAL_LINK_TEXT, 'Conti')
@@ -269,7 +268,7 @@ For instance, consider this page source::
 
 The heading "h1" element can be located like this::
 
-  heading1 = driver.find_element_by_tag_name('h1')
+  heading1 = driver.find_element(By.TAG_NAME, 'h1')
 
   heading1 = driver.find_element(By.TAG_NAME, 'h1')
   # (v4.0.0+) Alternate method
@@ -293,7 +292,7 @@ For instance, consider this page source::
 
 The "p" element can be located like this::
 
-  content = driver.find_element_by_class_name('content')
+  content = driver.find_element(By.CLASS_NAME, 'content')
 
   content = driver.find_element(By.CLASS_NAME, 'content')
   # (v4.0.0+) Alternate method
