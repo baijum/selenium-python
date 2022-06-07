@@ -106,7 +106,7 @@ class provides a property method that returns a list::
 
     select = Select(driver.find_element(By.XPATH, "//select[@name='name']"))
     all_selected_options = select.all_selected_options
-    
+
 To get all available options::
 
     options = select.options
@@ -175,7 +175,7 @@ would go to the frame named "child" of the first subframe of the frame called
 Once we are done with working on frames, we will have to come back to the parent
 frame which can be done using::
 
-  driver.switch_to_default_content()
+  driver.switch_to.default_content()
 
 
 Popup dialogs
