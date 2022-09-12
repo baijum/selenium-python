@@ -60,7 +60,7 @@ completely loaded*::
 
   driver.get("http://www.python.org")
 
-The next line is an assertion to confirm that title has "Python" word in it::
+The next line is an assertion to confirm that title has the word "Python" in it::
 
   assert "Python" in driver.title
 
@@ -73,7 +73,7 @@ chapter::
   elem = driver.find_element(By.NAME, "q")
 
 Next, we are sending keys, this is similar to entering keys using your keyboard.
-Special keys can be sent using `Keys` class imported from
+Special keys can be sent using the `Keys` class imported from
 `selenium.webdriver.common.keys`.  To be safe, we'll first clear any
 pre-populated text in the input field (e.g. "Search") so it doesn't affect our
 search results::
@@ -87,9 +87,9 @@ ensure that some results are found, make an assertion::
 
   assert "No results found." not in driver.page_source
 
-Finally, the browser window is closed.  You can also call `quit` method instead
-of `close`.  The `quit` will exit entire browser whereas `close` will close one
-tab, but if just one tab was open, by default most browser will exit entirely.::
+Finally, the browser window is closed.  You can also call the `quit` method instead
+of `close`.  The `quit` method will exit the browser whereas `close` will close one
+tab, but if just one tab was open, by default most browsers will exit entirely.::
 
   driver.close()
 
@@ -104,7 +104,7 @@ Python's unittest module.  The other options for a tool/framework are `pytest
 <https://nose.readthedocs.io/en/latest/>`_.
 
 In this chapter, we use `unittest` as the framework of choice.  Here is the
-modified example which uses unittest module.  This is a test for `python.org`
+modified example which uses the unittest module.  This is a test for the `python.org`
 search functionality::
 
   import unittest
@@ -149,7 +149,7 @@ Note: To run the above test in IPython or Jupyter, you should pass a couple of
 arguments to the `main` function as shown below::
 
   unittest.main(argv=['first-arg-is-ignored'], exit=False)
-  
+
 
 
 Walkthrough of the example
@@ -157,9 +157,9 @@ Walkthrough of the example
 
 Initially, all the basic modules required are imported.  The `unittest
 <http://docs.python.org/library/unittest.html>`_ module is a built-in Python
-based on Java's JUnit.  This module provides the framework for organizing the
+module based on Java's JUnit.  This module provides the framework for organizing the
 test cases.  The `selenium.webdriver` module provides all the WebDriver
-implementations.  Currently supported WebDriver implementations are Firefox,
+implementations.  Currently supported WebDriver implementations are: Firefox,
 Chrome, IE and Remote.  The `Keys` class provides keys in the keyboard like
 RETURN, F1, ALT etc. The `By` class is used to locate elements within a document.
 
@@ -171,14 +171,14 @@ RETURN, F1, ALT etc. The `By` class is used to locate elements within a document
   from selenium.webdriver.common.by import By
 
 The test case class is inherited from `unittest.TestCase`.  Inheriting from
-`TestCase` class is the way to tell `unittest` module that this is a test case::
+the `TestCase` class is the way to tell `unittest` module that this is a test case::
 
   class PythonOrgSearch(unittest.TestCase):
 
 
-The `setUp` is part of initialization, this method will get called before every
+The `setUp` method is part of initialization. This method will get called before every
 test function which you are going to write in this test case class.  Here you
-are creating the instance of Firefox WebDriver.
+are creating an instance of a Firefox WebDriver.
 
 ::
 
@@ -186,7 +186,7 @@ are creating the instance of Firefox WebDriver.
           self.driver = webdriver.Firefox()
 
 This is the test case method. The test case method should always start with
-characters `test`.  The first line inside this method create a local reference
+characters `test`.  The first line inside this method creates a local reference
 to the driver object created in `setUp` method.
 
 ::
@@ -202,7 +202,7 @@ completely loaded*::
 
           driver.get("http://www.python.org")
 
-The next line is an assertion to confirm that title has "Python" word in it::
+The next line is an assertion to confirm that title has the word "Python" in it::
 
           self.assertIn("Python", driver.title)
 
@@ -216,7 +216,7 @@ chapter::
           elem = driver.find_element(By.NAME, "q")
 
 Next, we are sending keys, this is similar to entering keys using your keyboard.
-Special keys can be send using `Keys` class imported from
+Special keys can be sent using the `Keys` class imported from
 `selenium.webdriver.common.keys`::
 
           elem.send_keys("pycon")
@@ -229,9 +229,9 @@ is any.  To ensure that some results are found, make an assertion::
 
 The `tearDown` method will get called after every test method.  This is a place
 to do all cleanup actions.  In the current method, the browser window is closed.
-You can also call `quit` method instead of `close`.  The `quit` will exit the
+You can also call the `quit` method instead of `close`.  The `quit` method will exit the
 entire browser, whereas `close` will close a tab, but if it is the only tab
-opened, by default most browser will exit entirely.::
+opened, by default most browsers will exit entirely.::
 
       def tearDown(self):
           self.driver.close()
@@ -246,7 +246,7 @@ Final lines are some boiler plate code to run the test suite::
 Using Selenium with remote WebDriver
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-To use the remote WebDriver, you should have Selenium server running.  To run
+To use the remote WebDriver, you should have the Selenium server running.  To run
 the server, use this command::
 
   java -jar selenium-server-standalone-2.x.x.jar
@@ -255,7 +255,7 @@ While running the Selenium server, you could see a message looking like this::
 
   15:43:07.541 INFO - RemoteWebDriver instances should connect to: http://127.0.0.1:4444/wd/hub
 
-The above line says that you can use this URL for connecting to remote
+The above line says that you can use this URL for connecting to the remote
 WebDriver.  Here are some examples::
 
   from selenium import webdriver
@@ -273,7 +273,7 @@ WebDriver.  Here are some examples::
      command_executor='http://127.0.0.1:4444/wd/hub',
      desired_capabilities=DesiredCapabilities.HTMLUNITWITHJS)
 
-The desired capabilities is a dictionary, so instead of using the default
+The desired capabilities is a dictionary. So instead of using the default
 dictionaries, you can specify the values explicitly::
 
   driver = webdriver.Remote(
