@@ -88,7 +88,7 @@ ensure that some results are found, make an assertion::
   assert "No results found." not in driver.page_source
 
 Finally, the browser window is closed.  You can also call the `quit` method instead
-of `close`.  The `quit` method will exit entire the browser whereas `close` will close one
+of `close`.  The `quit` method will exit the browser whereas `close` will close one
 tab, but if just one tab was open, by default most browsers will exit entirely.::
 
   driver.close()
