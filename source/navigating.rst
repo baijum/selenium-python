@@ -226,7 +226,7 @@ that the cookie will be valid for:
   driver.get("http://www.example.com")
 
   # Now set the cookie. This one's valid for the entire domain
-  cookie = {‘name’ : ‘foo’, ‘value’ : ‘bar’}
+  cookie = {'name' : 'foo', 'value' : 'bar'}
   driver.add_cookie(cookie)
 
   # And now output all the available cookies for the current URL
