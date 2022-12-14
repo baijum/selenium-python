@@ -144,9 +144,9 @@ Moving between windows and frames
 
 It's rare for a modern web application not to have any frames or to be
 constrained to a single window.  WebDriver supports moving between named windows
-using the "switch_to_window" method::
+using the "switch_to.window" method::
 
-  driver.switch_to_window("windowName")
+  driver.switch_to.window("windowName")
 
 All calls to ``driver`` will now be interpreted as being directed to the
 particular window.  But how do you know the window's name? Take a look at the
@@ -154,20 +154,20 @@ javascript or link that opened it::
 
   <a href="somewhere.html" target="windowName">Click here to open a new window</a>
 
-Alternatively, you can pass a "window handle" to the "switch_to_window()"
+Alternatively, you can pass a "window handle" to the "switch_to.window()"
 method.  Knowing this, it's possible to iterate over every open window like so::
 
   for handle in driver.window_handles:
-      driver.switch_to_window(handle)
+      driver.switch_to.window(handle)
 
 You can also swing from frame to frame (or into iframes)::
 
-  driver.switch_to_frame("frameName")
+  driver.switch_to.frame("frameName")
 
 It's possible to access subframes by separating the path with a dot, and you can
 specify the frame by its index too.  That is::
 
-  driver.switch_to_frame("frameName.0.child")
+  driver.switch_to.frame("frameName.0.child")
 
 would go to the frame named "child" of the first subframe of the frame called
 "frameName".  **All frames are evaluated as if from *top*.**
