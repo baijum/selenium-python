@@ -9,10 +9,10 @@ How to use ChromeDriver ?
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Download the latest `chromedriver from download page
-<https://sites.google.com/a/chromium.org/chromedriver/downloads>`_.  Unzip the
+<https://sites.google.com/chromium.org/driver/>`_.  Unzip the
 file::
 
-  unzip chromedriver_linux32_x.x.x.x.zip
+  unzip chromedriver_linux64.zip
 
 You should see a ``chromedriver`` executable.  Now you can create an instance of
 Chrome WebDriver like this::
