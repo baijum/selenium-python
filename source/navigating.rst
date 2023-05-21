@@ -115,7 +115,7 @@ Once you've finished filling out the form, you probably want to submit it. One
 way to do this would be to find the "submit" button and click it::
 
   # Assume the button has the ID "submit" :)
-  driver.find_element_by_id("submit").click()
+  driver.find_element(By.ID, "submit").click()
 
 Alternatively, WebDriver has the convenience method "submit" on every element.
 If you call this on an element within a form, WebDriver will walk up the DOM
