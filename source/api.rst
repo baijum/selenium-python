@@ -23,16 +23,32 @@ Then, you can access the classes like this::
 
   webdriver.Firefox
   webdriver.FirefoxProfile
+  webdriver.FirefoxOptions
+  webdriver.FirefoxService
   webdriver.Chrome
   webdriver.ChromeOptions
+  webdriver.ChromeService
   webdriver.Ie
-  webdriver.Opera
-  webdriver.PhantomJS
+  webdriver.IeOptions
+  webdriver.IeService
+  webdriver.Edge
+  webdriver.ChromiumEdge
+  webdriver.EdgeOptions
+  webdriver.EdgeService
+  webdriver.Safari
+  webdriver.SafariOptions
+  webdriver.SafariService
+  webdriver.WebKitGTK
+  webdriver.WebKitGTKOptions
+  webdriver.WebKitGTKService
+  webdriver.WPEWebKit
+  webdriver.WPEWebKitOptions
+  webdriver.WPEWebKitService
   webdriver.Remote
   webdriver.DesiredCapabilities
   webdriver.ActionChains
-  webdriver.TouchActions
   webdriver.Proxy
+  webdriver.Keys
 
 The special keys class (``Keys``) can be imported like this::
 
