@@ -139,16 +139,6 @@ See the :ref:`selenium-remote-webdriver` section for example usages of desired c
    :member-order: groupwise
    :show-inheritance:
 
-Touch Actions
-~~~~~~~~~~~~~
-
-.. automodule:: selenium.webdriver.common.touch_actions
-   :members:
-   :undoc-members:
-   :special-members: __init__
-   :member-order: groupwise
-   :show-inheritance:
-
 Proxy
 ~~~~~
 
@@ -347,46 +337,6 @@ Internet Explorer WebDriver
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. automodule:: selenium.webdriver.ie.webdriver
-   :members:
-   :undoc-members:
-   :special-members: __init__
-   :member-order: groupwise
-   :show-inheritance:
-
-Android WebDriver
-~~~~~~~~~~~~~~~~~
-
-.. automodule:: selenium.webdriver.android.webdriver
-   :members:
-   :undoc-members:
-   :special-members: __init__
-   :member-order: groupwise
-   :show-inheritance:
-
-Opera WebDriver
-~~~~~~~~~~~~~~~
-
-.. automodule:: selenium.webdriver.opera.webdriver
-   :members:
-   :undoc-members:
-   :special-members: __init__
-   :member-order: groupwise
-   :show-inheritance:
-
-PhantomJS WebDriver
-~~~~~~~~~~~~~~~~~~~
-
-.. automodule:: selenium.webdriver.phantomjs.webdriver
-   :members:
-   :undoc-members:
-   :special-members: __init__
-   :member-order: groupwise
-   :show-inheritance:
-
-PhantomJS WebDriver Service
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-.. automodule:: selenium.webdriver.phantomjs.service
    :members:
    :undoc-members:
    :special-members: __init__
