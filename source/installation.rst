@@ -111,7 +111,7 @@ the more popular browser drivers follow.
 
 For more information about driver installation, please refer the `official
 documentation
-<https://www.selenium.dev/documentation/en/webdriver/driver_requirements/>`_.
+<https://www.selenium.dev/documentation/webdriver/>`_.
 
 
 Downloading Selenium server
