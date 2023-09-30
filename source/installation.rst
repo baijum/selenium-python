@@ -111,8 +111,28 @@ the more popular browser drivers follow.
 
 For more information about driver installation, please refer the `official
 documentation
-<https://www.selenium.dev/documentation/en/webdriver/driver_requirements/>`_.
+<https://www.selenium.dev/documentation/webdriver/>`_.
 
+Starting from version ``4.6.0`` (November 4, 2022)
+selenium comes with **Selenium Manager** packed in distribution.
+
+**Selenium Manager** is a new tool that helps to get a working environment
+to run **Selenium** out of the box:
+
+* automatically discovers, downloads, and caches the ``drivers``
+  required by Selenium when these ``drivers`` are unavailable;
+* automatically discovers, downloads, and caches the ``browsers``
+  driven with Selenium (Chrome, Firefox, and Edge)
+  when these ``browsers`` are not installed in the local system.
+
+For example, to see the result of **Selenium Manager** work
+just run any selenium script without previous driver setup
+and explore `~/.cache/selenium`.
+
+More about **Selenium Manager** you can read in the
+`documentation <https://www.selenium.dev/documentation/selenium_manager/>`_
+and
+`blog <https://www.selenium.dev/blog/2022/introducing-selenium-manager/>`_.
 
 Downloading Selenium server
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~

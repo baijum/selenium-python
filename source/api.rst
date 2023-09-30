@@ -23,16 +23,32 @@ Then, you can access the classes like this::
 
   webdriver.Firefox
   webdriver.FirefoxProfile
+  webdriver.FirefoxOptions
+  webdriver.FirefoxService
   webdriver.Chrome
   webdriver.ChromeOptions
+  webdriver.ChromeService
   webdriver.Ie
-  webdriver.Opera
-  webdriver.PhantomJS
+  webdriver.IeOptions
+  webdriver.IeService
+  webdriver.Edge
+  webdriver.ChromiumEdge
+  webdriver.EdgeOptions
+  webdriver.EdgeService
+  webdriver.Safari
+  webdriver.SafariOptions
+  webdriver.SafariService
+  webdriver.WebKitGTK
+  webdriver.WebKitGTKOptions
+  webdriver.WebKitGTKService
+  webdriver.WPEWebKit
+  webdriver.WPEWebKitOptions
+  webdriver.WPEWebKitService
   webdriver.Remote
   webdriver.DesiredCapabilities
   webdriver.ActionChains
-  webdriver.TouchActions
   webdriver.Proxy
+  webdriver.Keys
 
 The special keys class (``Keys``) can be imported like this::
 
@@ -133,16 +149,6 @@ Desired Capabilities
 See the :ref:`selenium-remote-webdriver` section for example usages of desired capabilities.
 
 .. automodule:: selenium.webdriver.common.desired_capabilities
-   :members:
-   :undoc-members:
-   :special-members: __init__
-   :member-order: groupwise
-   :show-inheritance:
-
-Touch Actions
-~~~~~~~~~~~~~
-
-.. automodule:: selenium.webdriver.common.touch_actions
    :members:
    :undoc-members:
    :special-members: __init__
@@ -347,46 +353,6 @@ Internet Explorer WebDriver
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. automodule:: selenium.webdriver.ie.webdriver
-   :members:
-   :undoc-members:
-   :special-members: __init__
-   :member-order: groupwise
-   :show-inheritance:
-
-Android WebDriver
-~~~~~~~~~~~~~~~~~
-
-.. automodule:: selenium.webdriver.android.webdriver
-   :members:
-   :undoc-members:
-   :special-members: __init__
-   :member-order: groupwise
-   :show-inheritance:
-
-Opera WebDriver
-~~~~~~~~~~~~~~~
-
-.. automodule:: selenium.webdriver.opera.webdriver
-   :members:
-   :undoc-members:
-   :special-members: __init__
-   :member-order: groupwise
-   :show-inheritance:
-
-PhantomJS WebDriver
-~~~~~~~~~~~~~~~~~~~
-
-.. automodule:: selenium.webdriver.phantomjs.webdriver
-   :members:
-   :undoc-members:
-   :special-members: __init__
-   :member-order: groupwise
-   :show-inheritance:
-
-PhantomJS WebDriver Service
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-.. automodule:: selenium.webdriver.phantomjs.service
    :members:
    :undoc-members:
    :special-members: __init__
