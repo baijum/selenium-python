@@ -7,9 +7,11 @@ The current supported Python versions are 3.5 and above
 ![Contributors](https://img.shields.io/github/contributors/baijum/selenium-python.svg)](https://github.com/baijum/selenium-python/graphs/contributors)
 <hr/>
 <h1>Prerequisites</h1>
+
 **Python 3.5 and above**
 
 <h1>Installation</h1>
+
 ```
     pip install selenium
 ```
