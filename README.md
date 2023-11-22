@@ -4,7 +4,9 @@ Through Selenium Python API you can access all functionalities of Selenium WebDr
 Selenium Python bindings provide a convenient API to access Selenium WebDrivers like Firefox, Ie, Chrome, Remote etc.<br/>
 The current supported Python versions are 3.5 and above
 <hr/>
-![Contributors](https://img.shields.io/github/contributors/baijum/selenium-python.svg)](https://github.com/baijum/selenium-python/graphs/contributors)
+
+![Contributors](https://img.shields.io/github/contributors/baijum/selenium-python.svg)
+
 <hr/>
 <h1>Prerequisites</h1>
 
