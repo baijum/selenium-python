@@ -24,4 +24,4 @@ python -m venv <your_env_name>
 ```
 You can also downlload the Python bindings for selenium from the <a href="https://pypi.org/project/selenium/">PyPI Selenium</a>
 
-<a href="https://selenium-python.readthedocs.io/installation.html"><h1>Official Documentation</h1></a>
+<h1><a href="https://selenium-python.readthedocs.io/installation.html">Visit the Official Documentation</a></h1>
