@@ -10,7 +10,8 @@ The current supported Python versions are 3.5 and above
 <hr/>
 <h1>Prerequisites</h1>
 
-**Python 3.5 and above**
+**Python 3.5 and above**<br/>
+**Selenium Installled**
 
 <h1>Installation</h1>
 
