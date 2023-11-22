@@ -27,6 +27,6 @@ You can also downlload the Python bindings for selenium from the <a href="https:
 <h1><a href="https://selenium-python.readthedocs.io/installation.html">Visit the Official Documentation</a></h1>
 
 <h1>Translated Docs<h1>
-<a href="https://selenium-python-zh.readthedocs.io/en/latest/>">Chinese</a>
+<a href="https://selenium-python-zh.readthedocs.io/en/latest/">Chinese</a>
 <br>
-<a href="https://kurozumi.github.io/selenium-python/index.html>">Japanese</a>
+<a href="https://kurozumi.github.io/selenium-python/index.html">Japanese</a>
