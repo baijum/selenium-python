@@ -3,18 +3,25 @@ Selenium Python bindings provides a simple API to write functional/acceptance te
 Through Selenium Python API you can access all functionalities of Selenium WebDriver in an intuitive way.<br/>
 Selenium Python bindings provide a convenient API to access Selenium WebDrivers like Firefox, Ie, Chrome, Remote etc.<br/>
 The current supported Python versions are 3.5 and above
-<hr/>
+<h3>Prerequisites</h3>
+
+**Python 3.5 and above**
 
 ![Contributors](https://img.shields.io/github/contributors/baijum/selenium-python.svg)
 
 <hr/>
-<h1>Prerequisites</h1>
 
-**Python 3.5 and above**<br/>
-**Selenium Installled**
 
 <h1>Installation</h1>
 
 ```
     pip install selenium
 ```
+You can use venv to install this package to create a virtual environment 
+
+```
+python -m venv <your_env_name>
+```
+You can also downlload the Python bindings for selenium from the <a href="https://pypi.org/project/selenium/">PyPI Selenium</a>
+
+<a href="https://selenium-python.readthedocs.io/installation.html"><h1>Official Documentation</h1></a>
