@@ -101,7 +101,7 @@ The username & password elements can be located like this::
 
 This will give the "Login" button as it occurs before the "Clear" button::
 
-  continue = driver.find_element(By.NAME, 'continue')
+  continue_button = driver.find_element(By.NAME, 'continue')
 
 
 Locating by XPath
